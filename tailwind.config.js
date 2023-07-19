@@ -2,8 +2,14 @@
 module.exports = {
 	content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				primary: 'black',
+			},
+			fontFamily: {
+				nespresso: ['NespressoLucas', 'sans-serif'],
+			},
+		},
 	},
 	plugins: [],
 };
-

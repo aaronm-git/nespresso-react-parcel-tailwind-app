@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	/* light */
+	@font-face {
+		font-family: NespressoLucas;
+		font-weight: 200;
+		src: url(/src/public/fonts/NespressoLucas-Light.woff) format('woff');
+	}
+	/* med */
+	@font-face {
+		font-family: NespressoLucas;
+		font-weight: 400;
+		src: url(/src/public/fonts/NespressoLucas-Med.woff) format('woff');
+	}
+	/* bold */
+	@font-face {
+		font-family: NespressoLucas;
+		font-weight: 700;
+		src: url(/src/public/fonts/NespressoLucas-XtraBd.woff) format('woff');
+	}
+}
