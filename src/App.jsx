@@ -1,10 +1,17 @@
-import Button from '@ui/Button';
+import React from 'react';
+import Container from './components/ui/Container';
+import Home from './pages/Home';
+import Recipes from './pages/recipes/Index';
+
+import { Routes, Route } from 'react-router-dom';
 
 export function App() {
 	return (
-		<div className="min-h-screen">
-			<h1>Hello World</h1>
-			<Button>Button</Button>
-		</div>
+		<Container>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/recipes" element={<Recipes />} />
+			</Routes>
+		</Container>
 	);
 }

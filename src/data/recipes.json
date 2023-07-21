@@ -1,0 +1,34 @@
+{
+	"data": [
+		{
+			"id": "d1f3ca7e-9c93-46c8-8a0d-4e4e6ec6fbcf",
+			"name": "TIRAMISU CAPPUCCINO",
+			"prep_time": "10 Min",
+			"difficulty": "Easy",
+			"tags": ["FLAVOR", "AEROCCINO", "chocolate", "MILK", "mascarpone cheese", "Speculoos Spice Cookies"],
+			"description": "Enjoy your coffee with a taste of Tiramisu. Sweet, surprising, and fun.",
+			"coffee": ["756a693f-7832-4c5f-9321-320946dfc123", "84a751ac-8e17-4e4a-9e4c-1df5e56f7890"],
+			"ingredients": [
+				"1 NESPRESSO CAPSULE (VERTUO: IL CAFFÈ, ORIGINAL: VENEZIA)",
+				"2 TSPS. CHOCOLATE SAUCE OR SYRUP",
+				"2 TBS. MASCARPONE CHEESE",
+				"MILK - 4 OZ.",
+				"SPECULOOS SPICE COOKIES, ABOUT 3"
+			],
+			"materials": ["7c6f0e64-5035-47db-8b57-3a173bc77f97", "502037e9-4bc2-40e0-9424-97c63100dd52"],
+			"instructions": [
+				"Add chocolate sauce to glass.",
+				"Add mascarpone onto chocolate sauce.",
+				"Froth milk for cappuccinos and add to glass.",
+				"Brew capsule directly into glass.",
+				"Crumble speculoos cookies onto drink."
+			],
+			"products": [
+				"756a693f-7832-4c5f-9321-320946dfc123",
+				"84a751ac-8e17-4e4a-9e4c-1df5e56f7890",
+				"7c6f0e64-5035-47db-8b57-3a173bc77f97",
+				"502037e9-4bc2-40e0-9424-97c63100dd52"
+			]
+		}
+	]
+}

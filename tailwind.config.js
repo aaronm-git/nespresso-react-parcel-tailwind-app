@@ -5,6 +5,7 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: 'black',
+				"nespresso-gold": 'rgb(141, 103, 8)',
 			},
 			fontFamily: {
 				nespresso: ['NespressoLucas', 'sans-serif'],

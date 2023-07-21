@@ -1,5 +1,5 @@
 {
-	"name": "nespresso-sensei-react-parcel-tailwind-app",
+	"name": "nespresso-recipes-react-parcel-tailwind-app",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -11,10 +11,6 @@
 	},
 	"author": "https://aaronmolina.me",
 	"license": "ISC",
-	"alias": {
-		"@components/*": "/src/components/$1",
-		"@ui/*": "/src/components/ui/$1"
-	},
 	"devDependencies": {
 		"@types/react": "^18.2.15",
 		"@types/react-dom": "^18.2.7",
@@ -28,6 +24,7 @@
 	},
 	"dependencies": {
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.14.2"
 	}
 }
