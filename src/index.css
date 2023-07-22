@@ -22,8 +22,8 @@
 		src: url(/src/public/fonts/NespressoLucas-XtraBd.woff) format('woff');
 	}
 
-	body {
-		@apply antialiased;
+	#app {
+		@apply antialiased min-h-screen mt-16;
 	}
 
 	p {
@@ -32,5 +32,13 @@
 
 	h1 {
 		@apply mb-6 text-5xl font-bold leading-tight tracking-[12px] lg:text-6xl;
+	}
+
+	h2 {
+		@apply mb-6 text-2xl font-light leading-tight tracking-[8px] lg:text-3xl;
+	}
+
+	a {
+		@apply text-nespresso-gold underline;
 	}
 }

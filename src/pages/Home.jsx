@@ -3,7 +3,7 @@ import Container from '../components/ui/Container';
 export default function Home() {
 	return (
 		<main>
-			<div className="flex flex-col justify-center bg-recipes py-14 md:py-20 text-center">
+			<section className="flex flex-col justify-center bg-recipes py-12 text-center md:py-20">
 				<Container>
 					<h1>
 						NESPRESSO
@@ -15,7 +15,13 @@ export default function Home() {
 						comfort of your home.
 					</p>
 				</Container>
-			</div>
+			</section>
+
+			<Container>
+				<section className="mt-10">
+					<h2 className='text-center'>LATTE & CAPPUCCINO RECIPES</h2>
+				</section>
+			</Container>
 		</main>
 	);
 }
