@@ -5,10 +5,15 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: 'black',
-				"nespresso-gold": 'rgb(141, 103, 8)',
+				'nespresso-gold': 'rgb(141, 103, 8)',
 			},
+
 			fontFamily: {
-				nespresso: ['NespressoLucas', 'sans-serif'],
+				sans: ['NespressoLucas', 'sans-serif'],
+			},
+
+			backgroundImage: {
+				recipes: "url('/src/public/images/bg-recipes-jpg-1x.webp')",
 			},
 		},
 	},
