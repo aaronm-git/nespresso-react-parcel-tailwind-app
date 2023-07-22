@@ -13,7 +13,7 @@ module.exports = {
 			},
 
 			backgroundImage: {
-				recipes: "url('/src/public/images/bg-recipes-jpg-1x.webp')",
+				"hero-recipes": "url('/src/public/images/bg-recipes-jpg-1x.webp')",
 			},
 		},
 	},

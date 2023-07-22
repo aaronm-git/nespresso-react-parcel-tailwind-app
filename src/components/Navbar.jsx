@@ -16,7 +16,7 @@ export default function Navbar() {
 						<Logo small />
 						<span className="mx-1.5 text-2xl font-light">|</span>
 						<span className="text-2xl font-light uppercase tracking-[4px] text-nespresso-gold">
-							Recipes☕️
+							Recipes
 						</span>
 					</Link>
 				</div>
