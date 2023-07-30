@@ -15,6 +15,7 @@
 				"MILK - 4 OZ.",
 				"SPECULOOS SPICE COOKIES, ABOUT 3"
 			],
+			"images": ["recipes/01_Tiramisu_Cappuccino_2.webp"],
 			"materials": ["7c6f0e64-5035-47db-8b57-3a173bc77f97", "502037e9-4bc2-40e0-9424-97c63100dd52"],
 			"instructions": [
 				"Add chocolate sauce to glass.",

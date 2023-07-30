@@ -1,17 +1,19 @@
 import Container from '../../components/ui/Container';
 import HeroSection from './HeroSection';
+import RecipeList from '../../components/RecipeList';
 
 export default function Index() {
 	return (
 		<main>
-			<section id='hero'>
+			<section id="hero">
 				<HeroSection />
 			</section>
-			<Container>
-				<section className="mt-10">
-					<h2 className="text-center">LATTE & CAPPUCCINO RECIPES</h2>
-				</section>
-			</Container>
+			<section className="mt-10">
+				<Container>
+					<h2 className="text-center">FEATURED RECIPES</h2>
+					<RecipeList />
+				</Container>
+			</section>
 		</main>
 	);
 }

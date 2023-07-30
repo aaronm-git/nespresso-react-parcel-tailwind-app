@@ -9,13 +9,13 @@ export default function Navbar() {
 	};
 
 	return (
-		<div className="fixed top-0 w-full bg-black text-white md:flex md:px-4">
+		<div className="fixed top-0 z-10 w-full bg-black text-white md:flex md:px-4">
 			<div className="relative z-20 mr-auto flex items-center bg-black max-md:px-4">
 				<div className="flex flex-shrink-0">
 					<Link to="/" className="flex items-center text-white text-white no-underline">
 						<Logo small />
 						<span className="mx-1.5 text-2xl font-light">|</span>
-						<span className="text-2xl font-light uppercase tracking-[4px] text-nespresso-gold">
+						<span className="text-2xl font-light uppercase tracking-[4px] text-corn-harvest-700">
 							Recipes
 						</span>
 					</Link>

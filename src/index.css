@@ -23,7 +23,7 @@
 	}
 
 	#app {
-		@apply mt-16 min-h-screen bg-orange-50 antialiased;
+		@apply mb-32 mt-16 min-h-screen antialiased md:mb-20;
 	}
 
 	p {
