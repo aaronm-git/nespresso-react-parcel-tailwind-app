@@ -11,7 +11,7 @@ function CardBody({ children }) {
 }
 
 function CardTitle({ children }) {
-	return <h3 className="text-xl font-bold">{children}</h3>;
+	return <h3 className="mb-2 text-lg font-bold tracking-widest">{children}</h3>;
 }
 
 function Card(props) {
