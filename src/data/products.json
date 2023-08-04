@@ -1,17 +1,14 @@
-{
-	"data": [
-	
-		{
-			"id": "7c6f0e64-5035-47db-8b57-3a173bc77f97",
-			"name": "Glasses",
-			"description": "VIEW RECIPE GLASSES",
-			"price": "$24.00"
-		},
-		{
-			"id": "502037e9-4bc2-40e0-9424-97c63100dd52",
-			"name": "Aeroccino4",
-			"description": "AEROCCINO4",
-			"price": "$119.00"
-		}
-	]
-}
+[
+	{
+		"id": "7c6f0e64-5035-47db-8b57-3a173bc77f97",
+		"name": "Glasses",
+		"description": "VIEW RECIPE GLASSES",
+		"price": "$24.00"
+	},
+	{
+		"id": "502037e9-4bc2-40e0-9424-97c63100dd52",
+		"name": "Aeroccino4",
+		"description": "AEROCCINO4",
+		"price": "$119.00"
+	}
+]

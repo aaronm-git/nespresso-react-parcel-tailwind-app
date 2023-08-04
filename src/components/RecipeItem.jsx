@@ -8,7 +8,7 @@ export default function RecipeItem({ recipe }) {
 	const imgSrc = (recipe.images?.length && images[recipe.images[0]]) || 'https://via.placeholder.com/400';
 
 	return (
-		<Card href="#">
+		<Card href={`/recipes/${recipe.id}`}>
 			<Card.Image imgSrc={imgSrc} alt="Tiramisu cappuccino" />
 			<Card.Body>
 				<Card.Title>{recipe.name}</Card.Title>

@@ -1,92 +1,90 @@
-{
-	"data": [
-		{
-			"id": "d1f3ca7e-9c93-46c8-8a0d-4e4e6ec6fbcf",
-			"name": "TIRAMISU CAPPUCCINO",
-			"prepTime": "10 Min",
-			"difficulty": "Easy",
-			"tags": ["FLAVOR", "AEROCCINO", "chocolate", "MILK", "mascarpone cheese", "Speculoos Spice Cookies"],
-			"description": "Enjoy your coffee with a taste of Tiramisu. Sweet, surprising, and fun.",
-			"coffee": ["756a693f-7832-4c5f-9321-320946dfc123", "84a751ac-8e17-4e4a-9e4c-1df5e56f7890"],
-			"ingredients": [
-				"1 NESPRESSO CAPSULE (VERTUO: IL CAFFÈ, ORIGINAL: VENEZIA)",
-				"2 TSPS. CHOCOLATE SAUCE OR SYRUP",
-				"2 TBS. MASCARPONE CHEESE",
-				"MILK - 4 OZ.",
-				"SPECULOOS SPICE COOKIES, ABOUT 3"
-			],
-			"images": ["recipes/01_Tiramisu_Cappuccino_2.webp"],
-			"materials": ["7c6f0e64-5035-47db-8b57-3a173bc77f97", "502037e9-4bc2-40e0-9424-97c63100dd52"],
-			"instructions": [
-				"Add chocolate sauce to glass.",
-				"Add mascarpone onto chocolate sauce.",
-				"Froth milk for cappuccinos and add to glass.",
-				"Brew capsule directly into glass.",
-				"Crumble speculoos cookies onto drink."
-			],
-			"products": [
-				"756a693f-7832-4c5f-9321-320946dfc123",
-				"84a751ac-8e17-4e4a-9e4c-1df5e56f7890",
-				"7c6f0e64-5035-47db-8b57-3a173bc77f97",
-				"502037e9-4bc2-40e0-9424-97c63100dd52"
-			]
-		},
-		{
-			"id": "a6e1dfb5-2df1-4c65-b60a-781f76e21680",
-			"name": "AMARETTO SPICED LATTE",
-			"prepTime": "10 Min",
-			"difficulty": "Easy",
-			"description": "With just the right blend of ingredients, Nespresso's Amaretto Spiced Latte is the perfect drink to help you stay cozy and warm.",
-			"images": ["recipes/09_Amaretto_Spiced_Latte_1.png"],
-			"ingredients": [
-				"1 NESPRESSO CAPSULE (VERTUO: FORTADO, ORIGINAL: STOCKHOLM FORTISSIO LUNGO)",
-				"AMARETTO SYRUP - 1 TBS.",
-				"CINNAMON SUGAR - 2 TBS.",
-				"MILK - 6 OZ."
-			],
-			"materials": [
-				"A 0176 VIEW Recipe 2000X2000 2",
-				"RECIPE GLASSES - SET OF 2",
-				"A 0319 2000x2000",
-				"AEROCCINO4 CHROME"
-			],
-			"instructions": [
-				"Place amaretto syrup into cup.",
-				"Using your device, froth milk for cappuccinos.",
-				"Add milk to glass. Add cinnamon sugar and stir.",
-				"Brew capsule directly into glass."
-			],
-			"products": [
-				{
-					"id": "4a6a5748-73f0-42c5-8e4d-d726ffdf8ca2",
-					"name": "Fortado",
-					"type": "FORTADO",
-					"description": "Intense & Full-Bodied",
-					"price": "$1.15",
-					"inBasket": false
-				},
-				{
-					"id": "11b6a19a-755d-45f7-906c-7bb3e19f437d",
-					"name": "Stockholm Fortissio Lungo",
-					"type": "STOCKHOLM FORTISSIO LUNGO",
-					"description": "Rich & Full Bodied",
-					"price": "$0.85",
-					"inBasket": false
-				},
-				{
-					"id": "764e2974-e67e-4b46-8777-3e348b05a418",
-					"name": "VIEW Recipe Glasses",
-					"price": "$24.00",
-					"inBasket": false
-				},
-				{
-					"id": "f7f3b535-8490-4143-93f6-7f9a16187c1f",
-					"name": "Aeroccino4",
-					"description": "AEROCCINO4",
-					"price": "$119.00",
-					"inBasket": false
-				}
-			]
-		}
-	]
-}
+[
+	{
+		"id": "d1f3ca7e-9c93-46c8-8a0d-4e4e6ec6fbcf",
+		"name": "TIRAMISU CAPPUCCINO",
+		"prepTime": "10 Min",
+		"difficulty": "Easy",
+		"tags": ["FLAVOR", "AEROCCINO", "chocolate", "MILK", "mascarpone cheese", "Speculoos Spice Cookies"],
+		"description": "Enjoy your coffee with a taste of Tiramisu. Sweet, surprising, and fun.",
+		"coffee": ["756a693f-7832-4c5f-9321-320946dfc123", "84a751ac-8e17-4e4a-9e4c-1df5e56f7890"],
+		"ingredients": [
+			"1 NESPRESSO CAPSULE (VERTUO: IL CAFFÈ, ORIGINAL: VENEZIA)",
+			"2 TSPS. CHOCOLATE SAUCE OR SYRUP",
+			"2 TBS. MASCARPONE CHEESE",
+			"MILK - 4 OZ.",
+			"SPECULOOS SPICE COOKIES, ABOUT 3"
+		],
+		"images": ["recipes/01_Tiramisu_Cappuccino_2.webp"],
+		"materials": ["7c6f0e64-5035-47db-8b57-3a173bc77f97", "502037e9-4bc2-40e0-9424-97c63100dd52"],
+		"instructions": [
+			"Add chocolate sauce to glass.",
+			"Add mascarpone onto chocolate sauce.",
+			"Froth milk for cappuccinos and add to glass.",
+			"Brew capsule directly into glass.",
+			"Crumble speculoos cookies onto drink."
+		],
+		"products": [
+			"756a693f-7832-4c5f-9321-320946dfc123",
+			"84a751ac-8e17-4e4a-9e4c-1df5e56f7890",
+			"7c6f0e64-5035-47db-8b57-3a173bc77f97",
+			"502037e9-4bc2-40e0-9424-97c63100dd52"
+		]
+	},
+	{
+		"id": "a6e1dfb5-2df1-4c65-b60a-781f76e21680",
+		"name": "AMARETTO SPICED LATTE",
+		"prepTime": "10 Min",
+		"difficulty": "Easy",
+		"description": "With just the right blend of ingredients, Nespresso's Amaretto Spiced Latte is the perfect drink to help you stay cozy and warm.",
+		"images": ["recipes/09_Amaretto_Spiced_Latte_1.png"],
+		"ingredients": [
+			"1 NESPRESSO CAPSULE (VERTUO: FORTADO, ORIGINAL: STOCKHOLM FORTISSIO LUNGO)",
+			"AMARETTO SYRUP - 1 TBS.",
+			"CINNAMON SUGAR - 2 TBS.",
+			"MILK - 6 OZ."
+		],
+		"materials": [
+			"A 0176 VIEW Recipe 2000X2000 2",
+			"RECIPE GLASSES - SET OF 2",
+			"A 0319 2000x2000",
+			"AEROCCINO4 CHROME"
+		],
+		"instructions": [
+			"Place amaretto syrup into cup.",
+			"Using your device, froth milk for cappuccinos.",
+			"Add milk to glass. Add cinnamon sugar and stir.",
+			"Brew capsule directly into glass."
+		],
+		"products": [
+			{
+				"id": "4a6a5748-73f0-42c5-8e4d-d726ffdf8ca2",
+				"name": "Fortado",
+				"type": "FORTADO",
+				"description": "Intense & Full-Bodied",
+				"price": "$1.15",
+				"inBasket": false
+			},
+			{
+				"id": "11b6a19a-755d-45f7-906c-7bb3e19f437d",
+				"name": "Stockholm Fortissio Lungo",
+				"type": "STOCKHOLM FORTISSIO LUNGO",
+				"description": "Rich & Full Bodied",
+				"price": "$0.85",
+				"inBasket": false
+			},
+			{
+				"id": "764e2974-e67e-4b46-8777-3e348b05a418",
+				"name": "VIEW Recipe Glasses",
+				"price": "$24.00",
+				"inBasket": false
+			},
+			{
+				"id": "f7f3b535-8490-4143-93f6-7f9a16187c1f",
+				"name": "Aeroccino4",
+				"description": "AEROCCINO4",
+				"price": "$119.00",
+				"inBasket": false
+			}
+		]
+	}
+]
