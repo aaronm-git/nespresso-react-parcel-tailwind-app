@@ -3,12 +3,27 @@ import ImagesContext from '../context/imagePathsContext';
 import Card from './ui/Card';
 import FeatherIcon from './ui/FeatherIcon';
 
-export default function RecipeItem({ recipe }) {
+export default function RecipeItem({ recipe, loading }) {
 	const images = useContext(ImagesContext);
-	const imgSrc = (recipe.images?.length && images[recipe.images[0]]) || 'https://via.placeholder.com/400';
+
+	if (loading) {
+		return (
+			<Card loading>
+				<Card.Image />
+				<Card.Body>
+					<Card.Title />
+				</Card.Body>
+			</Card>
+		);
+	}
+
+	const imgSrc = recipe.images?.length && images[recipe.images[0]];
 
 	return (
-		<Card href={`/recipes/${recipe.id}`}>
+		<Card
+			href={`/recipes/${recipe.id}`}
+			className="hover:lg:scale-[1.01] hover:lg:border-gray-200 hover:lg:shadow-2xl"
+		>
 			<Card.Image imgSrc={imgSrc} alt="Tiramisu cappuccino" />
 			<Card.Body>
 				<Card.Title>{recipe.name}</Card.Title>

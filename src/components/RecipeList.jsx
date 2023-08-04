@@ -4,7 +4,13 @@ import useDB from '../hooks/db';
 export default function RecipeList() {
 	const { data, loading, error } = useDB('/recipes');
 	if (loading) {
-		return <div className="text-center">Loading...</div>;
+		return (
+			<ListWrapper className="relative overflow-hidden after:absolute after:inset-0 after:bottom-0 after:left-0 after:h-full after:bg-gradient-to-t after:from-white">
+				{new Array(6).fill(0).map((_, i) => (
+					<RecipeItem key={i} loading />
+				))}
+			</ListWrapper>
+		);
 	}
 
 	if (error) {
@@ -12,10 +18,14 @@ export default function RecipeList() {
 	}
 
 	return (
-		<div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
+		<ListWrapper>
 			{data.map((recipe) => (
 				<RecipeItem key={recipe.id} recipe={recipe} />
 			))}
-		</div>
+		</ListWrapper>
 	);
+}
+
+function ListWrapper({ children, className }) {
+	return <div className={`grid gap-2 md:grid-cols-2 lg:grid-cols-3 ${className}`}>{children}</div>;
 }

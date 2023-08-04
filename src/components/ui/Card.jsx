@@ -1,4 +1,4 @@
-function CardImage({ imgSrc = 'https://via.placeholder.com/150', alt }) {
+function CardImage({ imgSrc, alt }) {
 	return (
 		<div className="h-[240px] w-auto overflow-hidden">
 			<img
@@ -23,26 +23,37 @@ function CardTitle({ children }) {
 }
 
 function Card(props) {
-	const { children, className, href } = props;
+	const { children, className, href, loading } = props;
+	const loadingClasses = `
+	relative
+	invisible
+	after:rounded-lg
+	after:bg-gray-200
+	after:absolute
+	after:inset-0
+	after:animate-pulse
+	after:overflow-hidden
+	after:animate-fast
+	after:visible
+	`;
+
 	const classes = [
-		href && 'no-underline text-gray-900',
-		'bg-white',
-		'rounded-lg',
-		'overflow-hidden',
-		'shadow-lg',
-		'hover:lg:shadow-2xl',
-		'border',
-		'border-gray-200',
-		'hover:lg:border-gray-200',
-		'hover:lg:scale-[1.01]',
-		'transition-all',
-		'duration-200',
-		'ease-in-out',
-		'group',
-		className,
-	]
-		.filter((c) => c !== false)
-		.join(' ');
+		loading
+			? loadingClasses
+			: `${href ? 'no-underline text-gray-800' : ''}
+			bg-white
+			rounded-lg
+			overflow-hidden
+			border
+			border-gray-200
+			transition-all
+			duration-200
+			ease-in-out
+			shadow-lg
+			group
+			${className}
+		`,
+	];
 
 	if (href) {
 		return (
