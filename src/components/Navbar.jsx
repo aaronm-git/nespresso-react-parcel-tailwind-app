@@ -19,12 +19,12 @@ export default function Navbar() {
 					</Link>
 				</div>
 				<button
-					className="group ml-auto flex h-16 w-16 flex-col items-end justify-center hover:bg-gray-800 active:bg-white md:hidden"
+					className="ml-auto flex h-16 w-16 flex-col items-end justify-center transition-colors duration-75 ease-linear md:hidden"
 					onClick={menuToggle}
 				>
-					<div className="mx-auto mb-1 h-px w-6 bg-white group-active:bg-black"></div>
-					<div className="mx-auto mb-1 h-px w-6 bg-white group-active:bg-black"></div>
-					<div className="mx-auto h-px w-6 bg-white group-active:bg-black"></div>
+					<div className="mx-auto mb-1 h-px w-6 bg-white"></div>
+					<div className="mx-auto mb-1 h-px w-6 bg-white"></div>
+					<div className="mx-auto h-px w-6 bg-white"></div>
 				</button>
 			</div>
 			<div className="left-0 top-0 flex select-none items-center">
@@ -36,7 +36,7 @@ export default function Navbar() {
 					<li className="h-full">
 						<Link
 							to="/"
-							className="flex h-full flex-col justify-center border-solid border-slate-400 px-3 text-center text-white no-underline active:bg-slate-500 max-md:border-b max-md:bg-slate-700"
+							className="flex h-full flex-col justify-center border-solid border-corn-harvest-900 px-3 text-center text-white no-underline transition-colors duration-100 ease-linear active:bg-corn-harvest-900  max-md:border-b max-md:bg-nespresso-gold active:md:bg-nespresso-gold hover:lg:bg-nespresso-gold"
 							onClick={menuToggle}
 						>
 							Home
@@ -45,7 +45,7 @@ export default function Navbar() {
 					<li className="h-full">
 						<Link
 							to="/recipes"
-							className="flex h-full flex-col justify-center border-solid border-slate-400 px-3 text-center text-white no-underline active:bg-slate-500 max-md:border-b max-md:bg-slate-700"
+							className="flex h-full flex-col justify-center border-solid border-corn-harvest-900 px-3 text-center text-white no-underline transition-colors duration-100 ease-linear active:bg-corn-harvest-900  max-md:border-b max-md:bg-nespresso-gold active:md:bg-nespresso-gold hover:lg:bg-nespresso-gold"
 							onClick={menuToggle}
 						>
 							View Recipes

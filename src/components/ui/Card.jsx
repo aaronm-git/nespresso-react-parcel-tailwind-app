@@ -1,17 +1,25 @@
 function CardImage({ imgSrc = 'https://via.placeholder.com/150', alt }) {
 	return (
-		<div className="h-[240px] w-auto">
-			<img src={imgSrc} alt={alt} className="h-full w-full object-cover" />
+		<div className="h-[240px] w-auto overflow-hidden">
+			<img
+				src={imgSrc}
+				alt={alt}
+				className="relative bottom-[55%] h-[500] w-full bg-center object-cover transition-all duration-500 ease-in-out group-hover:filter-none lg:grayscale"
+			/>
 		</div>
 	);
 }
 
 function CardBody({ children }) {
-	return <div className="p-4 md:p-5">{children}</div>;
+	return <div className="h-full p-4 md:p-5">{children}</div>;
 }
 
 function CardTitle({ children }) {
-	return <h3 className="mb-2 text-lg font-bold tracking-widest">{children}</h3>;
+	return (
+		<h3 className="mb-2 text-lg font-bold tracking-widest transition-all duration-500 ease-in-out group-hover:text-nespresso-gold max-lg:text-nespresso-gold lg:text-black">
+			{children}
+		</h3>
+	);
 }
 
 function Card(props) {
@@ -25,11 +33,12 @@ function Card(props) {
 		'hover:lg:shadow-2xl',
 		'border',
 		'border-gray-200',
-		'hover:border-gray-300',
+		'hover:lg:border-gray-200',
 		'hover:lg:scale-[1.01]',
 		'transition-all',
 		'duration-200',
 		'ease-in-out',
+		'group',
 		className,
 	]
 		.filter((c) => c !== false)
