@@ -1,5 +1,5 @@
 import RecipeItem from './RecipeItem';
-import useDB from '../hooks/db';
+import useDB from '../hooks/useDB';
 
 export default function RecipeList() {
 	const { data, loading, error } = useDB('/recipes');

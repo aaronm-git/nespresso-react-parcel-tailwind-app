@@ -9,7 +9,7 @@ export default function RecipeItem({ recipe, loading }) {
 	if (loading) {
 		return (
 			<Card loading>
-				<Card.Image />
+				<Card.Image className="h-[240px]" />
 				<Card.Body>
 					<Card.Title />
 				</Card.Body>
@@ -24,7 +24,12 @@ export default function RecipeItem({ recipe, loading }) {
 			href={`/recipes/${recipe.id}`}
 			className="hover:lg:scale-[1.01] hover:lg:border-gray-200 hover:lg:shadow-2xl"
 		>
-			<Card.Image imgSrc={imgSrc} alt="Tiramisu cappuccino" />
+			<Card.Image
+				imgSrc={imgSrc}
+				alt="Tiramisu cappuccino"
+				className="bottom-[55%] h-[500px] transition-all duration-500 ease-in-out group-hover:filter-none lg:grayscale"
+				wrapperClassName="h-[250px]"
+			/>
 			<Card.Body>
 				<Card.Title>{recipe.name}</Card.Title>
 				<div className="flex h-full flex-col justify-between">

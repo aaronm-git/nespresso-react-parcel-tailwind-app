@@ -1,11 +1,7 @@
-function CardImage({ imgSrc, alt }) {
+function CardImage({ imgSrc, alt, className, wrapperClassName }) {
 	return (
-		<div className="h-[240px] w-auto overflow-hidden">
-			<img
-				src={imgSrc}
-				alt={alt}
-				className="relative bottom-[55%] h-[500] w-full bg-center object-cover transition-all duration-500 ease-in-out group-hover:filter-none lg:grayscale"
-			/>
+		<div className={`w-auto overflow-hidden ${wrapperClassName}`}>
+			<img src={imgSrc} alt={alt} className={`relative w-full bg-center object-cover ${className}`} />
 		</div>
 	);
 }

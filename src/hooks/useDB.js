@@ -31,13 +31,11 @@ function useDB(url) {
 	return { data, loading, error };
 }
 
-export default useDB;
-
 async function handleRequest(url) {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
 			resolve();
-		}, 1000);
+		}, 10);
 	}).then(() => {
 		const [_, resource, id] = url.split('/');
 
@@ -65,3 +63,5 @@ async function handleRequest(url) {
 		return null;
 	});
 }
+
+export default useDB;
