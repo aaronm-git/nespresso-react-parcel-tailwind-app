@@ -2,11 +2,12 @@
 	{
 		"id": "d1f3ca7e-9c93-46c8-8a0d-4e4e6ec6fbcf",
 		"name": "TIRAMISU CAPPUCCINO",
+		"type": "Latte",
 		"prepTime": "10 Min",
 		"difficulty": "Easy",
 		"tags": ["FLAVOR", "AEROCCINO", "chocolate", "MILK", "mascarpone cheese", "Speculoos Spice Cookies"],
 		"description": "Enjoy your coffee with a taste of Tiramisu. Sweet, surprising, and fun.",
-		"coffee": ["756a693f-7832-4c5f-9321-320946dfc123", "84a751ac-8e17-4e4a-9e4c-1df5e56f7890"],
+		"coffees": ["756a693f-7832-4c5f-9321-320946dfc123", "84a751ac-8e17-4e4a-9e4c-1df5e56f7890"],
 		"ingredients": [
 			"1 NESPRESSO CAPSULE (VERTUO: IL CAFFÈ, ORIGINAL: VENEZIA)",
 			"2 TSPS. CHOCOLATE SAUCE OR SYRUP",
@@ -43,18 +44,14 @@
 			"CINNAMON SUGAR - 2 TBS.",
 			"MILK - 6 OZ."
 		],
-		"materials": [
-			"A 0176 VIEW Recipe 2000X2000 2",
-			"RECIPE GLASSES - SET OF 2",
-			"A 0319 2000x2000",
-			"AEROCCINO4 CHROME"
-		],
+		"materials": ["7c6f0e64-5035-47db-8b57-3a173bc77f97", "502037e9-4bc2-40e0-9424-97c63100dd52"],
 		"instructions": [
 			"Place amaretto syrup into cup.",
 			"Using your device, froth milk for cappuccinos.",
 			"Add milk to glass. Add cinnamon sugar and stir.",
 			"Brew capsule directly into glass."
 		],
+		"tags": ["FLAVOR", "AMARETTO SYRUP", "MILK", "CINNAMON"],
 		"products": [
 			{
 				"id": "4a6a5748-73f0-42c5-8e4d-d726ffdf8ca2",

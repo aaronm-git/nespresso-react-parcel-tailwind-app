@@ -1,18 +1,22 @@
 function CardImage({ imgSrc, alt, className, wrapperClassName }) {
 	return (
-		<div className={`w-auto overflow-hidden ${wrapperClassName}`}>
-			<img src={imgSrc} alt={alt} className={`relative w-full bg-center object-cover ${className}`} />
+		<div className={`w-auto overflow-hidden ${wrapperClassName || ''}`}>
+			<img src={imgSrc} alt={alt} className={`relative w-full bg-center object-cover ${className || ''}`} />
 		</div>
 	);
 }
 
-function CardBody({ children }) {
-	return <div className="h-full p-4 md:p-5">{children}</div>;
+function CardBody({ children, className }) {
+	return <div className={`p-4 md:p-5 ${className || ''}`}>{children}</div>;
 }
 
-function CardTitle({ children }) {
+function CardTitle({ children, className }) {
 	return (
-		<h3 className="mb-2 text-lg font-bold tracking-widest transition-all duration-500 ease-in-out group-hover:text-nespresso-gold max-lg:text-nespresso-gold lg:text-black">
+		<h3
+			className={`mb-2 text-lg font-bold tracking-widest transition-all duration-500 ease-in-out group-hover:text-nespresso-gold max-lg:text-nespresso-gold lg:text-black ${
+				className || ''
+			}}`}
+		>
 			{children}
 		</h3>
 	);

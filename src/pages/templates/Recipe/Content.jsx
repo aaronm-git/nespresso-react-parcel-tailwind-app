@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import useDB from '../../../hooks/useDB';
 import useImageHelper from '../../../hooks/useImageHelper';
@@ -7,12 +6,9 @@ import RecipeInstructions from '../../../components/RecipeInstructions';
 
 export default function Content() {
 	const { id } = useParams();
-	const { data, loading, error } = useDB(`/recipes/${id}`);
-	const { getImage } = useImageHelper();
+	const { data: recipe, loading, error } = useDB(`/recipes/${id}`);
 
-	useEffect(() => {
-		data && console.log(data);
-	}, [data]);
+	const { getImage } = useImageHelper();
 
 	if (loading) {
 		return <div>Loading...</div>;
@@ -24,19 +20,19 @@ export default function Content() {
 
 	return (
 		<div className="flex w-full flex-wrap py-5">
-			<div className="flex flex-col gap-3 md:w-1/2 md:pr-2">
-				<h1 className="text-center font-light md:hidden">{data.name}</h1>
-				{data.images.map((imageSrc, index) => {
+			<div className="flex flex-col gap-3 md:w-1/2 md:pr-4">
+				<h1 className="text-center font-light md:hidden">{recipe.name}</h1>
+				{recipe.images.map((imageSrc, index) => {
 					const isHidden = index > 0;
 					return (
-						<Card className={isHidden && 'hidden md:block'}>
-							<Card.Image imgSrc={getImage(imageSrc)} alt={data.name} />
+						<Card className={isHidden && 'hidden md:block'} key={index}>
+							<Card.Image imgSrc={getImage(imageSrc)} alt={recipe.name} />
 						</Card>
 					);
 				})}
 			</div>
-			<div className="md:w-1/2 md:pl-2">
-				<RecipeInstructions recipe={data} />
+			<div className="md:w-1/2 md:pl-4">
+				<RecipeInstructions recipe={recipe} />
 			</div>
 		</div>
 	);

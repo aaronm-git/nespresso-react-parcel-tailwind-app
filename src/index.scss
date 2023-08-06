@@ -22,6 +22,10 @@
 		src: url(/src/public/fonts/NespressoLucas-XtraBd.woff) format('woff');
 	}
 
+	body {
+		@apply tracking-wider;
+	}
+
 	#app {
 		@apply mb-36 mt-16 min-h-[calc(100vh-64px-56px-144px-64px)] antialiased lg:mb-20 lg:min-h-[calc(100vh-64px-56px-80px-64px)];
 	}

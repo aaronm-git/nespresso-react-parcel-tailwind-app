@@ -38,29 +38,36 @@ async function handleRequest(url) {
 		}, 10);
 	}).then(() => {
 		const [_, resource, id] = url.split('/');
-
+		let response = null;
 		if (resource === 'recipes') {
 			if (id === undefined) {
-				return { data: recipes };
+				response = { data: recipes };
+			} else {
+				response = { data: recipes.find((recipe) => recipe.id === id) };
+				response.data.materials = response?.data.materials.map((materialId) => {
+					return products.find((product) => product.id === materialId);
+				});
+				response.data.coffees = response?.data.coffees.map((coffeeId) => {
+					return coffees.find((coffee) => coffee.id === coffeeId);
+				});
 			}
-			return { data: recipes.find((recipe) => recipe.id === id) };
 		}
 
 		if (resource === 'coffees') {
 			if (id === undefined) {
-				return { data: coffees };
-			}
-			return { data: coffees.find((coffee) => coffee.id === id) };
+				response = { data: coffees };
+			} else response = { data: coffees.find((coffee) => coffee.id === id) };
 		}
 
 		if (resource === 'products') {
 			if (id === undefined) {
-				return { data: products };
+				response = { data: products };
+			} else {
+				response = { data: products.find((product) => product.id === id) };
 			}
-			return { data: products.find((product) => product.id === id) };
 		}
 
-		return null;
+		return response;
 	});
 }
 

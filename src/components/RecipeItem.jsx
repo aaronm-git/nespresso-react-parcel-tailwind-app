@@ -22,7 +22,7 @@ export default function RecipeItem({ recipe, loading }) {
 	return (
 		<Card
 			href={`/recipes/${recipe.id}`}
-			className="hover:lg:scale-[1.01] hover:lg:border-gray-200 hover:lg:shadow-2xl"
+			className="relative hover:lg:scale-[1.01] hover:lg:border-gray-200 hover:lg:shadow-2xl"
 		>
 			<Card.Image
 				imgSrc={imgSrc}
@@ -30,11 +30,11 @@ export default function RecipeItem({ recipe, loading }) {
 				className="bottom-[55%] h-[500px] transition-all duration-500 ease-in-out group-hover:filter-none lg:grayscale"
 				wrapperClassName="h-[250px]"
 			/>
-			<Card.Body>
+			<Card.Body className="pb-8 md:pb-8">
 				<Card.Title>{recipe.name}</Card.Title>
-				<div className="flex h-full flex-col justify-between">
+				<div className="flex flex-col justify-between">
 					<p>{recipe.description}</p>
-					<div className="mt-5 grid grid-cols-2 gap-1 md:grid-cols-3">
+					<div className="absolute bottom-3 left-auto mt-5 grid grid-cols-2 gap-1 md:grid-cols-3">
 						<div className="flex items-center">
 							<FeatherIcon icon="clock" className="mr-1 stroke-1 text-nespresso-gold" />
 							{recipe.prepTime}
