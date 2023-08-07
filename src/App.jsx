@@ -12,7 +12,7 @@ export function App() {
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/recipes">
+				<Route path="/">
 					<Route path="/recipes" element={<Recipes />} />
 					<Route path=":id" element={<Recipe />} />
 				</Route>

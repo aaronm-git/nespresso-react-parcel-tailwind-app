@@ -5,7 +5,7 @@ import Content from './Content';
 export default function Index() {
 	return (
 		<>
-			<PageNavigation link="/recipes" />
+			<PageNavigation link="/" />
 			<Container>
 				<Content />
 			</Container>
