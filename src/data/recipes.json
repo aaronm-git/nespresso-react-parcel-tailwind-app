@@ -38,6 +38,7 @@
 		"difficulty": "Easy",
 		"description": "With just the right blend of ingredients, Nespresso's Amaretto Spiced Latte is the perfect drink to help you stay cozy and warm.",
 		"images": ["recipes/09_Amaretto_Spiced_Latte_1.png", "recipes/09_Amaretto_Spiced_Latte_2.png"],
+		"coffees": [],
 		"ingredients": [
 			"1 NESPRESSO CAPSULE (VERTUO: FORTADO, ORIGINAL: STOCKHOLM FORTISSIO LUNGO)",
 			"AMARETTO SYRUP - 1 TBS.",

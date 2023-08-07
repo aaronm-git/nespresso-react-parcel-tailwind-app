@@ -2,18 +2,20 @@
 	{
 		"id": "756a693f-7832-4c5f-9321-320946dfc123",
 		"name": "Il Caffè",
-		"description": "IL CAFFÈ - Intense & Velvety",
+		"description": "Intense & Velvety",
 		"price": "$0.98",
 		"type": "Vertuo",
-		"size": "1.35 oz"
+		"size": "1.35 oz",
+		"images": ["coffees/il-caffe.png"]
 	},
 	{
 		"id": "84a751ac-8e17-4e4a-9e4c-1df5e56f7890",
 		"name": "Venezia",
-		"description": "VENEZIA - Balanced & Thick",
+		"description": "Balanced & Thick",
 		"url": "https://www.nespresso.com/us/en/order/accessories/vertuo/aeroccino-4-milk-frother",
 		"type": "Classic",
 		"size": "",
-		"price": "$0.80"
+		"price": "$0.80",
+		"images": ["coffees/venezia.png"]
 	}
 ]

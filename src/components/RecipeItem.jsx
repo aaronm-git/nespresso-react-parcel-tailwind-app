@@ -34,7 +34,7 @@ export default function RecipeItem({ recipe, loading }) {
 				<Card.Title>{recipe.name}</Card.Title>
 				<div className="flex flex-col justify-between">
 					<p>{recipe.description}</p>
-					<div className="absolute bottom-3 left-auto mt-5 grid grid-cols-2 gap-1 md:grid-cols-3">
+					<div className="absolute bottom-3 left-auto mt-5 grid grid-cols-2 gap-1 md:grid-cols-3 w-full">
 						<div className="flex items-center">
 							<FeatherIcon icon="clock" className="mr-1 stroke-1 text-nespresso-gold" />
 							{recipe.prepTime}
