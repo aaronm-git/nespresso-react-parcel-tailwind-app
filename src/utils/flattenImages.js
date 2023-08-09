@@ -1,4 +1,4 @@
-import * as Images from '../public/images/**/*';
+import * as allImages from '../public/images/**/*';
 
 /*
     Images = {
@@ -27,6 +27,6 @@ function flattenImages(images, prefix = '') {
 	}, {});
 }
 
-export const Images = {
-	...flattenImages(Images),
+export default {
+	...flattenImages(allImages),
 };

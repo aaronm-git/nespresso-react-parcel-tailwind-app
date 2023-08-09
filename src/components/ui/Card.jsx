@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function CardImage({ imgSrc, alt, className, wrapperClassName }) {
 	return (
 		<div className={`w-auto overflow-hidden ${wrapperClassName || ''}`}>
@@ -57,9 +59,9 @@ function Card(props) {
 
 	if (href) {
 		return (
-			<a href={href} className={classes}>
+			<Link to={href} className={classes}>
 				{children}
-			</a>
+			</Link>
 		);
 	} else {
 		return <div className={classes}>{children}</div>;

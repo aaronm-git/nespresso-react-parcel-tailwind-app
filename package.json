@@ -2,13 +2,15 @@
 	"name": "nespresso-recipes-react-parcel-tailwind-app",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
 	"source": "src/index.html",
+	"homepage": "https://aaronm-git/nespresso-sensei-react-parcel-tailwind-app",
 	"scripts": {
 		"start": "parcel",
 		"build": "parcel build",
 		"clear": "rm -rf .parcel-cache dist",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist"
 	},
 	"author": "https://aaronmolina.me",
 	"license": "ISC",
@@ -18,6 +20,7 @@
 		"@types/react": "^18.2.15",
 		"@types/react-dom": "^18.2.7",
 		"eslint": "^8.45.0",
+		"gh-pages": "^5.0.0",
 		"parcel": "^2.9.3",
 		"postcss": "^8.4.26",
 		"prettier": "^3.0.0",
@@ -29,6 +32,7 @@
 		"@parcel/config-default": "^2.9.3",
 		"@parcel/core": "^2.9.3",
 		"feather-icons": "^4.29.0",
+		"lodash": "^4.17.21",
 		"pocketbase": "^0.15.3",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",

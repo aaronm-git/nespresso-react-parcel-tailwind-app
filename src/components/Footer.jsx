@@ -1,4 +1,5 @@
 import Container from './ui/Container';
+
 export default function Footer() {
 	return (
 		<footer className="fixed bottom-0 left-0 w-full bg-black py-3 text-center text-white">

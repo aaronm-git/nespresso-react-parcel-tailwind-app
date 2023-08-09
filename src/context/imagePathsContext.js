@@ -1,4 +1,4 @@
 import { createContext } from 'react';
-import { Images } from '../utils/flattenImages';
-const imagesContext = createContext(Images);
+import allImages from '../utils/flattenImages';
+const imagesContext = createContext(allImages);
 export default imagesContext;

@@ -2,10 +2,38 @@ import { useContext } from 'react';
 import ImagesContext from '../context/imagePathsContext';
 import FeatherIcon from './ui/FeatherIcon';
 import Tag from './ui/Tag';
-export default function RecipeInstructions({ recipe }) {
-	console.log(recipe);
+import Skeleton from './ui/Skeleton';
+export default function RecipeInstructions({ recipe, loading }) {
 	const images = useContext(ImagesContext);
-	console.log(images);
+
+	if (loading) {
+		return (
+			<div>
+				<Skeleton>
+					<Skeleton.Text>
+						<div className="h-4 w-1/2"></div>
+						<div className="h-4 w-1/4"></div>
+					</Skeleton.Text>
+					<Skeleton.Image>
+						<div className="h-64 w-full"></div>
+					</Skeleton.Image>
+					<Skeleton.Text>
+						<div className="h-4 w-1/2"></div>
+						<div className="h-4 w-1/4"></div>
+					</Skeleton.Text>
+					<Skeleton.Text>
+						<div className="h-4 w-1/2"></div>
+						<div className="h-4 w-1/4"></div>
+					</Skeleton.Text>
+					<Skeleton.Text>
+						<div className="h-4 w-1/2"></div>
+						<div className="h-4 w-1/4"></div>
+					</Skeleton.Text>
+				</Skeleton>
+			</div>
+		);
+	}
+
 	return (
 		<div>
 			<h1 className="hidden text-4xl font-light md:block">{recipe.name}</h1>
@@ -33,47 +61,55 @@ export default function RecipeInstructions({ recipe }) {
 					))}
 				</div>
 			</Section>
-			<Section title="INGREDIENTS">
-				<ul>
-					{recipe.coffees?.map((coffee) => {
-						const imgSrc = coffee.images.length && images[coffee.images[0]];
-						return (
-							<SpecialListItem key={coffee.name} imgSrc={imgSrc}>
-								<span className="underline">{coffee.name}</span>
-								<span className="block font-light text-black">{coffee.description}</span>
-							</SpecialListItem>
-						);
-					})}
-				</ul>
-				<ul className="ml-5 mt-4 list-disc">
-					{recipe.ingredients?.map((ingredient) => (
-						<li key={ingredient} className="my-3">
-							<span>{ingredient}</span>
-						</li>
-					))}
-				</ul>
-			</Section>
-			<Section title="MATERIALS">
-				<ul>
-					{recipe.materials?.map((material) => {
-						const imgSrc = material.images.length && images[material.images[0]];
-						return (
-							<SpecialListItem key={material.name} imgSrc={imgSrc}>
-								<span className="flex h-full items-center">{material.name}</span>
-							</SpecialListItem>
-						);
-					})}
-				</ul>
-			</Section>
-			<Section title="INSTRUCTIONS">
-				<ol className="list-inside list-decimal">
-					{recipe.instructions?.map((instruction) => (
-						<li key={instruction} className="my-3">
-							<span>{instruction}</span>
-						</li>
-					))}
-				</ol>
-			</Section>
+			{recipe.ingredients?.length > 0 && (
+				<Section title="INGREDIENTS">
+					{recipe.coffees.length > 0 && (
+						<ul>
+							{recipe.coffees?.map((coffee) => {
+								const imgSrc = coffee.images.length && images[coffee.images[0]];
+								return (
+									<SpecialListItem key={coffee.name} imgSrc={imgSrc}>
+										<span className="underline">{coffee.name}</span>
+										<span className="block font-light text-black">{coffee.description}</span>
+									</SpecialListItem>
+								);
+							})}
+						</ul>
+					)}
+					<ul className="ml-5 mt-4 list-disc">
+						{recipe.ingredients?.map((ingredient) => (
+							<li key={ingredient} className="my-3">
+								<span>{ingredient}</span>
+							</li>
+						))}
+					</ul>
+				</Section>
+			)}
+			{recipe.materials?.length > 0 && (
+				<Section title="MATERIALS">
+					<ul>
+						{recipe.materials?.map((material) => {
+							const imgSrc = material?.images.length && images[material.images[0]];
+							return (
+								<SpecialListItem key={material.name} imgSrc={imgSrc}>
+									<span className="flex h-full items-center">{material.name}</span>
+								</SpecialListItem>
+							);
+						})}
+					</ul>
+				</Section>
+			)}
+			{recipe.instructions?.length > 0 && (
+				<Section title="INSTRUCTIONS">
+					<ol className="list-inside list-decimal">
+						{recipe.instructions?.map((instruction) => (
+							<li key={instruction} className="my-3">
+								<span>{instruction}</span>
+							</li>
+						))}
+					</ol>
+				</Section>
+			)}
 		</div>
 	);
 }

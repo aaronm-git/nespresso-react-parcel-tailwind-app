@@ -32,7 +32,7 @@ export default function Content() {
 				})}
 			</div>
 			<div className="md:w-1/2 md:pl-4">
-				<RecipeInstructions recipe={recipe} />
+				<RecipeInstructions recipe={recipe} loading={loading} />
 			</div>
 		</div>
 	);

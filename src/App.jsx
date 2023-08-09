@@ -12,10 +12,8 @@ export function App() {
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/">
-					<Route path="/recipes" element={<Recipes />} />
-					<Route path=":id" element={<Recipe />} />
-				</Route>
+				<Route path="/recipes" element={<Recipes />} />
+				<Route path="/recipes/:id" element={<Recipe />} />
 			</Routes>
 			<Footer />
 		</>
