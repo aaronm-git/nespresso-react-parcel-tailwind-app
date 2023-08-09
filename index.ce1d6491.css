@@ -457,6 +457,10 @@ a {
   margin-bottom: 2rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -477,24 +481,12 @@ a {
   margin-top: 2.5rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
-}
-
-.ml-5 {
-  margin-left: 1.25rem;
-}
-
-.mt-3 {
-  margin-top: .75rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .block {
@@ -525,8 +517,16 @@ a {
   height: 4rem;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
 .h-6 {
   height: 1.5rem;
+}
+
+.h-64 {
+  height: 16rem;
 }
 
 .h-8 {
@@ -561,12 +561,16 @@ a {
   height: 1px;
 }
 
-.h-1 {
-  height: .25rem;
-}
-
 .max-h-full {
   max-height: 100%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-1\/4 {
+  width: 25%;
 }
 
 .w-16 {
@@ -593,10 +597,6 @@ a {
   width: 100%;
 }
 
-.w-1 {
-  width: .25rem;
-}
-
 .flex-shrink-0 {
   flex-shrink: 0;
 }
@@ -605,16 +605,14 @@ a {
   flex-grow: 1;
 }
 
-.basis-full {
-  flex-basis: 100%;
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
 }
 
-.basis-1 {
-  flex-basis: .25rem;
-}
-
-.basis-2 {
-  flex-basis: .5rem;
+.animate-pulse {
+  animation: 2s cubic-bezier(.4, 0, .6, 1) infinite pulse;
 }
 
 .select-none {
@@ -690,12 +688,16 @@ a {
   border-radius: .25rem;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .rounded-lg {
   border-radius: .5rem;
 }
 
-.rounded-full {
-  border-radius: 9999px;
+.rounded-md {
+  border-radius: .375rem;
 }
 
 .border {
@@ -731,6 +733,16 @@ a {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.bg-nespresso-gold {
+  --tw-bg-opacity: 1;
+  background-color: rgb(141 103 8 / var(--tw-bg-opacity));
+}
+
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -739,11 +751,6 @@ a {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-nespresso-gold {
-  --tw-bg-opacity: 1;
-  background-color: rgb(141 103 8 / var(--tw-bg-opacity));
 }
 
 .bg-hero-recipes {
