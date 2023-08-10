@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './pages/Home';
 import Recipes from './pages/Recipes';
-import Recipe from './pages/templates/Recipe';
+import Recipe from './pages/templates/Recipe/Index';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { Routes, Route } from 'react-router-dom';
