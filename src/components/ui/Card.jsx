@@ -46,8 +46,6 @@ function Card(props) {
 			bg-white
 			rounded-lg
 			overflow-hidden
-			border
-			border-gray-200
 			transition-all
 			duration-200
 			ease-in-out

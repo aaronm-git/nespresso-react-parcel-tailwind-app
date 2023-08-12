@@ -19,9 +19,9 @@ export default function Content() {
 	}
 
 	return (
-		<div className="flex w-full flex-wrap py-5">
+		<div className="flex w-full flex-wrap">
 			<div className="flex flex-col gap-3 md:w-1/2 md:pr-4">
-				<h1 className="text-center font-light md:hidden">{recipe.name}</h1>
+				<h1 className="m-0 text-center font-light md:hidden">{recipe.name}</h1>
 				{recipe.images.map((imageSrc, index) => {
 					const isHidden = index > 0;
 					return (
