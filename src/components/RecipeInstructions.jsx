@@ -73,7 +73,7 @@ export default function RecipeInstructions({ recipe, loading }) {
 										<a href={`/coffees/${coffee.id}`}>
 											<span>{coffee.name}</span>
 										</a>
-										<span className="block font-light text-black">{coffee.description}</span>
+										<span className="block font-light">{coffee.description}</span>
 									</SpecialListItem>
 								);
 							})}

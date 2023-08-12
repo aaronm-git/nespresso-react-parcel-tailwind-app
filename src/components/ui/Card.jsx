@@ -15,9 +15,9 @@ function CardBody({ children, className }) {
 function CardTitle({ children, className }) {
 	return (
 		<h3
-			className={`mb-2 text-lg font-bold tracking-widest transition-all duration-500 ease-in-out group-hover:text-nespresso-gold max-lg:text-nespresso-gold lg:text-black ${
+			className={`mb-2 text-lg font-bold tracking-widest transition-all duration-500 ease-in-out group-hover:text-nespresso-gold max-lg:text-nespresso-gold lg:text-inherit ${
 				className || ''
-			}}`}
+			}`}
 		>
 			{children}
 		</h3>
@@ -42,7 +42,7 @@ function Card(props) {
 	const classes = [
 		loading
 			? loadingClasses
-			: `${href ? 'no-underline text-gray-800' : ''}
+			: `${href ? 'no-underline text-inherit' : ''}
 			bg-white
 			rounded-lg
 			overflow-hidden
