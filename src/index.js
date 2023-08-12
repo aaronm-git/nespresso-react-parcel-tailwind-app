@@ -5,7 +5,7 @@ import { createHashRouter, createBrowserRouter, RouterProvider, HashRouter, Brow
 const container = document.getElementById('app');
 const root = createRoot(container);
 root.render(
-	<BrowserRouter>
+	<HashRouter>
 		<App />
-	</BrowserRouter>,
+	</HashRouter>,
 );

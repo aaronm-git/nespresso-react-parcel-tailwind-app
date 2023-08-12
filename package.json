@@ -1,15 +1,16 @@
 {
-	"name": "nespresso-recipes-react-parcel-tailwind-app",
+	"name": "nespresso-react-parcel-tailwind-app",
 	"version": "1.0.0",
 	"description": "",
 	"source": "src/index.html",
-	"homepage": "https://aaronm-git/nespresso-sensei-react-parcel-tailwind-app",
+	"homepage": "https://aaronm-git/nespresso-react-parcel-tailwind-app",
 	"scripts": {
 		"start": "parcel",
 		"build": "parcel build",
+		"ghPreDeoployBuild": "parcel build --public-url /nespresso-react-parcel-tailwind-app/",
 		"clear": "rm -rf .parcel-cache dist",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"predeploy": "npm run build",
+		"predeploy": "npm run ghPreDeoployBuild",
 		"deploy": "gh-pages -d dist"
 	},
 	"author": "https://aaronmolina.me",
