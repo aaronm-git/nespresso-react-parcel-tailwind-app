@@ -27162,23 +27162,27 @@ parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _home = require("./pages/Home");
+var _home = require("pages/Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
-var _recipes = require("./pages/Recipes");
+var _recipes = require("pages/Recipes");
 var _recipesDefault = parcelHelpers.interopDefault(_recipes);
-var _index = require("./pages/templates/Recipe/Index");
-var _indexDefault = parcelHelpers.interopDefault(_index);
+var _recipe = require("pages/Recipe");
+var _recipeDefault = parcelHelpers.interopDefault(_recipe);
 var _navbar = require("./components/Navbar");
 var _navbarDefault = parcelHelpers.interopDefault(_navbar);
 var _footer = require("./components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
 var _reactRouterDom = require("react-router-dom");
+var _products = require("pages/Products");
+var _productsDefault = parcelHelpers.interopDefault(_products);
+var _product = require("pages/Product");
+var _productDefault = parcelHelpers.interopDefault(_product);
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 12,
+                lineNumber: 14,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
@@ -27188,34 +27192,50 @@ function App() {
                         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "src/App.jsx",
-                        lineNumber: 14,
+                        lineNumber: 16,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                         path: "/recipes",
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recipesDefault.default), {}, void 0, false, void 0, void 0)
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recipesDefault.default), {}, void 0, false, void 0, void 0),
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: ":id",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recipeDefault.default), {}, void 0, false, void 0, void 0)
+                        }, void 0, false, {
+                            fileName: "src/App.jsx",
+                            lineNumber: 18,
+                            columnNumber: 6
+                        }, this)
                     }, void 0, false, {
                         fileName: "src/App.jsx",
-                        lineNumber: 15,
+                        lineNumber: 17,
                         columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                        path: "/recipes/:id",
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _indexDefault.default), {}, void 0, false, void 0, void 0)
+                        path: "/products",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _productsDefault.default), {}, void 0, false, void 0, void 0),
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: ":id",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _productDefault.default), {}, void 0, false, void 0, void 0)
+                        }, void 0, false, {
+                            fileName: "src/App.jsx",
+                            lineNumber: 21,
+                            columnNumber: 6
+                        }, this)
                     }, void 0, false, {
                         fileName: "src/App.jsx",
-                        lineNumber: 16,
+                        lineNumber: 20,
                         columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.jsx",
-                lineNumber: 13,
+                lineNumber: 15,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 18,
+                lineNumber: 24,
                 columnNumber: 4
             }, this)
         ]
@@ -27230,22 +27250,22 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./pages/Home":"4Ti5o","./pages/Recipes":"8bqMJ","./pages/templates/Recipe/Index":"7gA9J","./components/Navbar":"4U1ks","./components/Footer":"2OVeV","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4Ti5o":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$d877 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","pages/Home":"gazg2","pages/Recipes":"8bqMJ","pages/Recipe":"8dwai","./components/Navbar":"4U1ks","./components/Footer":"2OVeV","react-router-dom":"9xmpe","pages/Products":"innUs","pages/Product":"1CtKT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gazg2":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7787 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d877.prelude(module);
+$parcel$ReactRefreshHelpers$7787.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>Index);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _container = require("../../components/ui/Container");
+var _container = require("ui/Container");
 var _containerDefault = parcelHelpers.interopDefault(_container);
 var _heroSection = require("./HeroSection");
 var _heroSectionDefault = parcelHelpers.interopDefault(_heroSection);
-var _recipeList = require("../../components/RecipeList");
+var _recipeList = require("components/RecipeList");
 var _recipeListDefault = parcelHelpers.interopDefault(_recipeList);
 function Index() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
@@ -27253,12 +27273,12 @@ function Index() {
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
                 id: "hero",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heroSectionDefault.default), {}, void 0, false, {
-                    fileName: "src/pages/Home/index.jsx",
+                    fileName: "src/pages/Home/index.js",
                     lineNumber: 9,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
-                fileName: "src/pages/Home/index.jsx",
+                fileName: "src/pages/Home/index.js",
                 lineNumber: 8,
                 columnNumber: 4
             }, this),
@@ -27270,29 +27290,29 @@ function Index() {
                             className: "text-center",
                             children: "FEATURED RECIPES"
                         }, void 0, false, {
-                            fileName: "src/pages/Home/index.jsx",
+                            fileName: "src/pages/Home/index.js",
                             lineNumber: 13,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recipeListDefault.default), {}, void 0, false, {
-                            fileName: "src/pages/Home/index.jsx",
+                            fileName: "src/pages/Home/index.js",
                             lineNumber: 14,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
-                    fileName: "src/pages/Home/index.jsx",
+                    fileName: "src/pages/Home/index.js",
                     lineNumber: 12,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
-                fileName: "src/pages/Home/index.jsx",
+                fileName: "src/pages/Home/index.js",
                 lineNumber: 11,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
-        fileName: "src/pages/Home/index.jsx",
+        fileName: "src/pages/Home/index.js",
         lineNumber: 7,
         columnNumber: 3
     }, this);
@@ -27301,12 +27321,12 @@ _c = Index;
 var _c;
 $RefreshReg$(_c, "Index");
 
-  $parcel$ReactRefreshHelpers$d877.postlude(module);
+  $parcel$ReactRefreshHelpers$7787.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../../components/ui/Container":"l6U2c","./HeroSection":"kxGbk","../../components/RecipeList":"9sCv4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"l6U2c":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","ui/Container":"l6U2c","./HeroSection":"kxGbk","components/RecipeList":"9sCv4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"l6U2c":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5499 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27515,7 +27535,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>HeroSection);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _hero = require("../../components/Hero");
+var _hero = require("components/Hero");
 var _heroDefault = parcelHelpers.interopDefault(_hero);
 function HeroSection() {
     const title = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -27549,7 +27569,7 @@ $RefreshReg$(_c, "HeroSection");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../../components/Hero":"jzJuz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jzJuz":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","components/Hero":"jzJuz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jzJuz":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$53ac = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27560,7 +27580,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>Hero);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _container = require("./ui/Container");
+var _container = require("ui/Container");
 var _containerDefault = parcelHelpers.interopDefault(_container);
 function Hero(props) {
     const classes = `flex flex-col justify-center py-16 text-center md:py-24 ${props.className}`;
@@ -27611,7 +27631,7 @@ $RefreshReg$(_c, "Hero");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./ui/Container":"l6U2c","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9sCv4":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","ui/Container":"l6U2c","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9sCv4":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5864 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27624,7 +27644,7 @@ parcelHelpers.export(exports, "default", ()=>RecipeList);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _recipeItem = require("./RecipeItem");
 var _recipeItemDefault = parcelHelpers.interopDefault(_recipeItem);
-var _useDB = require("../hooks/useDB");
+var _useDB = require("hooks/useDB");
 var _useDBDefault = parcelHelpers.interopDefault(_useDB);
 var _s = $RefreshSig$();
 function RecipeList() {
@@ -27695,7 +27715,7 @@ $RefreshReg$(_c1, "ListWrapper");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./RecipeItem":"68jek","../hooks/useDB":"dCnE3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"68jek":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./RecipeItem":"68jek","hooks/useDB":"dCnE3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"68jek":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$cc1b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27707,11 +27727,11 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>RecipeItem);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _imagePathsContext = require("../context/imagePathsContext");
+var _imagePathsContext = require("../contexts/imagePathsContext");
 var _imagePathsContextDefault = parcelHelpers.interopDefault(_imagePathsContext);
-var _card = require("./ui/Card");
+var _card = require("ui/Card");
 var _cardDefault = parcelHelpers.interopDefault(_card);
-var _featherIcon = require("./ui/FeatherIcon");
+var _featherIcon = require("ui/FeatherIcon");
 var _featherIconDefault = parcelHelpers.interopDefault(_featherIcon);
 var _s = $RefreshSig$();
 function RecipeItem({ recipe, loading }) {
@@ -27780,14 +27800,14 @@ function RecipeItem({ recipe, loading }) {
                                 columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "absolute bottom-3 left-auto mt-5 grid grid-cols-2 gap-1 md:grid-cols-3 w-full",
+                                className: "absolute bottom-3 left-auto mt-5 grid w-full grid-cols-2 gap-1 md:grid-cols-3",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "flex items-center",
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featherIconDefault.default), {
                                                 icon: "clock",
-                                                className: "mr-1 stroke-1 text-nespresso-gold"
+                                                className: "mr-2 stroke-1 transition-all duration-500 ease-in-out group-hover:text-nespresso-gold"
                                             }, void 0, false, {
                                                 fileName: "src/components/RecipeItem.jsx",
                                                 lineNumber: 39,
@@ -27805,17 +27825,17 @@ function RecipeItem({ recipe, loading }) {
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featherIconDefault.default), {
                                                 icon: "target",
-                                                className: "mr-1 stroke-1 text-nespresso-gold"
+                                                className: "mr-2 stroke-1 transition-all duration-500 ease-in-out group-hover:text-nespresso-gold"
                                             }, void 0, false, {
                                                 fileName: "src/components/RecipeItem.jsx",
-                                                lineNumber: 43,
+                                                lineNumber: 46,
                                                 columnNumber: 8
                                             }, this),
                                             recipe.difficulty
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/RecipeItem.jsx",
-                                        lineNumber: 42,
+                                        lineNumber: 45,
                                         columnNumber: 7
                                     }, this)
                                 ]
@@ -27853,11 +27873,11 @@ $RefreshReg$(_c, "RecipeItem");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../context/imagePathsContext":"feyep","./ui/Card":"cnuSi","./ui/FeatherIcon":"3GEXD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"feyep":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$38e1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../contexts/imagePathsContext":"k4h1n","ui/Card":"cnuSi","ui/FeatherIcon":"3GEXD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"k4h1n":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a627 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$38e1.prelude(module);
+$parcel$ReactRefreshHelpers$a627.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27868,7 +27888,7 @@ var _flattenImagesDefault = parcelHelpers.interopDefault(_flattenImages);
 const imagesContext = /*#__PURE__*/ (0, _react.createContext)((0, _flattenImagesDefault.default));
 exports.default = imagesContext;
 
-  $parcel$ReactRefreshHelpers$38e1.postlude(module);
+  $parcel$ReactRefreshHelpers$a627.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -27903,7 +27923,7 @@ exports.default = {
     ...flattenImages(_)
 };
 
-},{"../public/images/**/*":"iyGng","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iyGng":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../public/images/**/*":"iyGng"}],"iyGng":[function(require,module,exports) {
 const _temp0 = require("6be447a07550200f");
 const _temp1 = require("ed9ba9621063181");
 const _temp2 = require("c8616cef24782607");
@@ -28056,7 +28076,7 @@ function CardBody({ children, className }) {
 _c1 = CardBody;
 function CardTitle({ children, className }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-        className: `mb-2 text-lg font-bold tracking-widest transition-all duration-500 ease-in-out group-hover:text-nespresso-gold max-lg:text-nespresso-gold lg:text-black ${className || ""}}`,
+        className: `mb-2 text-lg font-bold tracking-widest transition-all duration-500 ease-in-out group-hover:text-nespresso-gold max-lg:text-nespresso-gold lg:text-inherit ${className || ""}`,
         children: children
     }, void 0, false, {
         fileName: "src/components/ui/Card.jsx",
@@ -28080,12 +28100,10 @@ function Card(props) {
 	after:visible
 	`;
     const classes = [
-        loading ? loadingClasses : `${href ? "no-underline text-gray-800" : ""}
+        loading ? loadingClasses : `${href ? "no-underline text-inherit" : ""}
 			bg-white
 			rounded-lg
 			overflow-hidden
-			border
-			border-gray-200
 			transition-all
 			duration-200
 			ease-in-out
@@ -28100,7 +28118,7 @@ function Card(props) {
         children: children
     }, void 0, false, {
         fileName: "src/components/ui/Card.jsx",
-        lineNumber: 62,
+        lineNumber: 60,
         columnNumber: 4
     }, this);
     else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28108,7 +28126,7 @@ function Card(props) {
         children: children
     }, void 0, false, {
         fileName: "src/components/ui/Card.jsx",
-        lineNumber: 67,
+        lineNumber: 65,
         columnNumber: 10
     }, this);
 }
@@ -36960,14 +36978,22 @@ parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
 var _lodash = require("lodash");
 // fake data
-var _recipesJson = require("../data/recipes.json");
+var _recipesJson = require("data/recipes.json");
 var _recipesJsonDefault = parcelHelpers.interopDefault(_recipesJson);
-var _coffeesJson = require("../data/coffees.json");
+var _coffeesJson = require("data/coffees.json");
 var _coffeesJsonDefault = parcelHelpers.interopDefault(_coffeesJson);
-var _productsJson = require("../data/products.json");
+var _productsJson = require("data/products.json");
 var _productsJsonDefault = parcelHelpers.interopDefault(_productsJson);
 var _s = $RefreshSig$();
-function useDB(url) {
+/**
+ * @param {string} url
+ * @returns {{data: any, loading: boolean, error: Error}}
+ * @example
+ * const {data, loading, error} = useDB('products/1');
+ * if (loading) return <div>Loading...</div>;
+ * if (error) return <div>Something went wrong</div>;
+ * return <div>{data.name}</div>;
+ */ function useDB(url) {
     _s();
     const [data, setData] = (0, _react.useState)(null);
     const [loading, setLoading] = (0, _react.useState)(true);
@@ -37051,7 +37077,7 @@ exports.default = useDB;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","lodash":"3qBDj","../data/recipes.json":"9kFyL","../data/coffees.json":"1gxSf","../data/products.json":"hVYVB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3qBDj":[function(require,module,exports) {
+},{"react":"21dqq","lodash":"3qBDj","data/recipes.json":"9kFyL","data/coffees.json":"1gxSf","data/products.json":"hVYVB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3qBDj":[function(require,module,exports) {
 var global = arguments[3];
 (function() {
     /** Used as a safe reference for `undefined` in pre-ES5 environments. */ var undefined;
@@ -51303,13 +51329,20 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>Recipes);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _container = require("ui/Container");
+var _containerDefault = parcelHelpers.interopDefault(_container);
 function Recipes() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: "Recipes"
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _containerDefault.default), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
+            fileName: "src/pages/Recipes.jsx",
+            lineNumber: 7,
+            columnNumber: 4
+        }, this)
     }, void 0, false, {
         fileName: "src/pages/Recipes.jsx",
-        lineNumber: 2,
-        columnNumber: 9
+        lineNumber: 6,
+        columnNumber: 3
     }, this);
 }
 _c = Recipes;
@@ -51321,112 +51354,11 @@ $RefreshReg$(_c, "Recipes");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7gA9J":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b2c2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","ui/Container":"l6U2c","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8dwai":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$21f1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b2c2.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>Index);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _pageNavigation = require("../../../components/PageNavigation");
-var _pageNavigationDefault = parcelHelpers.interopDefault(_pageNavigation);
-var _container = require("../../../components/ui/Container");
-var _containerDefault = parcelHelpers.interopDefault(_container);
-var _content = require("./Content");
-var _contentDefault = parcelHelpers.interopDefault(_content);
-function Index() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pageNavigationDefault.default), {
-                link: "/"
-            }, void 0, false, {
-                fileName: "src/pages/templates/Recipe/Index.jsx",
-                lineNumber: 8,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _containerDefault.default), {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contentDefault.default), {}, void 0, false, {
-                    fileName: "src/pages/templates/Recipe/Index.jsx",
-                    lineNumber: 10,
-                    columnNumber: 5
-                }, this)
-            }, void 0, false, {
-                fileName: "src/pages/templates/Recipe/Index.jsx",
-                lineNumber: 9,
-                columnNumber: 4
-            }, this)
-        ]
-    }, void 0, true);
-}
-_c = Index;
-var _c;
-$RefreshReg$(_c, "Index");
-
-  $parcel$ReactRefreshHelpers$b2c2.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../../../components/PageNavigation":"3OIHh","../../../components/ui/Container":"l6U2c","./Content":"8a85l","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3OIHh":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$cf0f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$cf0f.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>PageNavigation);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _featherIcon = require("./ui/FeatherIcon");
-var _featherIconDefault = parcelHelpers.interopDefault(_featherIcon);
-var _reactRouterDom = require("react-router-dom");
-function PageNavigation({ link = "/" }) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "p-4 text-nespresso-gold",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-            to: link,
-            className: "no-underline",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featherIconDefault.default), {
-                    icon: "arrow-left",
-                    className: "mr-1"
-                }, void 0, false, {
-                    fileName: "src/components/PageNavigation.jsx",
-                    lineNumber: 8,
-                    columnNumber: 5
-                }, this),
-                "Back"
-            ]
-        }, void 0, true, {
-            fileName: "src/components/PageNavigation.jsx",
-            lineNumber: 7,
-            columnNumber: 4
-        }, this)
-    }, void 0, false, {
-        fileName: "src/components/PageNavigation.jsx",
-        lineNumber: 6,
-        columnNumber: 3
-    }, this);
-}
-_c = PageNavigation;
-var _c;
-$RefreshReg$(_c, "PageNavigation");
-
-  $parcel$ReactRefreshHelpers$cf0f.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./ui/FeatherIcon":"3GEXD","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8a85l":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$550c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$550c.prelude(module);
+$parcel$ReactRefreshHelpers$21f1.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -51434,114 +51366,209 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>Content);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
-var _useDB = require("../../../hooks/useDB");
+var _useDB = require("hooks/useDB");
 var _useDBDefault = parcelHelpers.interopDefault(_useDB);
-var _useImageHelper = require("../../../hooks/useImageHelper");
-var _useImageHelperDefault = parcelHelpers.interopDefault(_useImageHelper);
-var _card = require("../../../components/ui/Card");
-var _cardDefault = parcelHelpers.interopDefault(_card);
-var _recipeInstructions = require("../../../components/RecipeInstructions");
-var _recipeInstructionsDefault = parcelHelpers.interopDefault(_recipeInstructions);
+var _leftContent = require("./LeftContent");
+var _leftContentDefault = parcelHelpers.interopDefault(_leftContent);
+var _rightContent = require("./RightContent");
+var _rightContentDefault = parcelHelpers.interopDefault(_rightContent);
+var _pageNavigation = require("components/PageNavigation");
+var _pageNavigationDefault = parcelHelpers.interopDefault(_pageNavigation);
 var _s = $RefreshSig$();
 function Content() {
     _s();
     const { id } = (0, _reactRouterDom.useParams)();
     const { data: recipe, loading, error } = (0, _useDBDefault.default)(`/recipes/${id}`);
-    const { getImage } = (0, _useImageHelperDefault.default)();
-    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: "Loading..."
-    }, void 0, false, {
-        fileName: "src/pages/templates/Recipe/Content.jsx",
-        lineNumber: 14,
-        columnNumber: 10
-    }, this);
     if (error) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             "Error: ",
             error.message
         ]
     }, void 0, true, {
-        fileName: "src/pages/templates/Recipe/Content.jsx",
-        lineNumber: 18,
+        fileName: "src/pages/Recipe/index.js",
+        lineNumber: 11,
         columnNumber: 10
     }, this);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex w-full flex-wrap py-5",
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-col gap-3 md:w-1/2 md:pr-4",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "text-center font-light md:hidden",
-                        children: recipe.name
-                    }, void 0, false, {
-                        fileName: "src/pages/templates/Recipe/Content.jsx",
-                        lineNumber: 24,
-                        columnNumber: 5
-                    }, this),
-                    recipe.images.map((imageSrc, index)=>{
-                        const isHidden = index > 0;
-                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                            className: isHidden && "hidden md:block",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Image, {
-                                imgSrc: getImage(imageSrc),
-                                alt: recipe.name
-                            }, void 0, false, {
-                                fileName: "src/pages/templates/Recipe/Content.jsx",
-                                lineNumber: 29,
-                                columnNumber: 8
-                            }, this)
-                        }, index, false, {
-                            fileName: "src/pages/templates/Recipe/Content.jsx",
-                            lineNumber: 28,
-                            columnNumber: 7
-                        }, this);
-                    })
-                ]
-            }, void 0, true, {
-                fileName: "src/pages/templates/Recipe/Content.jsx",
-                lineNumber: 23,
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pageNavigationDefault.default), {
+                link: "/recipes"
+            }, void 0, false, {
+                fileName: "src/pages/Recipe/index.js",
+                lineNumber: 16,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "md:w-1/2 md:pl-4",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recipeInstructionsDefault.default), {
-                    recipe: recipe,
-                    loading: loading
-                }, void 0, false, {
-                    fileName: "src/pages/templates/Recipe/Content.jsx",
-                    lineNumber: 35,
-                    columnNumber: 5
-                }, this)
-            }, void 0, false, {
-                fileName: "src/pages/templates/Recipe/Content.jsx",
-                lineNumber: 34,
+                className: "flex w-full flex-wrap",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex flex-col gap-3 md:w-1/2 md:pr-4",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _leftContentDefault.default), {
+                            recipe: recipe,
+                            loading: loading
+                        }, void 0, false, {
+                            fileName: "src/pages/Recipe/index.js",
+                            lineNumber: 19,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/pages/Recipe/index.js",
+                        lineNumber: 18,
+                        columnNumber: 5
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "md:w-1/2 md:pl-4",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rightContentDefault.default), {
+                            recipe: recipe,
+                            loading: loading
+                        }, void 0, false, {
+                            fileName: "src/pages/Recipe/index.js",
+                            lineNumber: 22,
+                            columnNumber: 6
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/pages/Recipe/index.js",
+                        lineNumber: 21,
+                        columnNumber: 5
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/Recipe/index.js",
+                lineNumber: 17,
                 columnNumber: 4
             }, this)
         ]
-    }, void 0, true, {
-        fileName: "src/pages/templates/Recipe/Content.jsx",
-        lineNumber: 22,
-        columnNumber: 3
-    }, this);
+    }, void 0, true);
 }
-_s(Content, "cZSOpTc5awJ0UYLTNfUVZFrxBOU=", false, function() {
+_s(Content, "g9QwjXkxGozWC0U/6JCajd7bhmM=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
-        (0, _useDBDefault.default),
-        (0, _useImageHelperDefault.default)
+        (0, _useDBDefault.default)
     ];
 });
 _c = Content;
 var _c;
 $RefreshReg$(_c, "Content");
 
-  $parcel$ReactRefreshHelpers$550c.postlude(module);
+  $parcel$ReactRefreshHelpers$21f1.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../../../hooks/useDB":"dCnE3","../../../hooks/useImageHelper":"lbSR1","../../../components/ui/Card":"cnuSi","../../../components/RecipeInstructions":"eNpVp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lbSR1":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","hooks/useDB":"dCnE3","./LeftContent":"fHzvv","./RightContent":"edajz","components/PageNavigation":"3OIHh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fHzvv":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5d7f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5d7f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>LeftContent);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _useImageHelper = require("hooks/useImageHelper");
+var _useImageHelperDefault = parcelHelpers.interopDefault(_useImageHelper);
+var _skeleton = require("ui/Skeleton");
+var _skeletonDefault = parcelHelpers.interopDefault(_skeleton);
+var _card = require("ui/Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+var _s = $RefreshSig$();
+function LeftContent({ recipe, loading }) {
+    _s();
+    const { getImage } = (0, _useImageHelperDefault.default)();
+    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("w", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default).Text, {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "h-8 w-1/2"
+                }, void 0, false, {
+                    fileName: "src/pages/Recipe/LeftContent.jsx",
+                    lineNumber: 12,
+                    columnNumber: 6
+                }, this)
+            }, void 0, false, {
+                fileName: "src/pages/Recipe/LeftContent.jsx",
+                lineNumber: 11,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default).Image, {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "h-64 w-full"
+                }, void 0, false, {
+                    fileName: "src/pages/Recipe/LeftContent.jsx",
+                    lineNumber: 15,
+                    columnNumber: 6
+                }, this)
+            }, void 0, false, {
+                fileName: "src/pages/Recipe/LeftContent.jsx",
+                lineNumber: 14,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default).Image, {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "h-64 w-full"
+                }, void 0, false, {
+                    fileName: "src/pages/Recipe/LeftContent.jsx",
+                    lineNumber: 18,
+                    columnNumber: 6
+                }, this)
+            }, void 0, false, {
+                fileName: "src/pages/Recipe/LeftContent.jsx",
+                lineNumber: 17,
+                columnNumber: 5
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/Recipe/LeftContent.jsx",
+        lineNumber: 10,
+        columnNumber: 4
+    }, this);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "m-0 text-center font-light md:hidden",
+                children: recipe.name
+            }, void 0, false, {
+                fileName: "src/pages/Recipe/LeftContent.jsx",
+                lineNumber: 26,
+                columnNumber: 4
+            }, this),
+            recipe.images.map((imageSrc, index)=>{
+                const isHidden = index > 0;
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
+                    className: isHidden && "hidden md:block",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Image, {
+                        imgSrc: getImage(imageSrc),
+                        alt: recipe.name
+                    }, void 0, false, {
+                        fileName: "src/pages/Recipe/LeftContent.jsx",
+                        lineNumber: 31,
+                        columnNumber: 7
+                    }, this)
+                }, index, false, {
+                    fileName: "src/pages/Recipe/LeftContent.jsx",
+                    lineNumber: 30,
+                    columnNumber: 6
+                }, this);
+            })
+        ]
+    }, void 0, true);
+}
+_s(LeftContent, "sB91UaTDl7VENyxqbHl7Q9HJ8gg=", false, function() {
+    return [
+        (0, _useImageHelperDefault.default)
+    ];
+});
+_c = LeftContent;
+var _c;
+$RefreshReg$(_c, "LeftContent");
+
+  $parcel$ReactRefreshHelpers$5d7f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","hooks/useImageHelper":"lbSR1","ui/Skeleton":"8IQDo","ui/Card":"cnuSi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lbSR1":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f96c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -51552,7 +51579,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useImageHelper);
 var _react = require("react");
-var _imagePathsContext = require("../context/imagePathsContext");
+var _imagePathsContext = require("contexts/imagePathsContext");
 var _imagePathsContextDefault = parcelHelpers.interopDefault(_imagePathsContext);
 var _s = $RefreshSig$();
 function useImageHelper() {
@@ -51573,511 +51600,7 @@ _s(useImageHelper, "n/F8+ywbs3uK2U04Tw601T9RsKc=");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","../context/imagePathsContext":"feyep","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eNpVp":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$a0a1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$a0a1.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>RecipeInstructions);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _imagePathsContext = require("../context/imagePathsContext");
-var _imagePathsContextDefault = parcelHelpers.interopDefault(_imagePathsContext);
-var _featherIcon = require("./ui/FeatherIcon");
-var _featherIconDefault = parcelHelpers.interopDefault(_featherIcon);
-var _tag = require("./ui/Tag");
-var _tagDefault = parcelHelpers.interopDefault(_tag);
-var _skeleton = require("./ui/Skeleton");
-var _skeletonDefault = parcelHelpers.interopDefault(_skeleton);
-var _s = $RefreshSig$();
-function RecipeInstructions({ recipe, loading }) {
-    _s();
-    const images = (0, _react.useContext)((0, _imagePathsContextDefault.default));
-    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default), {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default).Text, {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "h-4 w-1/2"
-                        }, void 0, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 14,
-                            columnNumber: 7
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "h-4 w-1/4"
-                        }, void 0, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 15,
-                            columnNumber: 7
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/RecipeInstructions.jsx",
-                    lineNumber: 13,
-                    columnNumber: 6
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default).Image, {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "h-64 w-full"
-                    }, void 0, false, {
-                        fileName: "src/components/RecipeInstructions.jsx",
-                        lineNumber: 18,
-                        columnNumber: 7
-                    }, this)
-                }, void 0, false, {
-                    fileName: "src/components/RecipeInstructions.jsx",
-                    lineNumber: 17,
-                    columnNumber: 6
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default).Text, {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "h-4 w-1/2"
-                        }, void 0, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 21,
-                            columnNumber: 7
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "h-4 w-1/4"
-                        }, void 0, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 22,
-                            columnNumber: 7
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/RecipeInstructions.jsx",
-                    lineNumber: 20,
-                    columnNumber: 6
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default).Text, {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "h-4 w-1/2"
-                        }, void 0, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 25,
-                            columnNumber: 7
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "h-4 w-1/4"
-                        }, void 0, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 26,
-                            columnNumber: 7
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/RecipeInstructions.jsx",
-                    lineNumber: 24,
-                    columnNumber: 6
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default).Text, {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "h-4 w-1/2"
-                        }, void 0, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 29,
-                            columnNumber: 7
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "h-4 w-1/4"
-                        }, void 0, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 30,
-                            columnNumber: 7
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/RecipeInstructions.jsx",
-                    lineNumber: 28,
-                    columnNumber: 6
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/RecipeInstructions.jsx",
-            lineNumber: 12,
-            columnNumber: 5
-        }, this)
-    }, void 0, false, {
-        fileName: "src/components/RecipeInstructions.jsx",
-        lineNumber: 11,
-        columnNumber: 4
-    }, this);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "hidden text-4xl font-light md:block",
-                children: recipe.name
-            }, void 0, false, {
-                fileName: "src/components/RecipeInstructions.jsx",
-                lineNumber: 39,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "my-4 grid grid-cols-2 gap-1 md:grid-cols-3",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex items-center",
-                        title: "Prep time",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featherIconDefault.default), {
-                                icon: "clock",
-                                className: "mr-1 stroke-1 text-nespresso-gold"
-                            }, void 0, false, {
-                                fileName: "src/components/RecipeInstructions.jsx",
-                                lineNumber: 43,
-                                columnNumber: 6
-                            }, this),
-                            recipe.prepTime
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/RecipeInstructions.jsx",
-                        lineNumber: 42,
-                        columnNumber: 5
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex items-center",
-                        title: "Difficulty",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featherIconDefault.default), {
-                                icon: "target",
-                                className: "mr-1 stroke-1 text-nespresso-gold"
-                            }, void 0, false, {
-                                fileName: "src/components/RecipeInstructions.jsx",
-                                lineNumber: 47,
-                                columnNumber: 6
-                            }, this),
-                            recipe.difficulty
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/RecipeInstructions.jsx",
-                        lineNumber: 46,
-                        columnNumber: 5
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RecipeInstructions.jsx",
-                lineNumber: 41,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
-                className: "my-3"
-            }, void 0, false, {
-                fileName: "src/components/RecipeInstructions.jsx",
-                lineNumber: 52,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
-                className: "mb-8",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    children: recipe.description
-                }, void 0, false, {
-                    fileName: "src/components/RecipeInstructions.jsx",
-                    lineNumber: 55,
-                    columnNumber: 5
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/RecipeInstructions.jsx",
-                lineNumber: 54,
-                columnNumber: 4
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
-                title: "RECIPE DETAILS",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "flex flex-wrap gap-2",
-                    children: recipe.tags?.map((tag)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tagDefault.default), {
-                            text: tag
-                        }, tag, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 60,
-                            columnNumber: 7
-                        }, this))
-                }, void 0, false, {
-                    fileName: "src/components/RecipeInstructions.jsx",
-                    lineNumber: 58,
-                    columnNumber: 5
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/RecipeInstructions.jsx",
-                lineNumber: 57,
-                columnNumber: 4
-            }, this),
-            recipe.ingredients?.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
-                title: "INGREDIENTS",
-                children: [
-                    recipe.coffees.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                        children: recipe.coffees?.map((coffee)=>{
-                            const imgSrc = coffee.images.length && images[coffee.images[0]];
-                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(SpecialListItem, {
-                                imgSrc: imgSrc,
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: "underline",
-                                        children: coffee.name
-                                    }, void 0, false, {
-                                        fileName: "src/components/RecipeInstructions.jsx",
-                                        lineNumber: 72,
-                                        columnNumber: 11
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: "block font-light text-black",
-                                        children: coffee.description
-                                    }, void 0, false, {
-                                        fileName: "src/components/RecipeInstructions.jsx",
-                                        lineNumber: 73,
-                                        columnNumber: 11
-                                    }, this)
-                                ]
-                            }, coffee.name, true, {
-                                fileName: "src/components/RecipeInstructions.jsx",
-                                lineNumber: 71,
-                                columnNumber: 10
-                            }, this);
-                        })
-                    }, void 0, false, {
-                        fileName: "src/components/RecipeInstructions.jsx",
-                        lineNumber: 67,
-                        columnNumber: 7
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                        className: "ml-5 mt-4 list-disc",
-                        children: recipe.ingredients?.map((ingredient)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                className: "my-3",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    children: ingredient
-                                }, void 0, false, {
-                                    fileName: "src/components/RecipeInstructions.jsx",
-                                    lineNumber: 82,
-                                    columnNumber: 9
-                                }, this)
-                            }, ingredient, false, {
-                                fileName: "src/components/RecipeInstructions.jsx",
-                                lineNumber: 81,
-                                columnNumber: 8
-                            }, this))
-                    }, void 0, false, {
-                        fileName: "src/components/RecipeInstructions.jsx",
-                        lineNumber: 79,
-                        columnNumber: 6
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RecipeInstructions.jsx",
-                lineNumber: 65,
-                columnNumber: 5
-            }, this),
-            recipe.materials?.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
-                title: "MATERIALS",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                    children: recipe.materials?.map((material)=>{
-                        const imgSrc = material?.images.length && images[material.images[0]];
-                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(SpecialListItem, {
-                            imgSrc: imgSrc,
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "flex h-full items-center",
-                                children: material.name
-                            }, void 0, false, {
-                                fileName: "src/components/RecipeInstructions.jsx",
-                                lineNumber: 95,
-                                columnNumber: 10
-                            }, this)
-                        }, material.name, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 94,
-                            columnNumber: 9
-                        }, this);
-                    })
-                }, void 0, false, {
-                    fileName: "src/components/RecipeInstructions.jsx",
-                    lineNumber: 90,
-                    columnNumber: 6
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/RecipeInstructions.jsx",
-                lineNumber: 89,
-                columnNumber: 5
-            }, this),
-            recipe.instructions?.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
-                title: "INSTRUCTIONS",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ol", {
-                    className: "list-inside list-decimal",
-                    children: recipe.instructions?.map((instruction)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: "my-3",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: instruction
-                            }, void 0, false, {
-                                fileName: "src/components/RecipeInstructions.jsx",
-                                lineNumber: 107,
-                                columnNumber: 9
-                            }, this)
-                        }, instruction, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 106,
-                            columnNumber: 8
-                        }, this))
-                }, void 0, false, {
-                    fileName: "src/components/RecipeInstructions.jsx",
-                    lineNumber: 104,
-                    columnNumber: 6
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/RecipeInstructions.jsx",
-                lineNumber: 103,
-                columnNumber: 5
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/RecipeInstructions.jsx",
-        lineNumber: 38,
-        columnNumber: 3
-    }, this);
-}
-_s(RecipeInstructions, "n/F8+ywbs3uK2U04Tw601T9RsKc=");
-_c = RecipeInstructions;
-function Section({ title, children }) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
-        className: "my-12",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                className: "mb-3 text-xl font-light tracking-[8px]",
-                children: title
-            }, void 0, false, {
-                fileName: "src/components/RecipeInstructions.jsx",
-                lineNumber: 120,
-                columnNumber: 4
-            }, this),
-            children
-        ]
-    }, void 0, true, {
-        fileName: "src/components/RecipeInstructions.jsx",
-        lineNumber: 119,
-        columnNumber: 3
-    }, this);
-}
-_c1 = Section;
-function SpecialListItem({ imgSrc, item, children }) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-        className: "mb-2 rounded bg-gray-100 p-1",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "flex flex-nowrap items-center p-2",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                    href: "#",
-                    className: "relative flex grow no-underline",
-                    children: [
-                        imgSrc && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "mr-3 h-[50px] w-[50px]",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                src: imgSrc,
-                                className: "h-full w-full object-cover"
-                            }, void 0, false, {
-                                fileName: "src/components/RecipeInstructions.jsx",
-                                lineNumber: 133,
-                                columnNumber: 8
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 132,
-                            columnNumber: 7
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            children: children
-                        }, void 0, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 136,
-                            columnNumber: 6
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/RecipeInstructions.jsx",
-                    lineNumber: 130,
-                    columnNumber: 5
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "rounded-full bg-nespresso-gold text-right",
-                        type: "button",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featherIconDefault.default), {
-                            icon: "plus",
-                            className: "stroke-1 text-white"
-                        }, void 0, false, {
-                            fileName: "src/components/RecipeInstructions.jsx",
-                            lineNumber: 140,
-                            columnNumber: 7
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/components/RecipeInstructions.jsx",
-                        lineNumber: 139,
-                        columnNumber: 6
-                    }, this)
-                }, void 0, false, {
-                    fileName: "src/components/RecipeInstructions.jsx",
-                    lineNumber: 138,
-                    columnNumber: 5
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/RecipeInstructions.jsx",
-            lineNumber: 129,
-            columnNumber: 4
-        }, this)
-    }, void 0, false, {
-        fileName: "src/components/RecipeInstructions.jsx",
-        lineNumber: 128,
-        columnNumber: 3
-    }, this);
-}
-_c2 = SpecialListItem;
-var _c, _c1, _c2;
-$RefreshReg$(_c, "RecipeInstructions");
-$RefreshReg$(_c1, "Section");
-$RefreshReg$(_c2, "SpecialListItem");
-
-  $parcel$ReactRefreshHelpers$a0a1.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../context/imagePathsContext":"feyep","./ui/FeatherIcon":"3GEXD","./ui/Tag":"jzVJW","./ui/Skeleton":"8IQDo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jzVJW":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$83e8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$83e8.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>Tag);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-function Tag({ text }) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "whitespace-nowrap border border-solid border-nespresso-gold px-2 py-1 text-sm uppercase text-nespresso-gold",
-        children: text
-    }, void 0, false, {
-        fileName: "src/components/ui/Tag.jsx",
-        lineNumber: 3,
-        columnNumber: 3
-    }, this);
-}
-_c = Tag;
-var _c;
-$RefreshReg$(_c, "Tag");
-
-  $parcel$ReactRefreshHelpers$83e8.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8IQDo":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","contexts/imagePathsContext":"k4h1n"}],"8IQDo":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6953 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -52129,7 +51652,606 @@ $RefreshReg$(_c, "Skeleton");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4U1ks":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"edajz":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0759 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0759.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>RightContent);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _imagePathsContext = require("contexts/imagePathsContext");
+var _imagePathsContextDefault = parcelHelpers.interopDefault(_imagePathsContext);
+var _featherIcon = require("ui/FeatherIcon");
+var _featherIconDefault = parcelHelpers.interopDefault(_featherIcon);
+var _tag = require("ui/Tag");
+var _tagDefault = parcelHelpers.interopDefault(_tag);
+var _skeleton = require("ui/Skeleton");
+var _skeletonDefault = parcelHelpers.interopDefault(_skeleton);
+var _specialListItem = require("ui/SpecialListItem");
+var _specialListItemDefault = parcelHelpers.interopDefault(_specialListItem);
+var _section = require("ui/Section");
+var _sectionDefault = parcelHelpers.interopDefault(_section);
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+function RightContent({ recipe, loading }) {
+    _s();
+    const images = (0, _react.useContext)((0, _imagePathsContextDefault.default));
+    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default), {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default).Text, {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "h-4 w-1/2"
+                        }, void 0, false, {
+                            fileName: "src/pages/Recipe/RightContent.jsx",
+                            lineNumber: 18,
+                            columnNumber: 7
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "h-4 w-1/4"
+                        }, void 0, false, {
+                            fileName: "src/pages/Recipe/RightContent.jsx",
+                            lineNumber: 19,
+                            columnNumber: 7
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/pages/Recipe/RightContent.jsx",
+                    lineNumber: 17,
+                    columnNumber: 6
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default).Image, {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "h-64 w-full"
+                    }, void 0, false, {
+                        fileName: "src/pages/Recipe/RightContent.jsx",
+                        lineNumber: 22,
+                        columnNumber: 7
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/pages/Recipe/RightContent.jsx",
+                    lineNumber: 21,
+                    columnNumber: 6
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default).Text, {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "h-4 w-1/2"
+                        }, void 0, false, {
+                            fileName: "src/pages/Recipe/RightContent.jsx",
+                            lineNumber: 25,
+                            columnNumber: 7
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "h-4 w-1/4"
+                        }, void 0, false, {
+                            fileName: "src/pages/Recipe/RightContent.jsx",
+                            lineNumber: 26,
+                            columnNumber: 7
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/pages/Recipe/RightContent.jsx",
+                    lineNumber: 24,
+                    columnNumber: 6
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default).Text, {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "h-4 w-1/2"
+                        }, void 0, false, {
+                            fileName: "src/pages/Recipe/RightContent.jsx",
+                            lineNumber: 29,
+                            columnNumber: 7
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "h-4 w-1/4"
+                        }, void 0, false, {
+                            fileName: "src/pages/Recipe/RightContent.jsx",
+                            lineNumber: 30,
+                            columnNumber: 7
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/pages/Recipe/RightContent.jsx",
+                    lineNumber: 28,
+                    columnNumber: 6
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _skeletonDefault.default).Text, {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "h-4 w-1/2"
+                        }, void 0, false, {
+                            fileName: "src/pages/Recipe/RightContent.jsx",
+                            lineNumber: 33,
+                            columnNumber: 7
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "h-4 w-1/4"
+                        }, void 0, false, {
+                            fileName: "src/pages/Recipe/RightContent.jsx",
+                            lineNumber: 34,
+                            columnNumber: 7
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/pages/Recipe/RightContent.jsx",
+                    lineNumber: 32,
+                    columnNumber: 6
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/pages/Recipe/RightContent.jsx",
+            lineNumber: 16,
+            columnNumber: 5
+        }, this)
+    }, void 0, false, {
+        fileName: "src/pages/Recipe/RightContent.jsx",
+        lineNumber: 15,
+        columnNumber: 4
+    }, this);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "grid grid-cols-1 gap-y-10",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sectionDefault.default), {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "hidden text-4xl font-light md:block",
+                        children: recipe.name
+                    }, void 0, false, {
+                        fileName: "src/pages/Recipe/RightContent.jsx",
+                        lineNumber: 44,
+                        columnNumber: 5
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "my-3 grid grid-cols-2 gap-1 max-sm:mt-4 md:grid-cols-3",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex items-center",
+                                title: "Prep time",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featherIconDefault.default), {
+                                        icon: "clock",
+                                        className: "mr-1 stroke-1 text-nespresso-gold"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Recipe/RightContent.jsx",
+                                        lineNumber: 47,
+                                        columnNumber: 7
+                                    }, this),
+                                    recipe.prepTime
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Recipe/RightContent.jsx",
+                                lineNumber: 46,
+                                columnNumber: 6
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex items-center",
+                                title: "Difficulty",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featherIconDefault.default), {
+                                        icon: "target",
+                                        className: "mr-1 stroke-1 text-nespresso-gold"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Recipe/RightContent.jsx",
+                                        lineNumber: 51,
+                                        columnNumber: 7
+                                    }, this),
+                                    recipe.difficulty
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Recipe/RightContent.jsx",
+                                lineNumber: 50,
+                                columnNumber: 6
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/Recipe/RightContent.jsx",
+                        lineNumber: 45,
+                        columnNumber: 5
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                        className: "my-3"
+                    }, void 0, false, {
+                        fileName: "src/pages/Recipe/RightContent.jsx",
+                        lineNumber: 55,
+                        columnNumber: 5
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "m-0",
+                        children: recipe.description
+                    }, void 0, false, {
+                        fileName: "src/pages/Recipe/RightContent.jsx",
+                        lineNumber: 56,
+                        columnNumber: 5
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/Recipe/RightContent.jsx",
+                lineNumber: 43,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sectionDefault.default), {
+                title: "RECIPE DETAILS",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex flex-wrap gap-2",
+                    children: recipe.tags?.map((tag)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tagDefault.default), {
+                            text: tag
+                        }, tag, false, {
+                            fileName: "src/pages/Recipe/RightContent.jsx",
+                            lineNumber: 62,
+                            columnNumber: 7
+                        }, this))
+                }, void 0, false, {
+                    fileName: "src/pages/Recipe/RightContent.jsx",
+                    lineNumber: 60,
+                    columnNumber: 5
+                }, this)
+            }, void 0, false, {
+                fileName: "src/pages/Recipe/RightContent.jsx",
+                lineNumber: 59,
+                columnNumber: 4
+            }, this),
+            recipe.ingredients?.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sectionDefault.default), {
+                title: "INGREDIENTS",
+                children: [
+                    recipe.coffees.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                        children: recipe.coffees?.map((coffee)=>{
+                            const imgSrc = coffee.images.length && images[coffee.images[0]];
+                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _specialListItemDefault.default), {
+                                imgSrc: imgSrc,
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                        to: `/coffees/${coffee.id}`,
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            children: coffee.name
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Recipe/RightContent.jsx",
+                                            lineNumber: 75,
+                                            columnNumber: 12
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Recipe/RightContent.jsx",
+                                        lineNumber: 74,
+                                        columnNumber: 11
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "block font-light",
+                                        children: coffee.description
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Recipe/RightContent.jsx",
+                                        lineNumber: 77,
+                                        columnNumber: 11
+                                    }, this)
+                                ]
+                            }, coffee.id, true, {
+                                fileName: "src/pages/Recipe/RightContent.jsx",
+                                lineNumber: 73,
+                                columnNumber: 10
+                            }, this);
+                        })
+                    }, void 0, false, {
+                        fileName: "src/pages/Recipe/RightContent.jsx",
+                        lineNumber: 69,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                        className: "ml-5 list-disc",
+                        children: recipe.ingredients?.map((ingredient)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: "my-3",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    children: ingredient
+                                }, void 0, false, {
+                                    fileName: "src/pages/Recipe/RightContent.jsx",
+                                    lineNumber: 86,
+                                    columnNumber: 9
+                                }, this)
+                            }, ingredient, false, {
+                                fileName: "src/pages/Recipe/RightContent.jsx",
+                                lineNumber: 85,
+                                columnNumber: 8
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "src/pages/Recipe/RightContent.jsx",
+                        lineNumber: 83,
+                        columnNumber: 6
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/Recipe/RightContent.jsx",
+                lineNumber: 67,
+                columnNumber: 5
+            }, this),
+            recipe.materials?.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sectionDefault.default), {
+                title: "MATERIALS",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    children: recipe.materials?.map((material)=>{
+                        const imgSrc = material?.images.length && images[material.images[0]];
+                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _specialListItemDefault.default), {
+                            imgSrc: imgSrc,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: `/products/${material.id}`,
+                                children: material.name
+                            }, void 0, false, {
+                                fileName: "src/pages/Recipe/RightContent.jsx",
+                                lineNumber: 99,
+                                columnNumber: 10
+                            }, this)
+                        }, material.id, false, {
+                            fileName: "src/pages/Recipe/RightContent.jsx",
+                            lineNumber: 98,
+                            columnNumber: 9
+                        }, this);
+                    })
+                }, void 0, false, {
+                    fileName: "src/pages/Recipe/RightContent.jsx",
+                    lineNumber: 94,
+                    columnNumber: 6
+                }, this)
+            }, void 0, false, {
+                fileName: "src/pages/Recipe/RightContent.jsx",
+                lineNumber: 93,
+                columnNumber: 5
+            }, this),
+            recipe.instructions?.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sectionDefault.default), {
+                title: "INSTRUCTIONS",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ol", {
+                    className: "list-inside list-decimal",
+                    children: recipe.instructions?.map((instruction)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "my-3",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: instruction
+                            }, void 0, false, {
+                                fileName: "src/pages/Recipe/RightContent.jsx",
+                                lineNumber: 111,
+                                columnNumber: 9
+                            }, this)
+                        }, instruction, false, {
+                            fileName: "src/pages/Recipe/RightContent.jsx",
+                            lineNumber: 110,
+                            columnNumber: 8
+                        }, this))
+                }, void 0, false, {
+                    fileName: "src/pages/Recipe/RightContent.jsx",
+                    lineNumber: 108,
+                    columnNumber: 6
+                }, this)
+            }, void 0, false, {
+                fileName: "src/pages/Recipe/RightContent.jsx",
+                lineNumber: 107,
+                columnNumber: 5
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/Recipe/RightContent.jsx",
+        lineNumber: 42,
+        columnNumber: 3
+    }, this);
+}
+_s(RightContent, "n/F8+ywbs3uK2U04Tw601T9RsKc=");
+_c = RightContent;
+var _c;
+$RefreshReg$(_c, "RightContent");
+
+  $parcel$ReactRefreshHelpers$0759.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","contexts/imagePathsContext":"k4h1n","ui/FeatherIcon":"3GEXD","ui/Tag":"jzVJW","ui/Skeleton":"8IQDo","ui/SpecialListItem":"eSrGc","ui/Section":"fINJH","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jzVJW":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$83e8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$83e8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Tag);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function Tag({ text }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "whitespace-nowrap border border-solid border-nespresso-gold px-2 py-1 text-sm uppercase text-nespresso-gold",
+        children: text
+    }, void 0, false, {
+        fileName: "src/components/ui/Tag.jsx",
+        lineNumber: 3,
+        columnNumber: 3
+    }, this);
+}
+_c = Tag;
+var _c;
+$RefreshReg$(_c, "Tag");
+
+  $parcel$ReactRefreshHelpers$83e8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eSrGc":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$00c4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$00c4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>SpecialListItem);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _featherIcon = require("./FeatherIcon");
+var _featherIconDefault = parcelHelpers.interopDefault(_featherIcon);
+function SpecialListItem({ imgSrc, children }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+        className: "mb-2 rounded bg-gray-100 p-1",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex flex-nowrap items-center gap-3 p-3",
+            children: [
+                imgSrc && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "h-[50px] w-[50px] overflow-hidden rounded-full",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: imgSrc,
+                        className: "h-full w-full object-cover"
+                    }, void 0, false, {
+                        fileName: "src/components/ui/SpecialListItem.jsx",
+                        lineNumber: 10,
+                        columnNumber: 7
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/ui/SpecialListItem.jsx",
+                    lineNumber: 9,
+                    columnNumber: 6
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "grow",
+                    children: children
+                }, void 0, false, {
+                    fileName: "src/components/ui/SpecialListItem.jsx",
+                    lineNumber: 13,
+                    columnNumber: 5
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "rounded-full bg-nespresso-gold text-right",
+                        type: "button",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featherIconDefault.default), {
+                            icon: "plus",
+                            className: "stroke-1 text-white"
+                        }, void 0, false, {
+                            fileName: "src/components/ui/SpecialListItem.jsx",
+                            lineNumber: 16,
+                            columnNumber: 7
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/ui/SpecialListItem.jsx",
+                        lineNumber: 15,
+                        columnNumber: 6
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/ui/SpecialListItem.jsx",
+                    lineNumber: 14,
+                    columnNumber: 5
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/ui/SpecialListItem.jsx",
+            lineNumber: 7,
+            columnNumber: 4
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/ui/SpecialListItem.jsx",
+        lineNumber: 6,
+        columnNumber: 3
+    }, this);
+}
+_c = SpecialListItem;
+var _c;
+$RefreshReg$(_c, "SpecialListItem");
+
+  $parcel$ReactRefreshHelpers$00c4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./FeatherIcon":"3GEXD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fINJH":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$cf3b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$cf3b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Section);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function Section({ title, children }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+        children: [
+            title && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "mb-3 text-2xl font-light",
+                children: title
+            }, void 0, false, {
+                fileName: "src/components/ui/Section.jsx",
+                lineNumber: 4,
+                columnNumber: 14
+            }, this),
+            children
+        ]
+    }, void 0, true, {
+        fileName: "src/components/ui/Section.jsx",
+        lineNumber: 3,
+        columnNumber: 3
+    }, this);
+}
+_c = Section;
+var _c;
+$RefreshReg$(_c, "Section");
+
+  $parcel$ReactRefreshHelpers$cf3b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3OIHh":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$cf0f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$cf0f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>PageNavigation);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _featherIcon = require("ui/FeatherIcon");
+var _featherIconDefault = parcelHelpers.interopDefault(_featherIcon);
+var _reactRouterDom = require("react-router-dom");
+function PageNavigation({ link = "/" }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "p-4 text-nespresso-gold",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+            to: link,
+            className: "no-underline",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _featherIconDefault.default), {
+                    icon: "arrow-left",
+                    className: "mr-1"
+                }, void 0, false, {
+                    fileName: "src/components/PageNavigation.jsx",
+                    lineNumber: 8,
+                    columnNumber: 5
+                }, this),
+                "Back"
+            ]
+        }, void 0, true, {
+            fileName: "src/components/PageNavigation.jsx",
+            lineNumber: 7,
+            columnNumber: 4
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/PageNavigation.jsx",
+        lineNumber: 6,
+        columnNumber: 3
+    }, this);
+}
+_c = PageNavigation;
+var _c;
+$RefreshReg$(_c, "PageNavigation");
+
+  $parcel$ReactRefreshHelpers$cf0f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","ui/FeatherIcon":"3GEXD","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4U1ks":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$aed9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -52143,7 +52265,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
-var _logo = require("./ui/Logo");
+var _logo = require("ui/Logo");
 var _logoDefault = parcelHelpers.interopDefault(_logo);
 var _s = $RefreshSig$();
 function Navbar() {
@@ -52285,7 +52407,7 @@ $RefreshReg$(_c, "Navbar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./ui/Logo":"1ilCb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1ilCb":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","ui/Logo":"1ilCb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1ilCb":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$40e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -52296,7 +52418,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>Logo);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _logoWhiteSvg = require("../../public/images/logo-white.svg");
+var _logoWhiteSvg = require("public/images/logo-white.svg");
 var _logoWhiteSvgDefault = parcelHelpers.interopDefault(_logoWhiteSvg);
 function Logo(props) {
     const { small, medium, large } = props;
@@ -52307,7 +52429,7 @@ function Logo(props) {
         className: `${size} ${"inline-block w-auto"}`
     }, void 0, false, {
         fileName: "src/components/ui/Logo.jsx",
-        lineNumber: 5,
+        lineNumber: 6,
         columnNumber: 9
     }, this);
 }
@@ -52320,7 +52442,7 @@ $RefreshReg$(_c, "Logo");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../../public/images/logo-white.svg":"hxXcY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2OVeV":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","public/images/logo-white.svg":"hxXcY"}],"2OVeV":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$66c2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -52331,7 +52453,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>Footer);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _container = require("./ui/Container");
+var _container = require("ui/Container");
 var _containerDefault = parcelHelpers.interopDefault(_container);
 function Footer() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
@@ -52374,6 +52496,101 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./ui/Container":"l6U2c","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["igKGj","1xC6H","8lqZg"], "8lqZg", "parcelRequire8956")
+},{"react/jsx-dev-runtime":"iTorj","ui/Container":"l6U2c","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"innUs":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$029c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$029c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Products);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _container = require("ui/Container");
+var _containerDefault = parcelHelpers.interopDefault(_container);
+function Products() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _containerDefault.default), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
+            fileName: "src/pages/Products.jsx",
+            lineNumber: 6,
+            columnNumber: 4
+        }, this)
+    }, void 0, false, {
+        fileName: "src/pages/Products.jsx",
+        lineNumber: 5,
+        columnNumber: 3
+    }, this);
+}
+_c = Products;
+var _c;
+$RefreshReg$(_c, "Products");
+
+  $parcel$ReactRefreshHelpers$029c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","ui/Container":"l6U2c","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1CtKT":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0889 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0889.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Product);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _useDB = require("hooks/useDB");
+var _useDBDefault = parcelHelpers.interopDefault(_useDB);
+var _s = $RefreshSig$();
+function Product() {
+    _s();
+    const { id } = (0, _reactRouterDom.useParams)();
+    const { data, loading, error } = (0, _useDBDefault.default)(`products/${id}`);
+    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "Loading..."
+    }, void 0, false, {
+        fileName: "src/pages/Product/index.js",
+        lineNumber: 7,
+        columnNumber: 22
+    }, this);
+    if (error) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "Error"
+    }, void 0, false, {
+        fileName: "src/pages/Product/index.js",
+        lineNumber: 8,
+        columnNumber: 20
+    }, this);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            "Product: ",
+            id
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/Product/index.js",
+        lineNumber: 10,
+        columnNumber: 9
+    }, this);
+}
+_s(Product, "F+VfYr7mRmKLNLxOmEZ/DrGSNE8=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams),
+        (0, _useDBDefault.default)
+    ];
+});
+_c = Product;
+var _c;
+$RefreshReg$(_c, "Product");
+
+  $parcel$ReactRefreshHelpers$0889.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","hooks/useDB":"dCnE3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["igKGj","1xC6H","8lqZg"], "8lqZg", "parcelRequire8956")
 
 //# sourceMappingURL=index.975ef6c8.js.map
