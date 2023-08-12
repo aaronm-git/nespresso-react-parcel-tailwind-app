@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import ImagesContext from '../context/imagePathsContext';
-import Card from './ui/Card';
-import FeatherIcon from './ui/FeatherIcon';
+import ImagesContext from '../contexts/imagePathsContext';
+import Card from 'ui/Card';
+import FeatherIcon from 'ui/FeatherIcon';
 
 export default function RecipeItem({ recipe, loading }) {
 	const images = useContext(ImagesContext);

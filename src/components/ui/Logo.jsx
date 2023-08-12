@@ -1,4 +1,5 @@
-import LogoImage from '../../public/images/logo-white.svg';
+import LogoImage from 'public/images/logo-white.svg';
+
 export default function Logo(props) {
 	const { small, medium, large } = props;
 	const size = small ? 'h-6' : medium ? 'h-8' : large ? 'h-10' : 'h-8';

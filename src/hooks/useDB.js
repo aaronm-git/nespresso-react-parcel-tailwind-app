@@ -1,9 +1,19 @@
 import { useEffect, useState } from 'react';
 import { cloneDeep } from 'lodash';
 // fake data
-import recipes from '../data/recipes.json';
-import coffees from '../data/coffees.json';
-import products from '../data/products.json';
+import recipes from 'data/recipes.json';
+import coffees from 'data/coffees.json';
+import products from 'data/products.json';
+
+/**
+ * @param {string} url
+ * @returns {{data: any, loading: boolean, error: Error}}
+ * @example
+ * const {data, loading, error} = useDB('products/1');
+ * if (loading) return <div>Loading...</div>;
+ * if (error) return <div>Something went wrong</div>;
+ * return <div>{data.name}</div>;
+ */
 
 function useDB(url) {
 	const [data, setData] = useState(null);

@@ -1,11 +1,13 @@
 import { useContext } from 'react';
-import ImagesContext from '../context/imagePathsContext';
-import FeatherIcon from './ui/FeatherIcon';
-import Tag from './ui/Tag';
-import Skeleton from './ui/Skeleton';
-import SpecialListItem from './ui/SpecialListItem';
-import Section from './ui/Section';
-export default function RecipeInstructions({ recipe, loading }) {
+import ImagesContext from 'contexts/imagePathsContext';
+import FeatherIcon from 'ui/FeatherIcon';
+import Tag from 'ui/Tag';
+import Skeleton from 'ui/Skeleton';
+import SpecialListItem from 'ui/SpecialListItem';
+import Section from 'ui/Section';
+import { Link } from 'react-router-dom';
+
+export default function RightContent({ recipe, loading }) {
 	const images = useContext(ImagesContext);
 
 	if (loading) {
@@ -40,8 +42,7 @@ export default function RecipeInstructions({ recipe, loading }) {
 		<div className="grid grid-cols-1 gap-y-10">
 			<Section>
 				<h1 className="hidden text-4xl font-light md:block">{recipe.name}</h1>
-
-				<div className="my-3 grid grid-cols-2 gap-1 md:grid-cols-3">
+				<div className="my-3 grid grid-cols-2 gap-1 max-sm:mt-4 md:grid-cols-3">
 					<div className="flex items-center" title="Prep time">
 						<FeatherIcon icon="clock" className="mr-1 stroke-1 text-nespresso-gold" />
 						{recipe.prepTime}
@@ -70,9 +71,9 @@ export default function RecipeInstructions({ recipe, loading }) {
 								const imgSrc = coffee.images.length && images[coffee.images[0]];
 								return (
 									<SpecialListItem key={coffee.id} imgSrc={imgSrc}>
-										<a href={`/coffees/${coffee.id}`}>
+										<Link to={`/coffees/${coffee.id}`}>
 											<span>{coffee.name}</span>
-										</a>
+										</Link>
 										<span className="block font-light">{coffee.description}</span>
 									</SpecialListItem>
 								);
@@ -95,7 +96,7 @@ export default function RecipeInstructions({ recipe, loading }) {
 							const imgSrc = material?.images.length && images[material.images[0]];
 							return (
 								<SpecialListItem key={material.id} imgSrc={imgSrc}>
-									<a href={`/products/${material.id}`}>{material.name}</a>
+									<Link to={`/products/${material.id}`}>{material.name}</Link>
 								</SpecialListItem>
 							);
 						})}

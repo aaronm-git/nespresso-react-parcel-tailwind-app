@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import ImagesContext from '../context/imagePathsContext';
+import ImagesContext from 'contexts/imagePathsContext';
 
 export default function useImageHelper() {
 	const images = useContext(ImagesContext);

@@ -3,6 +3,15 @@
 	"version": "1.0.0",
 	"description": "",
 	"source": "src/index.html",
+	"alias": {
+		"components/*": "./src/components/$1",
+		"ui/*": "./src/components/ui/$1",
+		"hooks/*": "./src/hooks/$1",
+		"pages/*": "./src/pages/$1",
+		"data/*": "./src/data/$1",
+		"contexts/*": "./src/contexts/$1",
+		"public/*": "./src/public/$1"
+	},
 	"homepage": "https://aaronm-git/nespresso-react-parcel-tailwind-app",
 	"scripts": {
 		"start": "parcel",

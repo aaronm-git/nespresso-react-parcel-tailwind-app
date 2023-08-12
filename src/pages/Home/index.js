@@ -1,6 +1,6 @@
-import Container from '../../components/ui/Container';
+import Container from 'ui/Container';
 import HeroSection from './HeroSection';
-import RecipeList from '../../components/RecipeList';
+import RecipeList from 'components/RecipeList';
 
 export default function Index() {
 	return (
