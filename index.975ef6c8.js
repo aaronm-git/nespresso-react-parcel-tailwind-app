@@ -27166,8 +27166,8 @@ var _home = require("./pages/Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
 var _recipes = require("./pages/Recipes");
 var _recipesDefault = parcelHelpers.interopDefault(_recipes);
-var _recipe = require("./pages/templates/Recipe");
-var _recipeDefault = parcelHelpers.interopDefault(_recipe);
+var _index = require("./pages/templates/Recipe/Index");
+var _indexDefault = parcelHelpers.interopDefault(_index);
 var _navbar = require("./components/Navbar");
 var _navbarDefault = parcelHelpers.interopDefault(_navbar);
 var _footer = require("./components/Footer");
@@ -27201,7 +27201,7 @@ function App() {
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                         path: "/recipes/:id",
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recipeDefault.default), {}, void 0, false, void 0, void 0)
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _indexDefault.default), {}, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "src/App.jsx",
                         lineNumber: 16,
@@ -27230,7 +27230,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./pages/Home":"4Ti5o","./pages/Recipes":"8bqMJ","./pages/templates/Recipe":"kF333","./components/Navbar":"4U1ks","./components/Footer":"2OVeV","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4Ti5o":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./pages/Home":"4Ti5o","./pages/Recipes":"8bqMJ","./pages/templates/Recipe/Index":"7gA9J","./components/Navbar":"4U1ks","./components/Footer":"2OVeV","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4Ti5o":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$d877 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -37027,9 +37027,7 @@ async function handleRequest(url) {
         }
         if (resource === "coffees") {
             if (id === undefined) response = {
-                data: [
-                    ...(0, _coffeesJsonDefault.default)
-                ]
+                data: (0, _lodash.cloneDeep)((0, _coffeesJsonDefault.default))
             };
             else response = {
                 data: (0, _coffeesJsonDefault.default).find((coffee)=>coffee.id === id)
@@ -37037,9 +37035,7 @@ async function handleRequest(url) {
         }
         if (resource === "products") {
             if (id === undefined) response = {
-                data: [
-                    ...(0, _productsJsonDefault.default)
-                ]
+                data: (0, _lodash.cloneDeep)((0, _productsJsonDefault.default))
             };
             else response = {
                 data: (0, _productsJsonDefault.default).find((product)=>product.id === id)
@@ -51325,11 +51321,11 @@ $RefreshReg$(_c, "Recipes");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kF333":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ceb5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7gA9J":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b2c2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ceb5.prelude(module);
+$parcel$ReactRefreshHelpers$b2c2.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -51348,18 +51344,18 @@ function Index() {
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pageNavigationDefault.default), {
                 link: "/"
             }, void 0, false, {
-                fileName: "src/pages/templates/Recipe/index.jsx",
+                fileName: "src/pages/templates/Recipe/Index.jsx",
                 lineNumber: 8,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _containerDefault.default), {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contentDefault.default), {}, void 0, false, {
-                    fileName: "src/pages/templates/Recipe/index.jsx",
+                    fileName: "src/pages/templates/Recipe/Index.jsx",
                     lineNumber: 10,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
-                fileName: "src/pages/templates/Recipe/index.jsx",
+                fileName: "src/pages/templates/Recipe/Index.jsx",
                 lineNumber: 9,
                 columnNumber: 4
             }, this)
@@ -51370,7 +51366,7 @@ _c = Index;
 var _c;
 $RefreshReg$(_c, "Index");
 
-  $parcel$ReactRefreshHelpers$ceb5.postlude(module);
+  $parcel$ReactRefreshHelpers$b2c2.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -52378,6 +52374,6 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./ui/Container":"l6U2c","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["igKGj","1xC6H","8lqZg"], "8lqZg", "parcelRequiref760")
+},{"react/jsx-dev-runtime":"iTorj","./ui/Container":"l6U2c","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["igKGj","1xC6H","8lqZg"], "8lqZg", "parcelRequire8956")
 
 //# sourceMappingURL=index.975ef6c8.js.map
