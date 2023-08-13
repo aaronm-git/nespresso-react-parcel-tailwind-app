@@ -7,7 +7,7 @@ export default function LeftContent({ recipe, loading }) {
 
 	if (loading) {
 		return (
-			<w>
+			<>
 				<Skeleton.Text>
 					<div className="h-8 w-1/2"></div>
 				</Skeleton.Text>
@@ -17,7 +17,7 @@ export default function LeftContent({ recipe, loading }) {
 				<Skeleton.Image>
 					<div className="h-64 w-full"></div>
 				</Skeleton.Image>
-			</w>
+			</>
 		);
 	}
 
