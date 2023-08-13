@@ -77,7 +77,7 @@ async function handleRequest(url) {
 			} else response = { data: coffees.find((coffee) => coffee.id === id) };
 		}
 
-		if (resource === 'products') {
+		if (resource === 'materials') {
 			if (id === undefined) {
 				response = { data: cloneDeep(products) };
 			} else {

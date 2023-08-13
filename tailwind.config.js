@@ -6,6 +6,7 @@ module.exports = {
 			colors: {
 				primary: 'black',
 				'nespresso-gold': '#8D6708',
+				'nespresso-green': '#3d8705',
 				'corn-harvest': {
 					50: '#fdffe7',
 					100: '#f6ffc0',
@@ -18,6 +19,19 @@ module.exports = {
 					800: '#8d6708',
 					900: '#76520d',
 					950: '#452c03',
+				},
+				limeade: {
+					50: '#f4ffe5',
+					100: '#e6ffc6',
+					200: '#cdff95',
+					300: '#aaff57',
+					400: '#8af625',
+					500: '#69dd05',
+					600: '#4fb100',
+					700: '#3d8705',
+					800: '#33690b',
+					900: '#2c590e',
+					950: '#133201',
 				},
 			},
 

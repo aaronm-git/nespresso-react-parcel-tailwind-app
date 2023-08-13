@@ -38,14 +38,14 @@ export default function RecipeItem({ recipe, loading }) {
 						<div className="flex items-center">
 							<FeatherIcon
 								icon="clock"
-								className="mr-2 stroke-1 transition-all duration-500 ease-in-out group-hover:text-nespresso-gold"
+								className="mr-2 stroke-1 transition-all duration-500 ease-in-out group-hover:text-nespresso-gold max-lg:text-nespresso-gold"
 							/>
 							{recipe.prepTime}
 						</div>
 						<div className="flex items-center">
 							<FeatherIcon
 								icon="target"
-								className="mr-2 stroke-1 transition-all duration-500 ease-in-out group-hover:text-nespresso-gold"
+								className="mr-2 stroke-1 transition-all duration-500 ease-in-out group-hover:text-nespresso-gold max-lg:text-nespresso-gold"
 							/>
 							{recipe.difficulty}
 						</div>

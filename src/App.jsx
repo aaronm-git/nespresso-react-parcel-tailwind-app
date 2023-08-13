@@ -5,9 +5,10 @@ import Recipe from 'pages/Recipe';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { Routes, Route } from 'react-router-dom';
-import Products from 'pages/Products';
-import Product from 'pages/Product';
-
+import Materials from 'pages/Materials';
+import Material from 'pages/Material';
+import Coffees from 'pages/Coffees';
+import Coffee from 'pages/Coffee';
 export function App() {
 	return (
 		<>
@@ -17,8 +18,11 @@ export function App() {
 				<Route path="/recipes" element={<Recipes />}>
 					<Route path=":id" element={<Recipe />} />
 				</Route>
-				<Route path="/products" element={<Products />}>
-					<Route path=":id" element={<Product />} />
+				<Route path="/products" element={<Materials />}>
+					<Route path=":id" element={<Material />} />
+				</Route>
+				<Route path="coffees" element={<Coffees />}>
+					<Route path=":id" element={<Coffee />} />
 				</Route>
 			</Routes>
 			<Footer />

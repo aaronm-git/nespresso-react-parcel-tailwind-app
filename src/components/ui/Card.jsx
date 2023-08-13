@@ -9,7 +9,7 @@ function CardImage({ imgSrc, alt, className, wrapperClassName }) {
 }
 
 function CardBody({ children, className }) {
-	return <div className={`p-4 md:p-5 ${className || ''}`}>{children}</div>;
+	return <div className={`p-5 md:p-6 ${className || ''}`}>{children}</div>;
 }
 
 function CardTitle({ children, className }) {

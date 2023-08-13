@@ -83,7 +83,7 @@ export default function RightContent({ recipe, loading }) {
 					<ul className="ml-5 list-disc">
 						{recipe.ingredients?.map((ingredient) => (
 							<li key={ingredient} className="my-3">
-								<span>{ingredient}</span>
+								<span className="tracking-widest">{ingredient}</span>
 							</li>
 						))}
 					</ul>
@@ -105,10 +105,10 @@ export default function RightContent({ recipe, loading }) {
 			)}
 			{recipe.instructions?.length > 0 && (
 				<Section title="INSTRUCTIONS">
-					<ol className="list-inside list-decimal">
+					<ol className="ml-5 list-decimal">
 						{recipe.instructions?.map((instruction) => (
 							<li key={instruction} className="my-3">
-								<span>{instruction}</span>
+								<span className="tracking-widest">{instruction}</span>
 							</li>
 						))}
 					</ol>
