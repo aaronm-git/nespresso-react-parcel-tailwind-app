@@ -10,7 +10,7 @@ export default function Coffee() {
 	const { data: coffee, loading, error } = useDB(`/coffees/${id}`);
 	console.log('data', coffee, '\nloading', loading, '\nerror', error);
 
-	if (true)
+	if (loading)
 		return (
 			<div>
 				<section className="min-h-[500px] bg-gradient-to-t from-[#F9F7F6] from-60% to-[#EDEAE6] to-50% p-5 lg:py-20">
