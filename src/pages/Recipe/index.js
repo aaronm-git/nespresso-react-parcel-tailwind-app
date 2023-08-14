@@ -14,11 +14,11 @@ export default function Content() {
 	return (
 		<>
 			<PageNavigation link="/recipes" />
-			<div className="flex w-full flex-wrap">
-				<div className="flex flex-col gap-3 md:w-1/2 md:pr-4">
+			<div className="flex w-full flex-wrap gap-y-3">
+				<div className="flex w-full flex-col gap-3 md:w-1/2 md:pr-4">
 					<LeftContent recipe={recipe} loading={loading} />
 				</div>
-				<div className="md:w-1/2 md:pl-4">
+				<div className="w-full md:w-1/2 md:pl-4">
 					<RightContent recipe={recipe} loading={loading} />
 				</div>
 			</div>
