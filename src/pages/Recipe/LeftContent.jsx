@@ -7,17 +7,10 @@ export default function LeftContent({ recipe, loading }) {
 
 	if (loading) {
 		return (
-			<>
-				<Skeleton.Text>
-					<div className="h-8 w-1/2"></div>
-				</Skeleton.Text>
-				<Skeleton.Image>
-					<div className="h-64 w-full"></div>
-				</Skeleton.Image>
-				<Skeleton.Image>
-					<div className="h-64 w-full"></div>
-				</Skeleton.Image>
-			</>
+			<Skeleton>
+				<Skeleton.Image />
+				<Skeleton.Image />
+			</Skeleton>
 		);
 	}
 

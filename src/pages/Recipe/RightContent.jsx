@@ -14,25 +14,11 @@ export default function RightContent({ recipe, loading }) {
 		return (
 			<div>
 				<Skeleton>
-					<Skeleton.Text>
-						<div className="h-4 w-1/2"></div>
-						<div className="h-4 w-1/4"></div>
-					</Skeleton.Text>
-					<Skeleton.Image>
-						<div className="h-64 w-full"></div>
-					</Skeleton.Image>
-					<Skeleton.Text>
-						<div className="h-4 w-1/2"></div>
-						<div className="h-4 w-1/4"></div>
-					</Skeleton.Text>
-					<Skeleton.Text>
-						<div className="h-4 w-1/2"></div>
-						<div className="h-4 w-1/4"></div>
-					</Skeleton.Text>
-					<Skeleton.Text>
-						<div className="h-4 w-1/2"></div>
-						<div className="h-4 w-1/4"></div>
-					</Skeleton.Text>
+					<Skeleton.Title />
+					<Skeleton.Text />
+					<Skeleton.Image />
+					<Skeleton.Text />
+					<Skeleton.Button />
 				</Skeleton>
 			</div>
 		);
