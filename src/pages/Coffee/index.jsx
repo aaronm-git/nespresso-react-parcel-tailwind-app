@@ -20,7 +20,7 @@ export default function Coffee() {
 								<Skeleton.Image dark />
 							</div>
 						</div>
-						<Card className="my-3 w-full lg:w-1/3">
+						<Card className="my-3 w-full lg:w-[400px]">
 							<Card.Body>
 								<Skeleton>
 									<Skeleton.Text />
@@ -36,9 +36,9 @@ export default function Coffee() {
 					<Container className="grid grid-cols-1 gap-3 gap-x-10 lg:grid-cols-2">
 						<div>
 							<h2 className="text-4xl">Taste</h2>
-							<p>
+							<div>
 								<Skeleton.Text dark />
-							</p>
+							</div>
 						</div>
 						<div className="hidden lg:block"></div>
 						<div>
@@ -49,25 +49,25 @@ export default function Coffee() {
 											<p className="m-0 font-bold">BEST SERVED AS</p>
 										</td>
 										<td className="w-64 py-5 pl-10">
-											<p className="m-0 h-2 w-full">
+											<div className="m-0 h-2 w-full">
 												<Skeleton dark />
-											</p>
-											<p className="m-0">
+											</div>
+											<div className="m-0">
 												<Skeleton dark />
-											</p>
+											</div>
 										</td>
 									</tr>
 									<tr>
 										<td className="py-5 align-top">
-											<p className="m-0 font-bold">NOTES</p>
+											<div className="m-0 font-bold">NOTES</div>
 										</td>
 										<td className="w-64 py-5 pl-10">
-											<p className="m-0 h-2 w-full">
+											<div className="m-0 h-2 w-full">
 												<Skeleton dark />
-											</p>
-											<p className="m-0">
+											</div>
+											<div className="m-0">
 												<Skeleton dark />
-											</p>
+											</div>
 										</td>
 									</tr>
 								</tbody>
@@ -77,37 +77,61 @@ export default function Coffee() {
 							<div className="my-4 flex flex-row items-center gap-3">
 								<span className="w-28">BITTERNESS</span>
 								<div className="grid grow grid-cols-5 gap-x-1">
-									{new Array(5).fill(null).map(function (_, index) {
-										return (
-											<span key={index} className="h-1">
-												<Skeleton dark />
-											</span>
-										);
-									})}
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
 								</div>
 							</div>
 							<div className="my-4 flex flex-row items-center gap-3">
 								<span className="w-28">ACIDITY</span>
 								<div className="grid grow grid-cols-5 gap-x-1">
-									{new Array(5).fill(null).map(function (_, index) {
-										return (
-											<span key={index} className="h-1">
-												<Skeleton dark />
-											</span>
-										);
-									})}
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
 								</div>
 							</div>
 							<div className="my-4 flex flex-row items-center gap-3">
 								<span className="w-28">ROAST LEVEL</span>
 								<div className="grid grow grid-cols-5 gap-x-1">
-									{new Array(5).fill(null).map(function (_, index) {
-										return (
-											<span key={index} className="h-1">
-												<Skeleton dark />
-											</span>
-										);
-									})}
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
+									<span className="h-1">
+										<Skeleton dark />
+									</span>
 								</div>
 							</div>
 						</div>

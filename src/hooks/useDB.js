@@ -53,7 +53,7 @@ async function handleRequest(url) {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
 			resolve();
-		}, 10);
+		}, 500);
 	}).then(() => {
 		const [_, resource, id] = url.split('/');
 		let response = null;
