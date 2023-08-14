@@ -54,7 +54,7 @@ export default function RightContent({ recipe, loading }) {
 					{recipe.coffees.length > 0 && (
 						<ul>
 							{recipe.coffees?.map((coffee) => {
-								const imgSrc = coffee.images.length && images[coffee.images[0]];
+								const imgSrc = coffee.podImages.length && images[coffee.podImages[0]];
 								return (
 									<SpecialListItem key={coffee.id} imgSrc={imgSrc}>
 										<Link to={`/coffees/${coffee.id}`}>

@@ -1,0 +1,14 @@
+[
+	{
+		"id": "c25a555a-0786-4a5c-9822-6b6d188896b3",
+		"name": "Espresso",
+		"size": "1.35 oz",
+        "svg": "svgs/Original-25ml.svg"
+	},
+	{
+        "id": "df7f22b8-8d17-42a7-94e5-9d6c15a8f33e",
+		"name": "Ristretto",
+		"size": "0.85 oz",
+        "svg": "svgs/Original-40ml.svg"
+	}
+]

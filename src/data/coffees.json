@@ -5,21 +5,36 @@
 		"description": "Intense & Velvety",
 		"type": "Espresso",
 		"size": "1.35 oz",
-		"images": ["pods/il-caffe-pod.png", "coffees/il-caffe.png"],
+		"podImages": ["pods/il-caffe-pod.png"],
+		"productImages": ["coffees/il-caffe.png"],
 		"podType": "Vertuo",
 		"intensity": "11",
 		"tasteDescription": "Il Caffè takes you right to the heart of the classic Italian espresso experience. A punchy combination of smooth, velvety taste and roasty, cereal aromas.",
 		"notes": "Roasted & Chocolatey",
 		"bitterness": "4",
 		"acidity": "1",
-		"roastLevel": "5"
+		"roastLevel": "5",
+		"body": "0",
+		"numPods": "10",
+		"bestServedAs": ["c25a555a-0786-4a5c-9822-6b6d188896b3"]
 	},
 	{
 		"id": "84a751ac-8e17-4e4a-9e4c-1df5e56f7890",
-		"name": "Venezia",
+		"name": "VENEZIA",
 		"description": "Balanced & Thick",
-		"type": "Classic",
-		"size": "",
-		"images": ["coffees/venezia.png"]
+		"type": "ISPIRAZIONE ITALIANA",
+		"size": "1.35 oz",
+		"podType": "Original",
+		"intensity": "8",
+		"tasteDescription": "Bridging East and West, Venice has long balanced, diverse coffees in delicately aromatic roasts. This history inspired our rounded, medium roast.",
+		"notes": "Nutty & Balanced",
+		"bitterness": "3",
+		"acidity": "1",
+		"roastLevel": "4",
+		"body": "3",
+		"numPods": "10",
+		"bestServedAs": ["c25a555a-0786-4a5c-9822-6b6d188896b3", "df7f22b8-8d17-42a7-94e5-9d6c15a8f33e"],
+		"podImages": ["pods/venezia.png"],
+		"productImages": ["coffees/ispirazione-venezia_2x.png"]
 	}
 ]
