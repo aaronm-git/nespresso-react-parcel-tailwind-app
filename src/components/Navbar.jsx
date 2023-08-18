@@ -44,6 +44,15 @@ export default function Navbar() {
 						</li>
 						<li className="h-full">
 							<Link
+								to="/admin"
+								className="flex h-full flex-col justify-center border-solid border-corn-harvest-900 px-3 text-center text-sm text-white no-underline transition-colors duration-100 ease-linear active:bg-corn-harvest-900 max-md:border-b max-md:bg-nespresso-gold active:md:bg-nespresso-gold hover:lg:bg-nespresso-gold"
+								onClick={menuToggle}
+							>
+								Admin
+							</Link>
+						</li>
+						<li className="h-full">
+							<Link
 								to="/recipes"
 								className="flex h-full flex-col justify-center border-solid border-corn-harvest-900 px-3 text-center text-sm text-white no-underline transition-colors duration-100 ease-linear active:bg-corn-harvest-900 max-md:border-b max-md:bg-nespresso-gold active:md:bg-nespresso-gold hover:lg:bg-nespresso-gold"
 								onClick={menuToggle}

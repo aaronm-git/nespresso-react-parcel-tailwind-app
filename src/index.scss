@@ -27,7 +27,7 @@
 	}
 
 	#app {
-		@apply mb-36 mt-16 min-h-[calc(100vh-64px-56px-144px-64px)] antialiased lg:mb-20 lg:min-h-[calc(100vh-64px-56px-80px-64px)];
+		@apply mt-16 h-[calc(100vh-64px-96px)] md:h-[calc(100vh-64px-72px)] lg:h-[calc(100vh-64px-48px)];
 	}
 
 	p {
