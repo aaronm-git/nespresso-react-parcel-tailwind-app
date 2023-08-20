@@ -44,5 +44,15 @@ module.exports = {
 			},
 		},
 	},
+	safelist: [
+		{
+			pattern: /^w-full$/,
+			variants: ['md', 'lg', 'xl'],
+		},
+		{
+			pattern: /^w-(\d+)\/12$/,
+			variants: ['md', 'lg', 'xl'],
+		},
+	],
 	plugins: [],
 };

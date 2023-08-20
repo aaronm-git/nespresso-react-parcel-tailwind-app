@@ -23,7 +23,7 @@
 	}
 
 	body {
-		@apply tracking-wider text-[#333333];
+		@apply tracking-wider text-[#333333] antialiased;
 	}
 
 	#app {
@@ -39,10 +39,22 @@
 	}
 
 	h2 {
-		@apply mb-6 text-2xl font-light uppercase leading-tight tracking-[8px] lg:text-3xl;
+		@apply mb-4 text-2xl font-light uppercase leading-tight tracking-[6px] lg:text-3xl;
 	}
 
 	a {
 		@apply text-nespresso-gold underline;
+	}
+
+	label {
+		@apply mb-2 block text-sm font-bold text-gray-700;
+	}
+
+	input {
+		@apply w-full rounded-md border border-gray-300 px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-nespresso-gold;
+	}
+
+	textarea {
+		@apply w-full rounded-md border border-gray-300 px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-nespresso-gold;
 	}
 }
