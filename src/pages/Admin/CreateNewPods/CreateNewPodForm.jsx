@@ -47,6 +47,10 @@ export default function CreateNewPodForm() {
 							<Select.Option label="Mild" value="mild" />
 						</Select>
 					</FlexCol>
+					<FlexCol col={cols}>
+						<label htmlFor="intensity">Intensity</label>
+						<input type="number" name="intensity" id="intensity" className="w-full" max={5} min={0} />
+					</FlexCol>
 				</FlexRow>
 				<Button>SUBMIT</Button>
 			</form>

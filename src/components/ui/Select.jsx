@@ -44,7 +44,12 @@ function Select({ children, name }) {
 	};
 
 	return (
-		<div ref={selectRef} className="custom-select relative" onClick={toggleDropdown}>
+		<div
+			ref={selectRef}
+			className="relative w-full rounded-md border border-gray-300 px-4 py-2 caret-nespresso-gold data-[isopen=true]:border-transparent data-[isopen=true]:outline-none data-[isopen=true]:ring-2 data-[isopen=true]:ring-nespresso-gold"
+			onClick={toggleDropdown}
+			data-isopen={isOpen}
+		>
 			<div className="relative h-full select-none after:absolute after:right-0 after:top-1/2 after:h-5 after:w-5 after:-translate-y-1/2 after:select-none after:bg-svg-chevron-down after:bg-contain after:bg-no-repeat after:content-['']">
 				{selectedOption}
 			</div>
