@@ -41,6 +41,7 @@ module.exports = {
 
 			backgroundImage: {
 				'hero-recipes': "url('/src/public/images/bg-recipes-jpg-1x.webp')",
+				'svg-chevron-down': "url('/node_modules/feather-icons/dist/icons/chevron-down.svg')",
 			},
 		},
 	},

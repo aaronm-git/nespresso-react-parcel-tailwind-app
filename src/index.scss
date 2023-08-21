@@ -50,11 +50,15 @@
 		@apply mb-2 block text-sm font-bold text-gray-700;
 	}
 
-	input {
+	input,
+	textarea,
+	select,
+	.custom-select {
 		@apply w-full rounded-md border border-gray-300 px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-nespresso-gold;
 	}
 
-	textarea {
-		@apply w-full rounded-md border border-gray-300 px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-nespresso-gold;
+	select,
+	.custom-select {
+		@apply relative cursor-pointer appearance-none;
 	}
 }
