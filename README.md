@@ -34,7 +34,7 @@ But there was a twist! To ensure that these images could be correctly referenced
 
 One of the key components of this solution was the `getImage()` function provided by the `useImageHelper()` hook. This function enabled me to effortlessly retrieve the absolute path to an image within the outputted bundle, even when dealing with dynamic images and the modified naming scheme. It ensured that the dynamic images were correctly sourced and displayed in my React application.
 
-In conclusion, by strategically integrating ParcelJS with my React project, crafting a tailored solution for handling dynamic images, and employing the `flattenImages()` utility function to maintain correct image references, I was able to enjoy the benefits of Parcel's efficient bundling capabilities while ensuring the integrity of image source links.
+In the end, I managed to make ParcelJS play nicely with my React project. I created a custom solution for dynamic images using react context and react hooks with a helpful util function [flattenImages()](https://github.com/aaronm-git/nespresso-react-parcel-tailwind-app/blob/671bf34837e2739d19ac84cd486e07121f3dede9/src/utils/flattenImages.js) to keep things in order. The result? I got to keep Parcel's bundling magic while making sure my image links were all good.
 
 ### Creating my own flex grid components, based on bootstrap
 
