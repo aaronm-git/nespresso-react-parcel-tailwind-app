@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-function Select({ children }) {
+function Select({ children, name }) {
 	const [isOpen, setIsOpen] = useState(false);
 	const [selectedOption, setSelectedOption] = useState('');
 	const optionsRef = useRef([]);
+	const hiddenEl = useRef(null);
 
-	// Effect to collect option labels from children
+	// Effect to collect option data from children
 	useEffect(() => {
 		const newOptions = React.Children.map(children, (child) => ({
 			label: child.props.label,
@@ -22,15 +23,9 @@ function Select({ children }) {
 
 	// Function to handle option selection
 	const handleOptionSelect = (option) => {
-		setSelectedOption(option);
+		setSelectedOption(option.label);
 		toggleDropdown();
-
-		// Update the hidden select input when an option is selected
-		const hiddenSelect = document.getElementById('hidden-select');
-		if (hiddenSelect) {
-			hiddenSelect.value = option;
-			hiddenSelect.dispatchEvent(new Event('change', { bubbles: true }));
-		}
+		hiddenEl.current.value = option.value;
 	};
 
 	return (
@@ -40,21 +35,18 @@ function Select({ children }) {
 			</div>
 			{isOpen && (
 				<ul className="absolute left-0 top-11 z-10 w-full overflow-hidden rounded border border-gray-300 shadow">
-					{
-						// Loop through the options and render them
-						optionsRef.current.map((option, index) => (
-							<li
-								className="select-none border-b bg-white p-1 px-4 py-2 hover:bg-nespresso-gold hover:text-white"
-								key={index}
-								onClick={() => handleOptionSelect(option.label)}
-							>
-								{option.label}
-							</li>
-						))
-					}
+					{optionsRef.current.map((option, index) => (
+						<li
+							className="select-none border-b bg-white p-1 px-4 py-2 hover:bg-nespresso-gold hover:text-white"
+							key={index}
+							onClick={() => handleOptionSelect(option)}
+						>
+							{option.label}
+						</li>
+					))}
 				</ul>
 			)}
-			<select className="hidden">
+			<select className="hidden" name={name} ref={hiddenEl}>
 				{optionsRef.current.map((option, index) => (
 					<option key={index} value={option.value}>
 						{option.label}
@@ -67,7 +59,7 @@ function Select({ children }) {
 
 function Option({ children, value }) {
 	return (
-		<div value={value} label={label}>
+		<div label={children} value={value}>
 			{children}
 		</div>
 	);

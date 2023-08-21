@@ -36,7 +36,7 @@ export default function CreateNewPodForm() {
 								<option value="classic">Classic</option>
 							</select>
 						</div> */}
-						<Select>
+						<Select name="pod_type">
 							<Select.Option label="Vertuo" value="vertuo">
 								Vertuo <span className="text-xs text-gray-400">(default)</span>
 							</Select.Option>
