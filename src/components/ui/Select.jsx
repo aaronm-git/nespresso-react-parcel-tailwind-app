@@ -5,6 +5,7 @@ function Select({ children, name }) {
 	const [selectedOption, setSelectedOption] = useState('');
 	const optionsRef = useRef([]);
 	const hiddenEl = useRef(null);
+	const selectRef = useRef(null); // Reference to the custom select div
 
 	// Effect to collect option data from children
 	useEffect(() => {
@@ -15,6 +16,20 @@ function Select({ children, name }) {
 		optionsRef.current = newOptions;
 		setSelectedOption(newOptions[0] ? newOptions[0].label : ''); // Set the default selection
 	}, [children]);
+
+	// Close the dropdown when clicking outside
+	useEffect(() => {
+		const handleClickOutside = (event) => {
+			if (selectRef.current && !selectRef.current.contains(event.target)) {
+				setIsOpen(false);
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside);
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, []);
 
 	// Function to toggle the dropdown
 	const toggleDropdown = () => {
@@ -29,7 +44,7 @@ function Select({ children, name }) {
 	};
 
 	return (
-		<div className="custom-select relative" onClick={toggleDropdown}>
+		<div ref={selectRef} className="custom-select relative" onClick={toggleDropdown}>
 			<div className="relative h-full select-none after:absolute after:right-0 after:top-1/2 after:h-5 after:w-5 after:-translate-y-1/2 after:select-none after:bg-svg-chevron-down after:bg-contain after:bg-no-repeat after:content-['']">
 				{selectedOption}
 			</div>
