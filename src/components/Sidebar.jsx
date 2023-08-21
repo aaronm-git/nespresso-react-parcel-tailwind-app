@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import FeatherIcon from 'ui/FeatherIcon';
 
 function Sidebar({ children }) {
-	const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 	const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
-	const classes = `h-full w-full max-w-xs bg-gray-200 transform transition-all ease-in-out duration-300 overflow-hidden ${
-		isSidebarOpen ? 'max-md:translate-x-0' : 'max-md:-translate-x-full'
-	}`;
 	return (
-		<nav className={classes}>
-			<MenuButton isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-			{children}
-		</nav>
+		<div className="group relative h-full w-auto" data-isSidebarOpen={isSidebarOpen}>
+			<StickyMenuButton toggleSidebar={toggleSidebar} />
+			<nav className="h-full min-w-[200px] max-w-[200px] translate-x-0 transform overflow-x-hidden bg-gray-200 transition-all duration-300 ease-in-out max-md:group-data-[isSidebarOpen=false]:min-w-0 max-md:group-data-[isSidebarOpen=false]:max-w-0 max-md:group-data-[isSidebarOpen=false]:-translate-x-full">
+				<MenuButton isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+				{children}
+			</nav>
+		</div>
 	);
 }
 
@@ -20,9 +20,9 @@ function Menu({ children }) {
 	return <ul className="flex flex-col">{children}</ul>;
 }
 
-function Item(linkTo) {
+function Item({ linkTo }) {
 	return (
-		<li className="border-b border-solid border-gray-400 bg-gray-200 text-center text-nespresso-gold active:bg-nespresso-gold active:text-white">
+		<li className="border-b border-solid border-gray-300 bg-gray-200 text-center text-nespresso-gold active:bg-nespresso-gold active:text-white">
 			<Link to={linkTo} className="block p-3 px-2 text-inherit no-underline">
 				Item
 			</Link>
@@ -30,23 +30,23 @@ function Item(linkTo) {
 	);
 }
 
-function MenuButton({ isSidebarOpen, toggleSidebar }) {
-	if (!isSidebarOpen) {
-		return (
-			<button
-				className="absolute bottom-3 left-full z-10 w-auto rounded-full bg-nespresso-gold p-3 text-white hover:bg-black"
-				onClick={toggleSidebar}
-			>
-				<FeatherIcon icon="layout" />
-			</button>
-		);
-	}
-
+function StickyMenuButton({ toggleSidebar, className }) {
 	return (
-		<div className="border-b border-solid border-gray-400 p-2 text-center">
+		<div className="absolute bottom-0 z-10 p-2 opacity-0 transition-opacity ease-in-out max-md:group-data-[isSidebarOpen=false]:opacity-100">
 			<button className="rounded-full bg-nespresso-gold p-3 text-white hover:bg-black" onClick={toggleSidebar}>
 				<FeatherIcon icon="layout" />
 			</button>
+		</div>
+	);
+}
+
+function MenuButton({ toggleSidebar }) {
+	return (
+		<div className="border-b border-solid border-gray-300 p-2 text-center">
+			<button className="rounded-full bg-nespresso-gold p-3 text-white hover:bg-black" onClick={toggleSidebar}>
+				<FeatherIcon icon="layout" />
+			</button>
+			<p className="mt-3 uppercase">Admin Panel</p>
 		</div>
 	);
 }
