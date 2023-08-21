@@ -7,8 +7,8 @@ export default function CreateNewPodForm() {
 		lg: 4,
 	};
 	return (
-		<div className="">
-			<h2>Create New Pod</h2>
+		<div>
+			<h2 className="text-xl">Create New Pod</h2>
 			<form action="#">
 				<FlexRow>
 					<FlexCol col={cols}>

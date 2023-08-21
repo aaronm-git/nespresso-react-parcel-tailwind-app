@@ -9,6 +9,7 @@ import Coffees from 'pages/Coffees';
 import Coffee from 'pages/Coffee';
 import Page from 'pages/templates/Page';
 import Admin from 'pages/Admin';
+import CreateNewPods from 'pages/Admin/CreateNewPods';
 
 export function App() {
 	return (
@@ -29,7 +30,9 @@ export function App() {
 				<Route path=":id" element={<Coffee />} />
 			</Route>
 			<Route path="/admin" element={<Page />}>
-				<Route path="/admin" index element={<Admin />} />
+				<Route path="/admin" element={<Admin />}>
+					<Route path="new-pods" element={<CreateNewPods />} />
+				</Route>
 			</Route>
 		</Routes>
 	);
