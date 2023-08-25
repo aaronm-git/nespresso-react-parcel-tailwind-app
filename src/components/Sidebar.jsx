@@ -8,7 +8,7 @@ function Sidebar({ children }) {
 		<>
 			<StickyMenuButton toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
 			<nav
-				className="group fixed top-0 z-10 h-full w-[200px] max-w-[200px] translate-x-0 transform overflow-x-hidden bg-gray-200 pb-[96px] pt-[64px] shadow transition-all duration-300 ease-in-out max-md:data-[issidebaropen=false]:-translate-x-full md:pb-[72px] lg:pb-[48px]"
+				className="group fixed top-0 z-10 h-full w-[200px] max-w-[200px] translate-x-0 transform overflow-x-hidden bg-gray-200 pb-[96px] pt-[64px] transition-all duration-300 ease-in-out data-[issidebaropen=true]:shadow max-md:data-[issidebaropen=false]:-translate-x-full md:pb-[72px] lg:pb-[48px]"
 				data-issidebaropen={isSidebarOpen}
 			>
 				<div className="border-b border-solid border-gray-300 p-3 py-5 text-center">
