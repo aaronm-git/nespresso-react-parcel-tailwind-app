@@ -6,7 +6,9 @@ export default function Page() {
 	return (
 		<>
 			<Navbar />
-			<Outlet />
+			<main>
+				<Outlet />
+			</main>
 			<Footer />
 		</>
 	);

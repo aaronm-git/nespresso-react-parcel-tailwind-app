@@ -23,11 +23,7 @@
 	}
 
 	body {
-		@apply tracking-wider text-[#333333] antialiased;
-	}
-
-	#app {
-		@apply mt-16 h-[calc(100vh-64px-96px)] md:h-[calc(100vh-64px-72px)] lg:h-[calc(100vh-64px-48px)];
+		@apply pb-[96px] pt-16 tracking-wider text-[#333333] antialiased md:pb-[48px];
 	}
 
 	p {

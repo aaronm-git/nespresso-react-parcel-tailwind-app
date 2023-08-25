@@ -4,7 +4,7 @@ import Sidebar from 'components/Sidebar';
 import { Link, Outlet } from 'react-router-dom';
 export default function index() {
 	return (
-		<div className="flex h-full md:overflow-hidden">
+		<main className="flex md:overflow-hidden">
 			<Sidebar className="flex-1">
 				<Sidebar.Menu>
 					<Sidebar.Item>
@@ -24,6 +24,6 @@ export default function index() {
 			<Container className="flex-1 py-5">
 				<Outlet />
 			</Container>
-		</div>
+		</main>
 	);
 }
