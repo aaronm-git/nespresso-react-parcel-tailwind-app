@@ -23,6 +23,27 @@ export default function AdminPage() {
 					<Sidebar.Item>
 						<Link to="/admin/user">My Profile</Link>
 					</Sidebar.Item>
+					<Sidebar.Item>
+						<Link to="/admin/user">My Profile</Link>
+					</Sidebar.Item>
+					<Sidebar.Item>
+						<Link to="/admin/user">My Profile</Link>
+					</Sidebar.Item>
+					<Sidebar.Item>
+						<Link to="/admin/user">My Profile</Link>
+					</Sidebar.Item>
+					<Sidebar.Item>
+						<Link to="/admin/user">My Profile</Link>
+					</Sidebar.Item>
+					<Sidebar.Item>
+						<Link to="/admin/user">My Profile</Link>
+					</Sidebar.Item>
+					<Sidebar.Item>
+						<Link to="/admin/user">My Profile</Link>
+					</Sidebar.Item>
+					<Sidebar.Item>
+						<Link to="/admin/user">My Profile</Link>
+					</Sidebar.Item>
 				</Sidebar.Menu>
 			</Sidebar>
 			<main>
