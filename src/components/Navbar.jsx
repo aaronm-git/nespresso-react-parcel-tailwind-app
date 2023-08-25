@@ -8,7 +8,7 @@ export default function Navbar() {
 	};
 
 	return (
-		<nav className="fixed top-0 z-10 w-screen bg-black text-white">
+		<nav className="fixed top-0 z-[9999] w-screen bg-black text-white">
 			<div className="mx-auto lg:container md:flex md:px-4">
 				<div className="relative z-20 mr-auto flex items-center bg-black max-md:px-4">
 					<div className="flex flex-shrink-0">

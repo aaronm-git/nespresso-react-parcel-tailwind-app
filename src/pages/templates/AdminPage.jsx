@@ -4,7 +4,7 @@ import Sidebar from 'components/Sidebar';
 import { Link } from 'react-router-dom';
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
-
+import { FlexRow, FlexCol } from 'ui/FlexLayout';
 export default function AdminPage() {
 	return (
 		<>
@@ -23,30 +23,9 @@ export default function AdminPage() {
 					<Sidebar.Item>
 						<Link to="/admin/user">My Profile</Link>
 					</Sidebar.Item>
-					<Sidebar.Item>
-						<Link to="/admin/user">My Profile</Link>
-					</Sidebar.Item>
-					<Sidebar.Item>
-						<Link to="/admin/user">My Profile</Link>
-					</Sidebar.Item>
-					<Sidebar.Item>
-						<Link to="/admin/user">My Profile</Link>
-					</Sidebar.Item>
-					<Sidebar.Item>
-						<Link to="/admin/user">My Profile</Link>
-					</Sidebar.Item>
-					<Sidebar.Item>
-						<Link to="/admin/user">My Profile</Link>
-					</Sidebar.Item>
-					<Sidebar.Item>
-						<Link to="/admin/user">My Profile</Link>
-					</Sidebar.Item>
-					<Sidebar.Item>
-						<Link to="/admin/user">My Profile</Link>
-					</Sidebar.Item>
 				</Sidebar.Menu>
 			</Sidebar>
-			<main>
+			<main className="md:ml-[200px] pt-5">
 				<Outlet />
 			</main>
 			<Footer />

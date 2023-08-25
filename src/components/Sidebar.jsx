@@ -1,20 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import FeatherIcon from 'ui/FeatherIcon';
 
 function Sidebar({ children }) {
-	const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 	const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 	return (
-		<div
-			className="group fixed top-0 h-full w-auto pb-[96px] pt-[64px] md:pb-[72px] lg:pb-[48px]"
-			data-issidebaropen={isSidebarOpen}
-		>
-			<StickyMenuButton toggleSidebar={toggleSidebar} />
-			<nav className="h-full w-[200px] max-w-[200px] translate-x-0 transform overflow-x-hidden bg-gray-200 shadow transition-all duration-300 ease-in-out max-md:group-data-[issidebaropen=false]:-translate-x-full">
-				<MenuButton issidebaropen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+		<>
+			<StickyMenuButton toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
+			<nav
+				className="group fixed top-0 z-10 h-full w-[200px] max-w-[200px] translate-x-0 transform overflow-x-hidden bg-gray-200 pb-[96px] pt-[64px] shadow transition-all duration-300 ease-in-out max-md:data-[issidebaropen=false]:-translate-x-full md:pb-[72px] lg:pb-[48px]"
+				data-issidebaropen={isSidebarOpen}
+			>
+				<div className="border-b border-solid border-gray-300 p-3 py-5 text-center">
+					<div className="mx-auto mb-2 inline-block rounded-full bg-nespresso-gold p-4 text-white">
+						<FeatherIcon icon="layout" />
+					</div>
+					<p className="m-0 uppercase">Admin Panel</p>
+				</div>
 				{children}
 			</nav>
-		</div>
+		</>
 	);
 }
 
@@ -26,29 +31,12 @@ function Item({ children }) {
 	return <li className="border-b border-solid border-gray-300 bg-gray-200 p-3 px-5">{children}</li>;
 }
 
-function StickyMenuButton({ toggleSidebar }) {
+function StickyMenuButton({ toggleSidebar, isSidebarOpen }) {
 	return (
-		<div
-			id="sidebarStickyMenuButton"
-			className="absolute bottom-[160px] p-2 opacity-0 transition-opacity ease-in-out max-md:group-data-[issidebaropen=false]:opacity-100"
-		>
+		<div id="sidebarStickyMenuButton" className="absolute bottom-[100px] right-3 p-2">
 			<button className="rounded-full bg-nespresso-gold p-3 text-white" onClick={toggleSidebar}>
-				<FeatherIcon icon="layout" />
+				<FeatherIcon icon={isSidebarOpen ? 'x' : 'layout'} />
 			</button>
-		</div>
-	);
-}
-
-function MenuButton({ toggleSidebar }) {
-	return (
-		<div className="border-b border-solid border-gray-300 p-3 py-5 text-center">
-			<button
-				className="mb-2 rounded-full bg-nespresso-gold p-3 text-white hover:bg-black md:cursor-default"
-				onClick={toggleSidebar}
-			>
-				<FeatherIcon icon="layout" />
-			</button>
-			<p className="m-0 uppercase">Admin Panel</p>
 		</div>
 	);
 }

@@ -31,9 +31,8 @@ export function App() {
 				<Route path=":id" element={<Coffee />} />
 			</Route>
 			<Route path="/admin" element={<AdminPage />}>
-				<Route path="/admin" element={<Admin />}>
-					<Route path="new-pods" element={<CreateNewPods />} />
-				</Route>
+				<Route path="/admin" index element={<Admin />} />
+				<Route path="new-pods" element={<CreateNewPods />} />
 			</Route>
 		</Routes>
 	);

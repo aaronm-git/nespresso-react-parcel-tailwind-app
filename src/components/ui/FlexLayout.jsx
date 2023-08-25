@@ -1,4 +1,4 @@
-export function FlexRow({ children, className, cols = 1 }) {
+export function FlexRow({ children, className}) {
 	const classes = `-mx-1 flex flex-wrap ${className ? className : ''}`;
 	return <div className={classes}>{children}</div>;
 }
