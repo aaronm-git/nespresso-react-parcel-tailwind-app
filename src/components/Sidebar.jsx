@@ -1,5 +1,6 @@
-import { useState, createContext, useContext } from 'react';
+import { useState, createContext, useContext, Children } from 'react';
 import FeatherIcon from 'ui/FeatherIcon';
+import { Link } from 'react-router-dom';
 
 const SidebarContext = createContext({
 	isSidebarOpen: false,
@@ -45,11 +46,13 @@ function Menu({ children }) {
 	return <ul className="flex flex-col">{children}</ul>;
 }
 
-function Item({ children }) {
+function MenuLink({ linkTo, linkText }) {
 	const { toggleSidebar } = useContext(SidebarContext);
 	return (
-		<li className="border-b border-solid border-gray-300 bg-gray-200 p-3 px-5" onClick={toggleSidebar}>
-			{children}
+		<li className="border-b border-solid border-gray-300 bg-gray-200">
+			<Link to={linkTo} className="block px-5 py-3 hover:bg-gray-300" onClick={toggleSidebar}>
+				{linkText}
+			</Link>
 		</li>
 	);
 }
@@ -57,7 +60,7 @@ function Item({ children }) {
 function StickyMenuButton({ toggleSidebar, isSidebarOpen }) {
 	return (
 		<button
-			className="absolute bottom-[115px] right-5 rounded-full bg-nespresso-gold p-4 text-white shadow md:hidden"
+			className="fixed bottom-[115px] right-5 rounded-full bg-nespresso-gold p-4 text-white shadow md:hidden"
 			onClick={toggleSidebar}
 		>
 			<FeatherIcon icon={isSidebarOpen ? 'x' : 'layout'} />
@@ -66,5 +69,5 @@ function StickyMenuButton({ toggleSidebar, isSidebarOpen }) {
 }
 
 Sidebar.Menu = Menu;
-Sidebar.Item = Item;
+Sidebar.MenuLink = MenuLink;
 export default Sidebar;
