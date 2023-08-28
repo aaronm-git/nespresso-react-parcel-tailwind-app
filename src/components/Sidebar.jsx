@@ -60,7 +60,7 @@ function MenuLink({ linkTo, linkText }) {
 function StickyMenuButton({ toggleSidebar, isSidebarOpen }) {
 	return (
 		<button
-			className="fixed bottom-[115px] right-5 rounded-full bg-nespresso-gold p-4 text-white shadow md:hidden"
+			className="fixed bottom-[115px] right-5 z-[9999] rounded-full bg-nespresso-gold p-4 text-white shadow md:hidden"
 			onClick={toggleSidebar}
 		>
 			<FeatherIcon icon={isSidebarOpen ? 'x' : 'layout'} />

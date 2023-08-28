@@ -1,7 +1,9 @@
 import { FlexRow, FlexCol } from 'ui/FlexLayout';
 import Button from 'ui/Button';
 import Select from 'ui/Select';
-export default function CreateNewPodForm() {
+import Skeleton from 'ui/Skeleton';
+
+export default function CreateNewPodForm({ loading }) {
 	const cols = {
 		sm: 12,
 		md: 6,
@@ -14,6 +16,25 @@ export default function CreateNewPodForm() {
 		const data = Object.fromEntries(formData.entries());
 		console.log(data);
 	};
+
+	if (loading)
+		return (
+			<Skeleton>
+				<FlexRow>
+					<FlexCol col={12}>
+						<Skeleton.Title />
+					</FlexCol>
+					{[...Array(8)].map((_, i) => (
+						<FlexCol key={i} col={cols}>
+							<div className="mb-2 h-4 w-24">
+								<Skeleton />
+							</div>
+							<Skeleton.Input />
+						</FlexCol>
+					))}
+				</FlexRow>
+			</Skeleton>
+		);
 
 	return (
 		<div>
@@ -50,6 +71,44 @@ export default function CreateNewPodForm() {
 					<FlexCol col={cols}>
 						<label htmlFor="intensity">Intensity</label>
 						<input type="number" name="intensity" id="intensity" className="w-full" max={5} min={0} />
+					</FlexCol>
+					<FlexCol col={cols}>
+						<label htmlFor="bitterness">Bitterness</label>
+						<input type="number" name="bitterness" id="bitterness" className="w-full" max={5} min={0} />
+					</FlexCol>
+					<FlexCol col={cols}>
+						<label htmlFor="acidity">Acidity</label>
+						<input type="number" name="acidity" id="acidity" className="w-full" max={5} min={0} />
+					</FlexCol>
+					<FlexCol col={cols}>
+						<label htmlFor="roastLevel">Roast Level</label>
+						<input type="number" name="roast_level" id="roastLevel" className="w-full" max={5} min={0} />
+					</FlexCol>
+					<FlexCol col={cols}>
+						<label htmlFor="body">Body</label>
+						<input type="number" name="body" id="body" className="w-full" max={5} min={0} />
+					</FlexCol>
+					<FlexCol col={cols}>
+						<label htmlFor="numPods">Number of Pods</label>
+						<input type="number" name="num_pods" id="numPods" className="w-full" max={99} min={0} />
+					</FlexCol>
+					<FlexCol col={cols}>
+						<label htmlFor="productID">Product ID</label>
+						<Select name="product_id">
+							<Select.Option label="Vertuo" value="vertuo">
+								Vertuo <span className="text-xs text-gray-400">(default)</span>
+							</Select.Option>
+							<Select.Option label="Classic" value="classic" />
+						</Select>
+					</FlexCol>
+					<FlexCol>
+						<label htmlFor="podCategoryID">Pod Category ID</label>
+						<Select name="pod_category_id">
+							<Select.Option label="Vertuo" value="vertuo">
+								Vertuo <span className="text-xs text-gray-400">(default)</span>
+							</Select.Option>
+							<Select.Option label="Classic" value="classic" />
+						</Select>
 					</FlexCol>
 				</FlexRow>
 				<Button>SUBMIT</Button>

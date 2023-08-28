@@ -1,12 +1,12 @@
-export function FlexRow({ children, className}) {
-	const classes = `-mx-1 flex flex-wrap ${className ? className : ''}`;
+export function FlexRow({ children, className }) {
+	const classes = `-mx-2 flex flex-wrap ${className ? className : ''}`;
 	return <div className={classes}>{children}</div>;
 }
 
-export function FlexCol({ children, className, col = 1 }) {
-	const classes = `px-1 mb-3${className ? className : ''}`;
+export function FlexCol({ children, className, col = 12 }) {
+	const classes = 'px-2 mb-2';
 	const colSize = getColClasses(col);
-	return <div className={`${classes} ${colSize}`}>{children}</div>;
+	return <div className={`${classes} ${colSize} ${className ? className : ''}`}>{children}</div>;
 }
 
 function getColClasses(col) {
@@ -25,6 +25,9 @@ function getColClasses(col) {
 		});
 		return colSize.join(' ');
 	} else {
+		if (col === 12) {
+			return 'w-full';
+		}
 		return `w-${col}/12`;
 	}
 }
