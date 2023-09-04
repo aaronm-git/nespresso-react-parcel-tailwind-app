@@ -3,7 +3,8 @@ import Button from 'ui/Button';
 import Select from 'ui/Select';
 import Skeleton from 'ui/Skeleton';
 
-export default function CreateNewPodForm({ loading }) {
+export default function CreateNewPodForm({ data, loading }) {
+	console.log(data);
 	const cols = {
 		sm: 12,
 		md: 6,
@@ -21,15 +22,15 @@ export default function CreateNewPodForm({ loading }) {
 		return (
 			<Skeleton>
 				<FlexRow>
-					<FlexCol col={12}>
+					<FlexCol col={12} className="mb-4">
 						<Skeleton.Title />
 					</FlexCol>
 					{[...Array(8)].map((_, i) => (
 						<FlexCol key={i} col={cols}>
-							<div className="mb-2 h-4 w-24">
+							<div className="mb-3 h-4 w-24">
 								<Skeleton />
 							</div>
-							<Skeleton.Input />
+							<Skeleton.Input className="mb-2" />
 						</FlexCol>
 					))}
 				</FlexRow>
@@ -52,20 +53,20 @@ export default function CreateNewPodForm({ loading }) {
 					<FlexCol col={cols}>
 						<label htmlFor="podType">Pod Type</label>
 						<Select name="pod_type">
-							<Select.Option label="Vertuo" value="vertuo">
+							<Select.Option value="vertuo">
 								Vertuo <span className="text-xs text-gray-400">(default)</span>
 							</Select.Option>
-							<Select.Option label="Classic" value="classic" />
+							<Select.Option value="classic">Classic</Select.Option>
 						</Select>
 					</FlexCol>
 					<FlexCol col={cols}>
 						<label htmlFor="tasteProfile">Taste Profile</label>
 						<Select name="taste_profile">
-							<Select.Option label="Intense" value="intense">
+							<Select.Option value="intense">
 								Intense <span className="text-xs text-gray-400">(default)</span>
 							</Select.Option>
-							<Select.Option label="Balanced" value="balanced" />
-							<Select.Option label="Mild" value="mild" />
+							<Select.Option value="">Mild</Select.Option>
+							<Select.Option>Soft</Select.Option>
 						</Select>
 					</FlexCol>
 					<FlexCol col={cols}>
@@ -93,25 +94,35 @@ export default function CreateNewPodForm({ loading }) {
 						<input type="number" name="num_pods" id="numPods" className="w-full" max={99} min={0} />
 					</FlexCol>
 					<FlexCol col={cols}>
-						<label htmlFor="productID">Product ID</label>
+						<label htmlFor="productID">Related Product</label>
 						<Select name="product_id">
-							<Select.Option label="Vertuo" value="vertuo">
-								Vertuo <span className="text-xs text-gray-400">(default)</span>
-							</Select.Option>
-							<Select.Option label="Classic" value="classic" />
+							{data.products?.map((product) => (
+								<Select.Option
+									selectedLabel={product.name}
+									key={product.id}
+									value={product.id}
+									selected
+								>
+									<div className="">
+										<span className="block">{product.name}</span>
+										<span className="block text-xs text-gray-400">{product.id}</span>
+									</div>
+								</Select.Option>
+							))}
 						</Select>
 					</FlexCol>
-					<FlexCol>
-						<label htmlFor="podCategoryID">Pod Category ID</label>
+					<FlexCol col={cols}>
+						<label htmlFor="podCategoryID">Pod Category</label>
 						<Select name="pod_category_id">
-							<Select.Option label="Vertuo" value="vertuo">
-								Vertuo <span className="text-xs text-gray-400">(default)</span>
-							</Select.Option>
-							<Select.Option label="Classic" value="classic" />
+							{data.categories?.map((category) => (
+								<Select.Option key={category.id} label={category.name} value={category.id}>
+									{category.name}
+								</Select.Option>
+							))}
 						</Select>
 					</FlexCol>
 				</FlexRow>
-				<Button>SUBMIT</Button>
+				<Button className="mt-5">SUBMIT</Button>
 			</form>
 		</div>
 	);

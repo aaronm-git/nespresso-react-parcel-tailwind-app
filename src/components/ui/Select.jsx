@@ -38,7 +38,7 @@ function Select({ children, name }) {
 	return (
 		<div
 			ref={selectRef}
-			className="relative w-full cursor-pointer rounded-md border border-gray-300 bg-white px-4 py-2 caret-nespresso-gold data-[isopen=true]:border-transparent data-[isopen=true]:outline-none data-[isopen=true]:ring-2 data-[isopen=true]:ring-nespresso-gold"
+			className="relative mb-2 w-full cursor-pointer rounded-md border border-gray-300 bg-white px-4 py-2 caret-nespresso-gold data-[isopen=true]:border-transparent data-[isopen=true]:outline-none data-[isopen=true]:ring-2 data-[isopen=true]:ring-nespresso-gold"
 			onClick={toggleDropdown}
 			data-isopen={isOpen}
 		>

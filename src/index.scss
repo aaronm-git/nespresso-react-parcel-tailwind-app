@@ -49,7 +49,7 @@
 	input,
 	textarea,
 	select {
-		@apply w-full rounded-md border border-gray-300 px-4 py-2 caret-nespresso-gold focus:border-transparent focus:outline-none focus:ring-2 focus:ring-nespresso-gold max-sm:focus:outline-nespresso-gold;
+		@apply mb-2 w-full rounded-md border border-gray-300 px-4 py-2 caret-nespresso-gold focus:border-transparent focus:outline-none focus:ring-2 focus:ring-nespresso-gold max-sm:focus:outline-nespresso-gold;
 	}
 
 	select,

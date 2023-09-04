@@ -38,7 +38,7 @@ function SkeletonButton({ dark }) {
 }
 
 function SkeletonInput({ dark }) {
-	const classes = 'h-12 w-full animate-pulse rounded-md bg-gray-200' + `${dark ? ' bg-gray-400' : ''}`;
+	const classes = 'h-10 mb-2 w-full animate-pulse rounded-md bg-gray-200' + `${dark ? ' bg-gray-400' : ''}`;
 	return <div className={classes} />;
 }
 
