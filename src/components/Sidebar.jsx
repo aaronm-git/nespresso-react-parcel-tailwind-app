@@ -27,7 +27,7 @@ function Nav({ children }) {
 		<>
 			<StickyMenuButton toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
 			<nav
-				className="group fixed top-0 z-10 h-full w-[200px] max-w-[200px] translate-x-0 transform overflow-x-hidden border-r border-gray-300 bg-gray-200 pb-[96px] pt-[64px] transition-all duration-300 ease-in-out data-[issidebaropen=true]:shadow max-md:data-[issidebaropen=false]:-translate-x-full md:pb-[72px] md:shadow lg:pb-[48px]"
+				className="group fixed top-0 z-10 h-full w-[200px] max-w-[200px] translate-x-0 transform overflow-x-hidden border-r border-gray-300 bg-gray-200 pb-[96px] pt-[64px] transition-all duration-300 ease-in-out data-[issidebaropen=true]:shadow-md max-md:data-[issidebaropen=false]:-translate-x-full md:pb-[72px] md:shadow-md lg:pb-[48px]"
 				data-issidebaropen={isSidebarOpen}
 			>
 				<div className="border-b border-solid border-gray-300 p-3 py-5 text-center">
@@ -60,7 +60,7 @@ function MenuLink({ linkTo, linkText }) {
 function StickyMenuButton({ toggleSidebar, isSidebarOpen }) {
 	return (
 		<button
-			className="fixed bottom-[115px] right-5 z-[9999] rounded-full bg-nespresso-gold p-4 text-white shadow md:hidden"
+			className="fixed bottom-[115px] right-5 z-[9999] rounded-full bg-nespresso-gold p-4 text-white shadow-md md:hidden"
 			onClick={toggleSidebar}
 		>
 			<FeatherIcon icon={isSidebarOpen ? 'x' : 'layout'} />

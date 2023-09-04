@@ -60,7 +60,7 @@ function SelectedOptionDisplay({ selectedOption }) {
 
 function DropdownList({ children, handleOptionSelect }) {
 	return (
-		<ul className="absolute left-0 top-11 z-10 w-full overflow-hidden rounded border border-gray-300 shadow">
+		<ul className="absolute left-0 top-11 z-10 w-full overflow-hidden rounded border border-gray-300 shadow-md">
 			{children.map((option, index) => (
 				<DropdownItem key={index} option={option.props} handleOptionSelect={handleOptionSelect} />
 			))}
