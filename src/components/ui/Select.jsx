@@ -3,21 +3,15 @@ import React, { useState, useEffect, useRef } from 'react';
 function Select({ children, name }) {
 	const [isOpen, setIsOpen] = useState(false);
 	const [selectedOption, setSelectedOption] = useState('');
-	const optionsRef = useRef([]);
 	const hiddenEl = useRef(null);
-	const selectRef = useRef(null); // Reference to the custom select div
+	const selectRef = useRef(null);
 
-	// Effect to collect option data from children
 	useEffect(() => {
-		const newOptions = React.Children.map(children, (child) => ({
-			label: child.props.label,
-			value: child.props.value,
-		}));
-		optionsRef.current = newOptions;
-		setSelectedOption(newOptions[0] ? newOptions[0].label : ''); // Set the default selection
+		const defaultOption = getDefaultOption(children);
+		setSelectedOption(defaultOption.label);
+		hiddenEl.current.value = defaultOption.value;
 	}, [children]);
 
-	// Close the dropdown when clicking outside
 	useEffect(() => {
 		const handleClickOutside = (event) => {
 			if (selectRef.current && !selectRef.current.contains(event.target)) {
@@ -31,14 +25,12 @@ function Select({ children, name }) {
 		};
 	}, []);
 
-	// Function to toggle the dropdown
 	const toggleDropdown = () => {
 		setIsOpen(!isOpen);
 	};
 
-	// Function to handle option selection
 	const handleOptionSelect = (option) => {
-		setSelectedOption(option.label);
+		setSelectedOption(option.children);
 		toggleDropdown();
 		hiddenEl.current.value = option.value;
 	};
@@ -46,43 +38,69 @@ function Select({ children, name }) {
 	return (
 		<div
 			ref={selectRef}
-			className="relative w-full rounded-md border border-gray-300 px-4 py-2 caret-nespresso-gold data-[isopen=true]:border-transparent data-[isopen=true]:outline-none data-[isopen=true]:ring-2 data-[isopen=true]:ring-nespresso-gold"
+			className="relative w-full cursor-pointer rounded-md border border-gray-300 bg-white px-4 py-2 caret-nespresso-gold data-[isopen=true]:border-transparent data-[isopen=true]:outline-none data-[isopen=true]:ring-2 data-[isopen=true]:ring-nespresso-gold"
 			onClick={toggleDropdown}
 			data-isopen={isOpen}
 		>
-			<div className="relative h-full select-none after:absolute after:right-0 after:top-1/2 after:h-5 after:w-5 after:-translate-y-1/2 after:select-none after:bg-svg-chevron-down after:bg-contain after:bg-no-repeat after:content-['']">
-				{selectedOption}
-			</div>
-			{isOpen && (
-				<ul className="absolute left-0 top-11 z-10 w-full overflow-hidden rounded border border-gray-300 shadow">
-					{optionsRef.current.map((option, index) => (
-						<li
-							className="select-none border-b bg-white p-1 px-4 py-2 hover:bg-nespresso-gold hover:text-white"
-							key={index}
-							onClick={() => handleOptionSelect(option)}
-						>
-							{option.label}
-						</li>
-					))}
-				</ul>
-			)}
-			<select className="hidden" name={name} ref={hiddenEl}>
-				{optionsRef.current.map((option, index) => (
-					<option key={index} value={option.value}>
-						{option.label}
-					</option>
-				))}
-			</select>
+			<SelectedOptionDisplay selectedOption={selectedOption} />
+			{isOpen && <DropdownList children={children} handleOptionSelect={handleOptionSelect} />}
+			{/* Pass the children prop to HiddenSelectInput */}
+			<HiddenSelectInput name={name} hiddenEl={hiddenEl} children={children} />
 		</div>
 	);
 }
 
-function Option({ children, value }) {
+function SelectedOptionDisplay({ selectedOption }) {
 	return (
-		<div label={children} value={value}>
-			{children}
+		<div className="relative h-6 select-none overflow-hidden after:absolute after:right-0 after:top-1/2 after:h-5 after:w-5 after:-translate-y-1/2 after:select-none after:bg-svg-chevron-down after:bg-contain after:bg-no-repeat after:content-['']">
+			{selectedOption}
 		</div>
 	);
+}
+
+function DropdownList({ children, handleOptionSelect }) {
+	return (
+		<ul className="absolute left-0 top-11 z-10 w-full overflow-hidden rounded border border-gray-300 shadow">
+			{children.map((option, index) => (
+				<DropdownItem key={index} option={option.props} handleOptionSelect={handleOptionSelect} />
+			))}
+		</ul>
+	);
+}
+
+function DropdownItem({ option, handleOptionSelect }) {
+	return (
+		<li
+			className="select-none border-b bg-white p-1 px-4 py-2 hover:bg-nespresso-gold hover:text-white"
+			onClick={() => handleOptionSelect(option)}
+		>
+			{option.children}
+		</li>
+	);
+}
+
+function HiddenSelectInput({ name, hiddenEl, children }) {
+	return (
+		<select className="hidden" name={name} ref={hiddenEl}>
+			{children?.map((option, index) => (
+				<option key={index} value={option.props.value}>
+					{option.children}
+				</option>
+			))}
+		</select>
+	);
+}
+
+function Option({ children, value }) {
+	return <div value={value}>{children}</div>;
+}
+
+function getDefaultOption(options) {
+	if (options && options.length > 0) {
+		const firstOption = options[0].props;
+		return { label: firstOption.children, value: firstOption.value };
+	}
+	return { label: '', value: '' };
 }
 
 Select.Option = Option;
