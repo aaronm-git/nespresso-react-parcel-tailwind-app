@@ -52,6 +52,9 @@ These components can be seen in action from every page there's data being loaded
 
 I wanted to create a component that would display a loading skeleton for a component that was not yet ready to display its data. I wanted to create my own component library for this, instead of using a library such as `react-loading-skeleton`
 
-## Future plans
+### Created a scrapper using Python to scrape Nespresso.com to get all the data
 
-In the future, I plan to add more pages to the app. I also plan to add more features to the app, such as a navigation bar and a footer. I also plan to add more tests to the app. I also plan to add more features to the app, such as a navigation bar and a footer.
+Using Python, I wrote a scrapper script to get all the data around Nespresso recipes, including images, pod information, etc. This was a challenge because this was my first exposure to Python3. I have actually grown to really like using Python thanks to this project and I will definitely implement more Python with my apps.
+
+## Future plans
+I want people to be able to create their own recipes and be able to manage their recipes in the app and build a community of coffee lovers all around Nespresso products.

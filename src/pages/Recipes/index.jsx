@@ -4,7 +4,9 @@ import RecipeList from 'components/RecipeList';
 export default function index() {
 	return (
 		<Container>
-			<RecipeList />
+			<div className="mt-8">
+				<RecipeList />
+			</div>
 		</Container>
 	);
 }

@@ -1,22 +1,382 @@
 [
 	{
-		"id": "d1f3ca7e-9c93-46c8-8a0d-4e4e6ec6fbcf",
-		"name": "TIRAMISU CAPPUCCINO",
-		"type": "Latte",
-		"prepTime": "10 Min",
+		"coffees": ["c456a512-e4f7-4443-b578-5accbec0a21d", "b5ab927c-4a71-4955-af90-cfb3dae13160"],
+		"description": "One word: microfoam. This is what gives the Flat White a smooth and velvety texture. Simple, yet another great way to extract bold and intense aromas from the coffee. Not that flat in the end is it?",
 		"difficulty": "Easy",
-		"tags": ["FLAVOR", "AEROCCINO", "chocolate", "MILK", "mascarpone cheese", "Speculoos Spice Cookies"],
-		"description": "Enjoy your coffee with a taste of Tiramisu. Sweet, surprising, and fun.",
-		"coffees": ["756a693f-7832-4c5f-9321-320946dfc123", "84a751ac-8e17-4e4a-9e4c-1df5e56f7890"],
-		"ingredients": [
-			"1 NESPRESSO CAPSULE (VERTUO: IL CAFFÈ, ORIGINAL: VENEZIA)",
-			"2 TSPS. CHOCOLATE SAUCE OR SYRUP",
-			"2 TBS. MASCARPONE CHEESE",
-			"MILK - 4 OZ.",
-			"SPECULOOS SPICE COOKIES, ABOUT 3"
+		"id": "07750ca6-4f59-4a76-a282-d19abd1776be",
+		"images": ["recipes/flat-white-1-recipe_image.jpg", "recipes/flat-white-2-recipe_image.jpg"],
+		"ingredients": ["Milk3 oz."],
+		"instructions": [
+			"Brew capsule directly into cup.",
+			"Prepare Milk for lattes.",
+			"Slowly pour steamed, frothed milk onto espresso.",
+			"Spoon a small amount of foam onto drink."
 		],
-		"images": ["recipes/01_Tiramisu_Cappuccino_2.webp"],
-		"materials": ["7c6f0e64-5035-47db-8b57-3a173bc77f97", "502037e9-4bc2-40e0-9424-97c63100dd52"],
+		"materials": [],
+		"name": "Flat White",
+		"prepTime": "5 Min",
+		"products": [],
+		"tags": ["Milk"]
+	},
+	{
+		"coffees": ["700eb050-d7c2-4c0a-b09e-26626018ddbe", "de43b815-0059-4772-b524-fbb858a4fbc5"],
+		"description": "With just the right blend of ingredients, Nespresso's Amaretto Spiced Latte is the perfect drink to help you stay cozy and warm.",
+		"difficulty": "Easy",
+		"id": "48f0113e-cd2e-48e3-9f57-6611013e6bd1",
+		"images": [
+			"recipes/honey-oat-cafe-au-lait-1-recipe_image.jpg",
+			"recipes/honey-oat-cafe-au-lait-2-recipe_image.jpg"
+		],
+		"ingredients": ["2 nespresso original capsule original: ispirazione venezia", "Honey1 tbs.", "Oat milk 6 oz."],
+		"instructions": [
+			"Place honey into glass.",
+			"Using your device, froth milk for lattes.",
+			"Brew capsule directly into glass.",
+			"Add milk and stir to combine."
+		],
+		"materials": [],
+		"name": "Honey Oat Caf\u00e9 Au Lait",
+		"prepTime": "10 Min",
+		"products": [],
+		"tags": ["Flavor", "Milk", "Honey"]
+	},
+	{
+		"coffees": ["109e42a1-ede1-4118-8563-6559bbc75295", "40d6b3ba-20df-4034-bc76-8a300eb5164e"],
+		"description": "At once intense and refreshing, this simple iced coffee can be enjoyed any time of day!",
+		"difficulty": "Easy",
+		"id": "c52c4c52-f524-4862-aa01-4a7b4852f5ac",
+		"images": ["recipes/iced-coffee-1-recipe_image.jpeg", "recipes/iced-coffee-2-recipe_image.jpeg"],
+		"ingredients": ["Ice"],
+		"instructions": [
+			"Fill recipe glass with ice.",
+			"Brew coffee into metal pitcher.",
+			"Pour coffee over ice to fill glass.",
+			"Stir to chill. Enjoy!"
+		],
+		"materials": [],
+		"name": "Iced coffee",
+		"prepTime": "5 Min",
+		"products": [],
+		"tags": ["Flavor", "Ice", "Cold water"]
+	},
+	{
+		"coffees": ["8632d509-1c2a-4525-8f05-aa7c803ee68f"],
+		"description": "Lovers of fancy sweet sensations listen up because this cappuccino is for you. With a base of condensed milk, it is finished with a cinnamon flourish \u2013 decadently creamy yet intensely satisfying.",
+		"difficulty": "Easy",
+		"id": "92a2f6bf-3677-481d-acaf-d33e4e8f2dc6",
+		"images": [
+			"recipes/cinnamon-roll-cappuccino-1-recipe_image.jpg",
+			"recipes/cinnamon-roll-cappuccino-2-recipe_image.jpg"
+		],
+		"ingredients": [
+			"2 nespresso original capsule original: vanilla \u00e9clair",
+			"Sweetened condensed milk1\u00bd tbs.",
+			"Vanilla extract1/8 tsp.",
+			"Milk3 oz.",
+			"Cinnamon sugar"
+		],
+		"instructions": [
+			"Place condensed milk and vanilla into cup and stir.",
+			"Froth milk for lattes and add to glass.",
+			"Brew capsule directly into glass.",
+			"Stir. Top with sprinkling of cinnamon sugar."
+		],
+		"materials": [],
+		"name": "Cinnamon Roll Cappuccino",
+		"prepTime": "5 Min",
+		"products": [],
+		"tags": ["Flavor", "Milk", "Cinnamon", "Condensed milk", "Vanilla"]
+	},
+	{
+		"coffees": ["269e62b4-3941-4b73-81a0-163fe56b4c59", "888a170f-8d19-40ef-8016-57483e6c9c0f"],
+		"description": "Surprisingly delicious, turmeric brings an interesting depth of flavor to a classic latte recipe\u2014use a coffee with toasted notes to compliment the taste.",
+		"difficulty": "Easy",
+		"id": "a4ab1ba5-c99b-477a-bb8f-e56c95572b02",
+		"images": [
+			"recipes/turmeric-latte-1-recipe_image.jpeg",
+			"recipes/turmeric-latte-2-recipe_image.jpeg"
+		],
+		"ingredients": ["Turmeric syrup 1 oz.", "Milk 6 oz.", "Ground turmeric, for garnish, optional"],
+		"instructions": [
+			"Place turmeric syrup into glass.",
+			"Prepare hot, frothed milk for a latte using frothing device. Add milk to glass and stir to combine.",
+			"Brew capsule directly into the glass.",
+			"Top with sprinkle of ground turmeric."
+		],
+		"materials": [],
+		"name": "Turmeric Latte",
+		"prepTime": "5 Min",
+		"products": [],
+		"tags": ["Flavor", "Turmeric", "Syrup", "Milk"]
+	},
+	{
+		"coffees": ["bdd388db-9c43-4d45-a4ef-6e790e3eb787", "a22af98b-2b0c-4536-ac00-3074680cf37c"],
+		"description": "Discover one of our classic recipes: Espresso Martini.",
+		"difficulty": "Medium",
+		"id": "24579910-f7f7-4790-8ce4-c7e5da79f3f5",
+		"images": ["recipes/espresso-martini-1-recipe_image.jpg", "recipes/espresso-martini-2-recipe_image.jpg"],
+		"ingredients": [
+			"Vodka, vanilla-flavored or plain 1 oz.",
+			"Vanilla syrup1 tsp.",
+			"Ice",
+			"1 whole strawberry, optional",
+			"Cacao nibs, optional"
+		],
+		"instructions": [
+			"In a cocktail shaker, combine vodka, syrup and espresso.",
+			"Fill shaker with ice. Cover and shake well until chilled.",
+			"Strain into martini glass.  Slice strawberry \u00be through, from bottom.",
+			"Place strawberry onto glass rim. Top with a few cocoa nibs."
+		],
+		"materials": [],
+		"name": "Espresso Martini",
+		"prepTime": "10 Min",
+		"products": [],
+		"tags": ["Flavor", "Ice", "Vodka", "Vanilla", "Cacao", "Strawberry"]
+	},
+	{
+		"coffees": ["3a69e8a7-442c-4dc1-ba49-0fc22977eb7c", "773889b0-dc27-49e3-ada5-e69a4aa7074b"],
+		"description": "Make your caramel latte even sweeter with a touch of honey.",
+		"difficulty": "Easy",
+		"id": "5f1cf4e3-9bae-4740-9592-a1d9c117b0af",
+		"images": ["recipes/honey-caramel-latte-1-recipe_image.jpg", "recipes/honey-caramel-latte-2-recipe_image.jpg"],
+		"ingredients": ["Honey1\u00bd tbs.", "Milk 4 oz.", "Caramel sauce1\u00bd tbs."],
+		"instructions": [
+			"Add honey to mug. Froth milk for lattes.",
+			"Add steamed milk to glass and stir to combine with honey.",
+			"Brew capsule directly into glass.",
+			"Top with swirl of caramel sauce."
+		],
+		"materials": [],
+		"name": "Honey Caramel Latte",
+		"prepTime": "5 Min",
+		"products": [],
+		"tags": ["Flavor", "Honey", "Milk", "Caramel"]
+	},
+	{
+		"coffees": ["3a69e8a7-442c-4dc1-ba49-0fc22977eb7c", "b5ab927c-4a71-4955-af90-cfb3dae13160"],
+		"description": "A delicious classic, the scent of vanilla compliments the warm and toasty notes of our delicious espresso.",
+		"difficulty": "Easy",
+		"id": "b4efb7ff-f08b-4a7e-88a7-b2470acdc698",
+		"images": ["recipes/vanilla-latte-1-recipe_image.jpeg", "recipes/vanilla-latte-2-recipe_image.jpeg"],
+		"ingredients": ["Vanilla syrup 1 oz.", "Milk 6 oz.", "Whipped cream, optional"],
+		"instructions": [
+			"Pour vanilla syrup into glass.",
+			"Prepare milk for lattes using Aeroccino or other frothing device. Stir to combine.",
+			"Pour prepared milk into glass.",
+			"Brew capsule(s) directly into glass.",
+			"Top with whipped cream."
+		],
+		"materials": [],
+		"name": "Vanilla Latte",
+		"prepTime": "3 Min",
+		"products": [],
+		"tags": ["Flavor", "Turmeric", "Syrup", "Milk"]
+	},
+	{
+		"coffees": ["d625ff81-c63c-4338-aed7-052b496b950a", "40d6b3ba-20df-4034-bc76-8a300eb5164e"],
+		"description": "Treat your taste buds with Pumpkin Spice Latte.",
+		"difficulty": "Easy",
+		"id": "ac73d3ab-669b-415e-9fa9-64425e6b7a68",
+		"images": ["recipes/pumpkin-spice-latte-1-recipe_image.jpg", "recipes/pumpkin-spice-latte-2-recipe_image.jpg"],
+		"ingredients": [
+			"Pumpkin pie filling 3 oz.",
+			"Almond milk, or preference \u00be oz.",
+			"Agave syrup 1 oz.",
+			"Vanilla extract \u00bc tsp",
+			"Cinnamon \u00bc tsp"
+		],
+		"instructions": [
+			"Combine pumpkin pie filling, almond milk, agave, vanilla and \u00bc tsp. cinnamon in a small bowl and whisk together until well combined.",
+			"Spoon puree into glass.",
+			"Brew coffee directly into glass.",
+			"Stir and top with cinnamon."
+		],
+		"materials": [],
+		"name": "Pumpkin Spice Latte",
+		"prepTime": "5 Min",
+		"products": [],
+		"tags": ["Flavor", "Pumpkin", "Almond milk", "Syrup", "Cinnamon"]
+	},
+	{
+		"coffees": ["3a69e8a7-442c-4dc1-ba49-0fc22977eb7c", "40d6b3ba-20df-4034-bc76-8a300eb5164e"],
+		"description": "The ideal cappuccino has perfectly portioned coffee and milk, and luscious foam from first sip to last. Here's how to make this classic yet impressive beverage.",
+		"difficulty": "Easy",
+		"id": "f3bbda5d-60e2-4dfe-9eb0-377ebafd3af9",
+		"images": ["recipes/cappuccino-1-recipe_image.jpeg", "recipes/cappuccino-2-recipe_image.jpeg"],
+		"ingredients": ["Milk 3 oz.", "Cinnamon, for garnish"],
+		"instructions": [
+			"Froth milk for cappuccinos in Aeroccino or other device.",
+			"Brew espresso(s) directly into cup.",
+			"Quickly pour prepared hot milk and foam into cup to evenly distribute.",
+			"Use excess froth to cover any brown spots in foam.",
+			"Sprinkle with cinnamon. Enjoy!"
+		],
+		"materials": [],
+		"name": "Cappuccino",
+		"prepTime": "5 Min",
+		"products": [],
+		"tags": ["Flavor", "Aeroccino", "Milk", "Cinnamon"]
+	},
+	{
+		"coffees": ["700eb050-d7c2-4c0a-b09e-26626018ddbe", "40d6b3ba-20df-4034-bc76-8a300eb5164e"],
+		"description": "A grand classic prepared just right \u2014 unadorned and simple, allowing the purity of the ingredients to fully express themselves.",
+		"difficulty": "Easy",
+		"id": "4caf93a1-0752-4e61-8687-8b2b3fa9fbaf",
+		"images": ["recipes/iced-latte-1-recipe_image.jpeg", "recipes/iced-latte-2-recipe_image.jpg"],
+		"ingredients": ["Cold milk 5 oz.", "Ice", "Flavored syrup, optional1 oz."],
+		"instructions": [
+			"Fill glass with ice.",
+			"Pour milk to fill 3/4 of the glass. Add syrup.",
+			"Brew capsule directly into glass.",
+			"Stir to chill. Enjoy!"
+		],
+		"materials": [],
+		"name": "Iced Latte",
+		"prepTime": "3 Min",
+		"products": [],
+		"tags": ["Flavor", "Syrup", "Milk"]
+	},
+	{
+		"coffees": ["998c34ca-1f04-4995-8d65-d94fc161b491", "49e2b5a4-39c3-47f8-9a83-a9dec9f2d16c"],
+		"description": "With just the right blend of ingredients, Nespresso's Amaretto Spiced Latte is the perfect drink to help you stay cozy and warm.",
+		"difficulty": "Easy",
+		"id": "fc188bda-a94e-4c26-9feb-eeb61012b7d9",
+		"images": [
+			"recipes/amaretto-spiced-latte-1-recipe_image.jpg",
+			"recipes/amaretto-spiced-latte-2-recipe_image.jpg"
+		],
+		"ingredients": ["Amaretto syrup1 tbs.", "Cinnamon sugar2 tbs.", "Milk 6 oz."],
+		"instructions": [
+			"Place amaretto syrup into cup.",
+			"Using your device, froth milk for cappuccinos.",
+			"Add milk to glass. Add cinnamon sugar and stir.",
+			"Brew capsule directly into glass."
+		],
+		"materials": [],
+		"name": "Amaretto Spiced Latte",
+		"prepTime": "10 Min",
+		"products": [],
+		"tags": ["Flavor", "Amaretto syrup", "Milk", "Cinnamon"]
+	},
+	{
+		"coffees": ["c456a512-e4f7-4443-b578-5accbec0a21d", "9fe44921-af83-44b8-b4c6-eb9f9b51ba93"],
+		"description": "The classic combination our delicious espresso topped with a bit of milk foam in the center creates an intensely smooth experience.",
+		"difficulty": "Easy",
+		"id": "384ac6c5-afba-4ce9-a432-ebc772f9f5d4",
+		"images": ["recipes/macchiato-1-recipe_image.jpg", "recipes/macchiato-2-recipe_image.jpg"],
+		"ingredients": ["Milk 2 oz."],
+		"instructions": [
+			"Prepare milk for cappuccinos (with foam) using frothing device.",
+			"Brew capsule (1.35 oz.) directly into glass.",
+			"Spoon a small amount of milk froth onto surface of espresso.",
+			"Add more hot milk, if desired. Enjoy!"
+		],
+		"materials": [],
+		"name": "Macchiato Coffee Recipe",
+		"prepTime": "3 Min",
+		"products": [],
+		"tags": ["Milk"]
+	},
+	{
+		"coffees": ["28627057-96f1-4c0f-815b-47e31651dfab", "40d6b3ba-20df-4034-bc76-8a300eb5164e"],
+		"description": "A marriage made in heaven between vanilla ice cream and your favorite espresso. After dinner, after lunch, or even after a nap.",
+		"difficulty": "Medium",
+		"id": "4a00d0c8-2664-4802-9c80-99f1febdea23",
+		"images": ["recipes/affogato-1-recipe_image.jpg", "recipes/affogato-2-recipe_image.jpg"],
+		"ingredients": ["1-2 scoops ice cream, vanilla or chocolate recommended", "Whipped cream, optional"],
+		"instructions": [
+			"Scoop ice cream into glass.",
+			"Brew capsule into pitcher.",
+			"Pour espresso onto ice cream.",
+			"Top with whipped cream.",
+			"Enjoy immediately."
+		],
+		"materials": [],
+		"name": "Affogato",
+		"prepTime": "10 Min",
+		"products": [],
+		"tags": ["Flavor", "Ice cream", "Whipped cream"]
+	},
+	{
+		"coffees": ["700eb050-d7c2-4c0a-b09e-26626018ddbe", "40d6b3ba-20df-4034-bc76-8a300eb5164e"],
+		"description": "An icy, indulgent twist on a simple favorite. The caramel flavor works perfectly with just a touch of milk.",
+		"difficulty": "Easy",
+		"id": "7a998496-d7f1-48d6-a71b-e0cade149b5a",
+		"images": [
+			"recipes/iced-caramel-macchiato-1-recipe_image.jpg",
+			"recipes/iced-caramel-macchiato-2-recipe_image.jpeg"
+		],
+		"ingredients": ["Caramel sauce 1/2 oz.", "Milk3 oz.", "Ice"],
+		"instructions": [
+			"Place caramel sauce into glass.",
+			"Prepare milk for cappuccinos (with foam) using frothing device. If possible, use cold froth setting.",
+			"Brew espresso directly into glass. Stir to combine with caramel.",
+			"Spoon milk froth onto the surface of the espresso to cover.",
+			"Add ice and stir gently to chill."
+		],
+		"materials": [],
+		"name": "Iced Caramel Macchiatos Carmel",
+		"prepTime": "5 Min",
+		"products": [],
+		"tags": ["Flavor", "Ice", "Caramel sauce", "Milk"]
+	},
+	{
+		"coffees": ["ddcc1d15-9ce8-4191-a0f1-c182c337859b", "1a2574ba-4b73-48b2-bcf6-6d52fd66646f"],
+		"description": "Make this signature treat all year long with any of your favorite espressos.",
+		"difficulty": "Easy",
+		"id": "ecb93e26-1d8f-408c-a76b-2b36792db2d8",
+		"images": [
+			"recipes/white-chocolate-pumpkin-spice-latte-1-recipe_image.jpeg",
+			"recipes/white-chocolate-pumpkin-spice-latte-2-recipe_image.jpeg"
+		],
+		"ingredients": [
+			"Pumpkin spice syrup or pumpkin pie sauce, torani brand recommended 1 oz.",
+			"Milk 6 oz.",
+			"White chocolate sauce, torani brand recommended, for garnish"
+		],
+		"instructions": [
+			"Place pumpkin spice syrup or sauce into bottom of glass.",
+			"Prepare hot, frothed milk for a latte using frothing device. Add milk to glass and stir to combine.",
+			"Brew capsule directly into the glass.",
+			"Top with drizzle of white chocolate sauce."
+		],
+		"materials": [],
+		"name": "White chocolate pumpkin spice latte recipe",
+		"prepTime": "5 Min",
+		"products": [],
+		"tags": ["Flavor", "Aeroccino", "Chocolate", "Milk"]
+	},
+	{
+		"coffees": ["d625ff81-c63c-4338-aed7-052b496b950a", "9fe44921-af83-44b8-b4c6-eb9f9b51ba93"],
+		"description": "Small yet deliciously mighty, we use equal parts milk and coffee to dilute the espresso just enough and take the edge off any acidity or bitterness--the perfect little package.",
+		"difficulty": "Easy",
+		"id": "e567e8a8-be84-4959-9d0b-2e0f108b9e14",
+		"images": ["recipes/cortado-1-recipe_image.jpg", "recipes/cortado-2-recipe_image.jpg"],
+		"ingredients": ["Milk 2 oz."],
+		"instructions": [
+			"Brew capsule (1.35 oz.) directly into glass.",
+			"Prepare hot milk with frothing device.",
+			"Spoon hot milk into the espresso."
+		],
+		"materials": [],
+		"name": "Cortado",
+		"prepTime": "5 Min",
+		"products": [],
+		"tags": ["Milk"]
+	},
+	{
+		"coffees": ["4c9bbe3a-833e-4653-8017-013dfdac8457", "de43b815-0059-4772-b524-fbb858a4fbc5"],
+		"description": "Enjoy your coffee with a taste of Tiramisu. Sweet, surprising, and fun.",
+		"difficulty": "Easy",
+		"id": "e3457e62-72ab-4e4e-8559-5f707c976088",
+		"images": ["recipes/tiramisu-cappuccino-1-recipe_image.jpg", "recipes/tiramisu-cappuccino-2-recipe_image.jpg"],
+		"ingredients": [
+			"2 tsps. chocolate sauce or syrup",
+			"2 tbs. mascarpone cheese",
+			"Milk 4 oz.",
+			"Speculoos spice cookies, about 3"
+		],
 		"instructions": [
 			"Add chocolate sauce to glass.",
 			"Add mascarpone onto chocolate sauce.",
@@ -24,65 +384,51 @@
 			"Brew capsule directly into glass.",
 			"Crumble speculoos cookies onto drink."
 		],
-		"products": [
-			"756a693f-7832-4c5f-9321-320946dfc123",
-			"84a751ac-8e17-4e4a-9e4c-1df5e56f7890",
-			"7c6f0e64-5035-47db-8b57-3a173bc77f97",
-			"502037e9-4bc2-40e0-9424-97c63100dd52"
-		]
+		"materials": [],
+		"name": "Tiramisu Cappuccino",
+		"prepTime": "10 Min",
+		"products": [],
+		"tags": ["Flavor", "Aeroccino", "Chocolate", "Milk", "Mascarpone cheese", "Speculoos spice cookies"]
 	},
 	{
-		"id": "a6e1dfb5-2df1-4c65-b60a-781f76e21680",
-		"name": "AMARETTO SPICED LATTE",
-		"prepTime": "10 Min",
+		"coffees": ["dcf292c0-96f3-4d1b-b4b4-59942c191448", "de43b815-0059-4772-b524-fbb858a4fbc5"],
+		"description": "Oh, doesn\u2019t it look glorious? Sweetened with honey and topped with gingerbread pieces, the striking layers of the coffee and luxuriously whipped cream are reason enough to just stare at it alone.",
 		"difficulty": "Easy",
-		"description": "With just the right blend of ingredients, Nespresso's Amaretto Spiced Latte is the perfect drink to help you stay cozy and warm.",
-		"images": ["recipes/09_Amaretto_Spiced_Latte_1.png", "recipes/09_Amaretto_Spiced_Latte_2.png"],
-		"coffees": [],
-		"ingredients": [
-			"1 NESPRESSO CAPSULE (VERTUO: FORTADO, ORIGINAL: STOCKHOLM FORTISSIO LUNGO)",
-			"AMARETTO SYRUP - 1 TBS.",
-			"CINNAMON SUGAR - 2 TBS.",
-			"MILK - 6 OZ."
+		"id": "0fc444df-c7c6-4ebe-896d-f57821ed80e4",
+		"images": [
+			"recipes/gingerbread-viennois-1-recipe_image.jpg",
+			"recipes/gingerbread-viennois-2-recipe_image.jpg"
 		],
-		"materials": ["7c6f0e64-5035-47db-8b57-3a173bc77f97", "502037e9-4bc2-40e0-9424-97c63100dd52"],
+		"ingredients": ["Honey or molasses1 tbs.", "Whipped cream", "Gingerbread cookie or cake, crumbled"],
 		"instructions": [
-			"Place amaretto syrup into cup.",
-			"Using your device, froth milk for cappuccinos.",
-			"Add milk to glass. Add cinnamon sugar and stir.",
-			"Brew capsule directly into glass."
+			"Place honey or molasses into mug.",
+			"Brew capsule directly into mug, stirring to dissolve.",
+			"Top with whipped cream enough to fill glass.",
+			"Top with gingerbread crumbles."
 		],
-		"tags": ["FLAVOR", "AMARETTO SYRUP", "MILK", "CINNAMON"],
-		"products": [
-			{
-				"id": "4a6a5748-73f0-42c5-8e4d-d726ffdf8ca2",
-				"name": "Fortado",
-				"type": "FORTADO",
-				"description": "Intense & Full-Bodied",
-				"price": "$1.15",
-				"inBasket": false
-			},
-			{
-				"id": "11b6a19a-755d-45f7-906c-7bb3e19f437d",
-				"name": "Stockholm Fortissio Lungo",
-				"type": "STOCKHOLM FORTISSIO LUNGO",
-				"description": "Rich & Full Bodied",
-				"price": "$0.85",
-				"inBasket": false
-			},
-			{
-				"id": "764e2974-e67e-4b46-8777-3e348b05a418",
-				"name": "VIEW Recipe Glasses",
-				"price": "$24.00",
-				"inBasket": false
-			},
-			{
-				"id": "f7f3b535-8490-4143-93f6-7f9a16187c1f",
-				"name": "Aeroccino4",
-				"description": "AEROCCINO4",
-				"price": "$119.00",
-				"inBasket": false
-			}
-		]
+		"materials": [],
+		"name": "Gingerbread Viennois",
+		"prepTime": "10 Min",
+		"products": [],
+		"tags": ["Flavor", "Milk", "Honey"]
+	},
+	{
+		"coffees": ["3a69e8a7-442c-4dc1-ba49-0fc22977eb7c", "40d6b3ba-20df-4034-bc76-8a300eb5164e"],
+		"description": "An indulgent twist on a simple favorite. The caramel flavor works perfectly with just a touch of milk.",
+		"difficulty": "Easy",
+		"id": "1a7994f2-665e-4ab0-9033-5a3c1fceabb3",
+		"images": ["recipes/caramel-macchiato-1-recipe_image.jpeg", "recipes/caramel-macchiato-2-recipe_image.jpg"],
+		"ingredients": ["Caramel sauce 1/2 oz.", "Milk3 oz."],
+		"instructions": [
+			"Place caramel sauce into glass.",
+			"Brew espresso directly into glass. Stir to combine with caramel.",
+			"Spoon milk froth onto the surface of the espresso to cover.",
+			"Add more hot milk, if desired."
+		],
+		"materials": [],
+		"name": "Caramel Macchiato Carmel",
+		"prepTime": "5 Min",
+		"products": [],
+		"tags": ["Flavor", "Caramel sauce", "Milk"]
 	}
 ]
