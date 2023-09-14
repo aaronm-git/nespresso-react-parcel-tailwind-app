@@ -8,7 +8,7 @@ export default function Navbar() {
 	};
 
 	return (
-		<nav className="fixed top-0 z-10 w-screen bg-black text-white">
+		<nav className="fixed top-0 z-[9999] w-screen bg-black text-white">
 			<div className="mx-auto lg:container md:flex md:px-4">
 				<div className="relative z-20 mr-auto flex items-center bg-black max-md:px-4">
 					<div className="flex flex-shrink-0">
@@ -42,6 +42,15 @@ export default function Navbar() {
 								Home
 							</Link>
 						</li>
+						{/* <li className="h-full">
+							<Link
+								to="/admin"
+								className="flex h-full flex-col justify-center border-solid border-corn-harvest-900 px-3 text-center text-sm text-white no-underline transition-colors duration-100 ease-linear active:bg-corn-harvest-900 max-md:border-b max-md:bg-nespresso-gold active:md:bg-nespresso-gold hover:lg:bg-nespresso-gold"
+								onClick={menuToggle}
+							>
+								Admin
+							</Link>
+						</li> */}
 						<li className="h-full">
 							<Link
 								to="/recipes"

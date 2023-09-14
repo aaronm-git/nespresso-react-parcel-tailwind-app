@@ -1,14 +1,17 @@
 import React from 'react';
 
-export default function Skeleton({ children, dark }) {
-	const classes = 'h-full w-full animate-pulse rounded-md bg-gray-200' + `${dark ? ' bg-gray-400' : ''}`;
+export default function Skeleton({ children, dark, className }) {
+	const classes =
+		'h-full w-full animate-pulse rounded-md bg-gray-200' +
+		`${dark ? ' bg-gray-400' : ''}` +
+		`${className ? className : ''}`;
 	if (children) {
-		return <div className="flex flex-col gap-3">{children}</div>;
+		return <div className={`flex flex-col gap-3 ${className ? className : ''}`}>{children}</div>;
 	} else return <div className={classes} />;
 }
 
 function SkeletonTitle({ dark }) {
-	const classes = 'h-10 w-2/3 animate-pulse rounded-md bg-gray-200' + `${dark ? ' bg-gray-400' : ''}`;
+	const classes = 'h-8 w-2/3 animate-pulse rounded-md bg-gray-200' + `${dark ? ' bg-gray-400' : ''}`;
 	return <div className={classes} />;
 }
 
@@ -34,7 +37,13 @@ function SkeletonButton({ dark }) {
 	return <div className={classes} />;
 }
 
+function SkeletonInput({ dark }) {
+	const classes = 'h-10 mb-2 w-full animate-pulse rounded-md bg-gray-200' + `${dark ? ' bg-gray-400' : ''}`;
+	return <div className={classes} />;
+}
+
 Skeleton.Title = SkeletonTitle;
+Skeleton.Input = SkeletonInput;
 Skeleton.Text = SkeletonText;
 Skeleton.Image = SkeletonImage;
 Skeleton.Button = SkeletonButton;

@@ -23,11 +23,7 @@
 	}
 
 	body {
-		@apply tracking-wider text-[#333333];
-	}
-
-	#app {
-		@apply mb-36 mt-16 min-h-[calc(100vh-64px-56px-144px-64px)] antialiased lg:mb-20 lg:min-h-[calc(100vh-64px-56px-80px-64px)];
+		@apply pb-[96px] pt-16 tracking-wider text-[#333333] antialiased md:pb-[48px];
 	}
 
 	p {
@@ -39,10 +35,25 @@
 	}
 
 	h2 {
-		@apply mb-6 text-2xl font-light uppercase leading-tight tracking-[8px] lg:text-3xl;
+		@apply mb-4 text-2xl font-light uppercase leading-tight tracking-[6px] lg:text-3xl;
 	}
 
 	a {
 		@apply text-nespresso-gold underline;
+	}
+
+	label {
+		@apply mb-2 block text-sm font-bold text-gray-700;
+	}
+
+	input,
+	textarea,
+	select {
+		@apply mb-2 w-full rounded-md border border-gray-300 px-4 py-2 caret-nespresso-gold focus:border-transparent focus:outline-none focus:ring-2 focus:ring-nespresso-gold max-sm:focus:outline-nespresso-gold;
+	}
+
+	select,
+	select {
+		@apply relative cursor-pointer appearance-none;
 	}
 }

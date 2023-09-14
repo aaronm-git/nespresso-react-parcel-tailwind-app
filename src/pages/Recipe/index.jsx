@@ -15,7 +15,7 @@ export default function Content() {
 	return (
 		<Container>
 			<PageNavigation link="/recipes" />
-			<div className="flex w-full flex-wrap gap-y-3">
+			<div className="mb-8 flex w-full flex-wrap gap-y-3">
 				<div className="flex w-full flex-col gap-3 md:w-1/2 md:pr-4">
 					<LeftContent recipe={recipe} loading={loading} />
 				</div>

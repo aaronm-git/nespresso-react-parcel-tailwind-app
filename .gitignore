@@ -76,3 +76,4 @@ sketch
 .vscode
 .parcel-cache
 dist
+.env

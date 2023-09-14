@@ -10,7 +10,9 @@
 		"pages/*": "./src/pages/$1",
 		"data/*": "./src/data/$1",
 		"contexts/*": "./src/contexts/$1",
-		"public/*": "./src/public/$1"
+		"public/*": "./src/public/$1",
+		"utils/*": "./src/utils/$1"
+		
 	},
 	"homepage": "https://aaronm-git/nespresso-react-parcel-tailwind-app",
 	"scripts": {
@@ -41,6 +43,8 @@
 	"dependencies": {
 		"@parcel/config-default": "^2.9.3",
 		"@parcel/core": "^2.9.3",
+		"@supabase/supabase-js": "^2.33.1",
+		"dotenv": "^16.3.1",
 		"feather-icons": "^4.29.0",
 		"lodash": "^4.17.21",
 		"pocketbase": "^0.15.3",

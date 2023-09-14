@@ -41,8 +41,19 @@ module.exports = {
 
 			backgroundImage: {
 				'hero-recipes': "url('/src/public/images/bg-recipes-jpg-1x.webp')",
+				'svg-chevron-down': "url('/node_modules/feather-icons/dist/icons/chevron-down.svg')",
 			},
 		},
 	},
+	safelist: [
+		{
+			pattern: /^w-full$/,
+			variants: ['md', 'lg', 'xl'],
+		},
+		{
+			pattern: /^w-(\d+)\/12$/,
+			variants: ['md', 'lg', 'xl'],
+		},
+	],
 	plugins: [],
 };

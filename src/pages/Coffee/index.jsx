@@ -6,6 +6,7 @@ import Container from 'ui/Container';
 import FeatherIcon from 'ui/FeatherIcon';
 import Skeleton from 'ui/Skeleton';
 import MugShotCard from 'components/MugShotCard';
+
 export default function Coffee() {
 	const { id } = useParams();
 	const { data: coffee, loading, error } = useDB(`/coffees/${id}`);
@@ -13,7 +14,7 @@ export default function Coffee() {
 
 	if (loading)
 		return (
-			<div>
+			<>
 				<section className="min-h-[500px] bg-gradient-to-t from-[#F9F7F6] from-60% to-[#EDEAE6] to-50% p-5 lg:py-20">
 					<div className="container mx-auto flex flex-col justify-end text-center lg:flex-row">
 						<div className="grow">
@@ -74,7 +75,7 @@ export default function Coffee() {
 								</tbody>
 							</table>
 						</div>
-						<div className="border-t border-solid border-gray-300 py-5">
+						<div className="border-t border-solid border-gray-300">
 							<div className="my-4 flex flex-row items-center gap-3">
 								<span className="w-28">BITTERNESS</span>
 								<div className="grid grow grid-cols-5 gap-x-1">
@@ -158,7 +159,7 @@ export default function Coffee() {
 						</div>
 					</Container>
 				</section>
-			</div>
+			</>
 		);
 
 	if (error) return <div>Error: {JSON.stringify(error, null, 2)}</div>;
@@ -201,7 +202,7 @@ export default function Coffee() {
 							</tbody>
 						</table>
 					</div>
-					<div className="border-t border-solid border-gray-300 py-5">
+					<div className="border-t border-solid border-gray-300">
 						<div className="my-4 flex flex-row items-center gap-3">
 							<span className="w-28">BITTERNESS</span>
 							<div className="grid grow grid-cols-5 gap-x-1">
