@@ -12,7 +12,6 @@
 		"contexts/*": "./src/contexts/$1",
 		"public/*": "./src/public/$1",
 		"utils/*": "./src/utils/$1"
-		
 	},
 	"homepage": "https://aaronm-git/nespresso-react-parcel-tailwind-app",
 	"scripts": {
@@ -38,6 +37,7 @@
 		"prettier": "^3.0.0",
 		"prettier-plugin-tailwindcss": "^0.4.1",
 		"process": "^0.11.10",
+		"sharp": "^0.31.3",
 		"tailwindcss": "^3.3.3"
 	},
 	"dependencies": {

@@ -9,7 +9,7 @@ import Coffees from 'pages/Coffees';
 import Coffee from 'pages/Coffee';
 import Page from 'pages/templates/Page';
 // import Admin from 'pages/Admin';
-import CreateNewPods from 'pages/Admin/CreateNewPods';
+// import CreateNewPods from 'pages/Admin/CreateNewPods';
 // import AdminPage from 'pages/templates/AdminPage';
 
 export function App() {
