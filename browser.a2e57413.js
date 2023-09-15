@@ -1,2 +1,0 @@
-var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{};e.parcelRequire8956.register("979Ct",function(n,o){"use strict";var t=function(){if("undefined"!=typeof self)return self;if("undefined"!=typeof window)return window;if(void 0!==e)return e;throw Error("unable to locate global object")}();n.exports=o=t.fetch,t.fetch&&(o.default=t.fetch.bind(t)),o.Headers=t.Headers,o.Request=t.Request,o.Response=t.Response});
-//# sourceMappingURL=browser.a2e57413.js.map
