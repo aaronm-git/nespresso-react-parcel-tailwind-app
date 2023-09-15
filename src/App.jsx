@@ -30,10 +30,10 @@ export function App() {
 				<Route path="/coffees" index element={<Coffees />} />
 				<Route path=":id" element={<Coffee />} />
 			</Route>
-			<Route path="/admin" element={<AdminPage />}>
+			{/* <Route path="/admin" element={<AdminPage />}>
 				<Route path="/admin" index element={<Admin />} />
 				<Route path="new-pods" element={<CreateNewPods />} />
-			</Route>
+			</Route> */}
 		</Routes>
 	);
 }
